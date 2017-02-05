@@ -1,0 +1,185 @@
+/**
+ * Base - Type
+ */
+
+p {
+  padding: $p-padding;
+  margin: $p-margin;
+}
+
+p.lead {
+  font-family: $p-lead-font-family;
+  font-size: $p-lead-font-size;
+  line-height: $p-lead-line-height;
+  font-weight: normal;
+  //font-weight: $p-lead-font-weight; // using system fonts
+  font-style: $p-lead-font-style;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  margin: $heading-margin;
+  padding: $heading-padding;
+  color: $heading-color;
+  text-rendering: optimizelegibility;
+  font-style: $heading-font-style;
+  font-weight: $heading-font-weight;
+  text-decoration: $heading-text-decoration;
+  text-transform: $heading-text-transform;
+  clear: both;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: $heading-text-decoration;
+}
+
+h1 {
+  margin: $h1-margin;
+}
+
+h1,
+.h1 {
+  font-size: $h1-mobile;
+  @media only screen and (min-width: 600px) {
+    font-size: $h1;
+  }
+}
+h2,
+.h2 {
+  font-size: $h2-mobile;
+  @media only screen and (min-width: 600px) {
+    font-size: $h2;
+  }
+}
+h3,
+.h3 {
+  font-size: $h3-mobile;
+  @media only screen and (min-width: 600px) {
+    font-size: $h3;
+  }
+}
+h4,
+.h4 {
+  font-size: $h4-mobile;
+  @media only screen and (min-width: 600px) {
+    font-size: $h4;
+  }
+}
+h5,
+.h5 {
+  font-size: $h5-mobile;
+  @media only screen and (min-width: 600px) {
+    font-size: $h5;
+  }
+}
+h6,
+.h6 {
+  font-size: $h6-mobile;
+  @media only screen and (min-width: 600px) {
+    font-size: $h6;
+  }
+}
+
+blockquote {
+  margin: $blockquote-margin;
+  padding: $blockquote-padding;
+  border-left: $blockquote-border-left;
+  background-color: $blockquote-bg-color;
+}
+
+blockquote p {
+  font-family: $blockquote-p-font-family;
+  margin: $blockquote-p-margin;
+  padding: $blockquote-p-padding;
+  color: $blockquote-p-color;
+  font-size: $blockquote-p-font-size;
+  line-height: $blockquote-p-line-height;
+  font-style: $blockquote-p-font-style;
+  font-weight: $blockquote-p-font-weight;
+  text-indent: $blockquote-p-text-indent;
+}
+
+blockquote p em {
+  font-family: $sans;
+  font-style: $blockquote-author-font-style;
+  font-size: $blockquote-author-font-size;
+  vertical-align: baseline !important;
+  color: $blockquote-author-font-color;
+  @extend .cf;
+}
+
+/*
+.quote-icon path,
+#quote_icon path {
+  fill: #f00000 !important;
+  background-color: #f00000 !important;
+}
+*/
+
+// definition list
+dl {
+  dt {
+    font-weight: $dt-font-weight;
+    margin: $dt-margin;
+    padding: $dt-padding;
+  }
+  dd {
+    margin: $dd-margin;
+    padding: $dd-padding;
+  }
+}
+
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+address {}
+abbr, acronym {}
+mark, ins {}
+
+// pre/code stuff
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+  font-family: $mono;
+  font-size: inherit;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: $pre-margin-bottom;
+  overflow-x: scroll;
+}
+
+// horizontal rule
+hr {
+  margin-top: $hr-margin-top;
+  margin-bottom: $hr-margin-bottom;
+  border: $hr-border;
+  border-bottom: $hr-border-bottom;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.list-reset {
+  list-style-type: none;
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}

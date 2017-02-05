@@ -1,0 +1,198 @@
+/**
+ * Layout - Footer
+ */
+
+.site-footer {}
+
+// ----------- The social media container
+
+/*
+.container--social {
+  @extend .container;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-color: rgba($site-color-1, .5);
+  border-top: 4px solid $site-color-1;
+
+  .grid {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+}
+
+// over-ride for the home page
+.home .container--social {
+  @extend .container;
+  padding: 2rem 0;
+  background-color: transparent;
+  border-top: none;
+
+  .grid {
+    margin: 0 auto;
+    text-align: left;
+  }
+
+}
+
+.container--social .widget-title {
+  //font-style: italic;
+}
+
+.hadley-social {
+  display: inline-block;
+}
+
+.hadley-social {
+  text-align: center;
+}
+
+.hadley-social ul {
+  @extend .list-reset;
+}
+
+.hadley-social li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+}
+
+.hadley-social a {
+  margin: 0;
+  padding: .65rem .75rem .6rem .75rem;
+  text-decoration: none;
+  background-color: transparent;
+  color: $brand-color-1;
+  font-family: $sans;
+  text-transform: uppercase;
+  font-size: .65rem;
+  line-height: 1em;
+  font-weight: bold;
+  border: 2px solid $brand-color-1;
+  @include border-radius (2px);
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  min-width: 50px;
+
+  &:visited {}
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $brand-color-1;
+    color: white;
+  }
+
+  .facebook {}
+  .twitter {}
+  .instagram {}
+  .google {}
+  .linkedin {}
+  .pinterest {}
+  .tumblr {}
+  .youtube {}
+  .reddit {}
+  .flickr {}
+  .vine {}
+  //.meetup {}
+
+  @media only screen and (max-width: 800px) {
+    padding: .5rem;
+    font-size: .75rem;
+  }
+
+}
+
+// ----------- The search container
+// ----------- (just happen to have this in the footer for now)
+
+.container--search {
+  @extend .container;
+  padding-top: 2rem;
+  padding-bottom: 2.25rem;
+  background-color: white;
+  border-top: 4px solid $site-color-1;
+
+  // remove some defaults when it's in this position
+  section,
+  input[type="submit"],
+  .widget,
+  .widget-search {
+    margin-bottom: 0 !important;
+  }
+
+  .grid {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 600px;
+  }
+
+}
+
+.container--search .widget-title {
+  //font-style: italic;
+}
+
+
+// ----------- The footer container
+
+.container--footer {
+  @extend .container;
+  padding: 4rem 0;
+  background-color: $brand-color-1;
+}
+
+
+// ----------- footer text
+
+.site-footer .site-info {
+  text-align: center;
+  color: $brand-color-2;
+  font-family: $serif;
+  font-style: italic;
+}
+
+//.site-footer .site-info .button--trans-on-dark
+
+.site-footer .site-info a {
+  text-decoration: none;
+  color: white;
+
+  &:visited {
+    color: white;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: darken($brand-color-2, 10%);
+  }
+
+}
+*/
+
+/*
+.site-footer .button--trans {
+  color: lighten($brand-color-1, 25%);
+  border-color: lighten($brand-color-1, 25%);
+
+  &:visited {
+    color: lighten($brand-color-1, 25%);
+    border-color: lighten($brand-color-1, 25%);
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: lighten($brand-color-1, 35%);
+    background-color: rgba(255,255,255,.125%);
+    border-color: lighten($brand-color-1, 35%);
+  }
+
+}
+*/

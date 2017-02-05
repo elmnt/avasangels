@@ -1,0 +1,149 @@
+/**
+ * Mixins
+ */
+
+// ----------- border-box
+
+@mixin bbox {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+// ----------- content box
+
+@mixin cbox {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box; 
+}
+
+// ----------- remove native browser styles
+
+@mixin no-appearance {
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+          appearance: none !important;
+}
+
+// ----------- remove native webkit list styles
+
+@mixin no-native-list {
+  -webkit-margin-before: 0 !important;
+   -webkit-margin-after: 0 !important;
+   -webkit-margin-start: 0 !important;
+     -webkit-margin-end: 0 !important;
+  -webkit-padding-start: 0 !important;
+
+  -moz-margin-before: 0 !important;
+   -moz-margin-after: 0 !important;
+   -moz-margin-start: 0 !important;
+     -moz-margin-end: 0 !important;
+  -moz-padding-start: 0 !important;
+
+  margin-before: 0 !important;
+   margin-after: 0 !important;
+   margin-start: 0 !important;
+     margin-end: 0 !important;
+  padding-start: 0 !important;
+
+}
+
+// ----------- border radius (uniform)
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// ----------- border radius (set each corner)
+
+@mixin border-radius-select($radtl,$radtr,$radbr,$radbl) {
+    -webkit-border-top-left-radius: $radtl;
+   -webkit-border-top-right-radius: $radtr;
+-webkit-border-bottom-right-radius: $radbr;
+ -webkit-border-bottom-left-radius: $radbl;
+		    -moz-border-radius-topleft: $radtl;
+		   -moz-border-radius-topright: $radtr;
+		-moz-border-radius-bottomright: $radbr;
+		 -moz-border-radius-bottomleft: $radbl;
+			   -ms-border-radius-topleft: $radtl;
+			  -ms-border-radius-topright: $radtr;
+		 -ms-border-radius-bottomright: $radbr;
+			-ms-border-radius-bottomleft: $radbl;
+				    border-top-left-radius: $radtl;
+				   border-top-right-radius: $radtr;
+				border-bottom-right-radius: $radbr;
+				 border-bottom-left-radius: $radbl;
+}
+
+// ----------- transitions
+
+@mixin trans($t, $easing) {
+  -webkit-transition: all $t $easing;
+  -moz-transition: all $t $easing;
+  -ms-transition: all $t $easing;
+  -o-transition: all $t $easing;
+  transition: all $t $easing;
+}
+
+/*
+@mixin transY($tY) {
+  -webkit-transform: translateY($tY);
+      -ms-transform: translateY($tY);
+          transform: translateY($tY);
+}
+*/
+
+// force text-smoothing (useful with headroom.js)
+/*
+@mixin forcesmooth {
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+*/
+
+@mixin breakpoint($size) {
+
+  @if $size == bp-mobile-landscape {
+    @media only screen and (min-width: $bp-mobile-landscape) { @content; }
+  }
+  @else if $size == bp-tablet-portrait {
+    @media only screen and (min-width: $bp-tablet-portrait) { @content; }
+  }
+  @else if $size == bp-tablet-landscape {
+    @media only screen and (min-width: $bp-tablet-landscape) { @content; }
+  }
+  @else if $size == bp-laptop {
+    @media only screen and (min-width: $bp-laptop) { @content; }
+  }
+  @else if $size == bp-desktop {
+    @media only screen and (min-width: $bp-desktop) { @content; }
+  }
+  @else if $size == bp-main-sidebar {
+    @media only screen and (min-width: $bp-main-sidebar) { @content; }
+  }
+
+}
+
+/**
+ * Create a breakpoint for below a given size 
+ * Example usage:
+ * @include below(200px) { // css }
+ */
+
+@mixin below($size) {
+  @media only screen and (max-width: $size) { @content; }
+}
+
+/**
+ * Create a breakpoint for above a given size 
+ * Example usage:
+ * @include above(200px) { // css }
+ */
+
+@mixin above($size) {
+  @media only screen and (min-width: $size) { @content; }
+}
+

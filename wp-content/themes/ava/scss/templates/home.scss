@@ -1,0 +1,66 @@
+/**
+ * Home
+ */
+
+// home.php which shows the blog feed
+
+.blog__categories {
+   //margin-top: 1rem;
+   //border-top: 2px solid #ccc;
+   //padding-top: 1rem;
+   //padding-bottom: 0;
+   margin-bottom: 2rem;
+}
+
+.blog__categories h6 {
+   text-transform: none;
+}
+
+.blog__categories ul {
+  @extend .list-reset;
+}
+
+.blog__categories li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+}
+
+.blog__categories a {
+  margin: 0;
+  padding: .65rem .75rem .6rem .75rem;
+  text-decoration: none;
+  background-color: transparent;
+  color: $brand-color-1;
+  font-family: $sans;
+  text-transform: uppercase;
+  font-size: .65rem;
+  line-height: 1em;
+  font-weight: bold;
+  border: 2px solid $brand-color-1;
+  @include border-radius (2px);
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  min-width: 50px;
+
+  &:visited {}
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $brand-color-1;
+    color: white;
+  }
+
+  @media only screen and (max-width: 800px) {
+    padding: .5rem;
+    font-size: .75rem;
+  }
+
+}

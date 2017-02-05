@@ -1,0 +1,56 @@
+/**
+ * Base - Page
+ */
+
+html {
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  font-size: $base-font-size-xs;
+
+  @media only screen and (min-width: 800px) {
+    font-size: $base-font-size-sm;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    font-size: $base-font-size;
+  }
+
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  background-color: $page-background;
+  font-size: 100%;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  color: $base-font-color;
+  -webkit-text-size-adjust: 100%; //fix for iOS
+  -ms-text-size-adjust: 100%;
+}
+
+a,
+a img,
+input,
+textarea,
+button {
+  @include trans($global-trans-time, $global-easing);
+}
+
+/*
+.animated {
+  -webkit-animation-duration: .4s;
+  animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+*/

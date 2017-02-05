@@ -1,0 +1,16 @@
+/**
+ * Category
+ * Any global styles for category.php
+ * More specific content styles (for the template-parts) in content.scss
+ */
+
+// The page header for category archives
+.category .page-header {
+  border-bottom: 2px solid $base-border-color;
+  @extend .mb3;
+}
+
+// If we choose to show the category descriptions under the title
+.category .page-header p {
+  @extend .lead;
+}

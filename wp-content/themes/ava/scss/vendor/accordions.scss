@@ -1,0 +1,26 @@
+/**
+ * Accordions
+ * http://jsfiddle.net/ChrisStanyon/z9fWG/
+ */
+
+#accordion li ul { display: none; }
+
+.accordion__item {
+  margin-bottom: 1px;
+}
+
+.accordion__trigger {
+  display: block;
+  padding: $accordion-trigger-padding;
+  background-color: $accordion-background-color;
+  text-decoration: none;
+}
+
+.accordion__content-holder {
+  @extend .list-reset;
+  background-color: $accordion-content-holder-background-color;
+}
+
+.accordion__content {
+  padding: $accordion-content-padding;
+}

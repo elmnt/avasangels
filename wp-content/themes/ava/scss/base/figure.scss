@@ -1,0 +1,26 @@
+/**
+ * Base - Figure
+ */
+
+figure {
+  width: 100%;
+  max-width: 100%;
+  margin: $figure-margin; 
+  padding: $figure-padding; 
+}
+
+figcaption {
+  margin: $figcaption-margin;
+  padding: $figcaption-padding;
+  background-color: $figcaption-background-color;
+  text-align: $figcaption-text-align;
+}
+
+figcaption p {
+  font-family: $figcaption-font-family;
+  font-size: $figcaption-font-size;
+  line-height: $figcaption-line-height;
+  color: $figcaption-color;
+  padding: $figcaption-text-padding;
+  margin: $figcaption-text-margin;
+}

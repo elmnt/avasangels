@@ -1,0 +1,23 @@
+/**
+ * Layout - Header
+ */
+
+// ----------- Force the z-index on the header content,
+// ----------- so the menus are always on top.
+
+.header,
+.header * {
+  @extend .z7;
+}
+
+.site-title {}
+.site-title {}
+.site-description {}
+
+.container--branding {
+  @extend .container--full;
+}
+
+.site-branding {}
+.site-branding .site-title {}
+.site-branding .site-description {}

@@ -1,0 +1,95 @@
+/**
+ * Components - buttons
+ */
+
+// base button
+
+/*
+The button element styled in vendor/form-hack
+It will use most of these styles, but will stay there
+to avoid any conflict.
+*/
+.button {
+  display: inline-block;
+  color: $button-color;
+  background: $button-background-color;
+  text-decoration: none;
+  text-transform: $button-text-transform;
+  text-align: center;
+  font-family: $sans;
+  font-weight: $button-font-weight;
+  font-size: $button-font-size;
+  letter-spacing: $button-letter-spacing;
+  line-height: 1em;
+  cursor: pointer;
+  padding: $button-padding;
+  margin: $button-margin;
+  -webkit-font-smoothing: antialiased;
+  @include border-radius($base-border-radius);
+  vertical-align: middle !important;
+
+  &:visited {
+    color: $button-color-visited;
+    background: $button-background-color-visited;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $button-color-hover;
+    background: $button-background-color-hover;
+  }
+
+}
+
+// display: block (width constrained to text width)
+
+.button--block {
+  display: block;
+  width: auto;
+  float: left;
+  clear: left;
+}
+
+// display: block (always 100% width)
+
+.button--block-full {
+  display: block;
+}
+
+// big button
+
+.button--big {
+  @extend .button;
+  padding: $button-big-padding;
+  font-size: $button-big-font-size;
+}
+
+// small button
+
+.button--small {
+  @extend .button;
+  padding: $button-small-padding;
+  font-size: $button-small-font-size;
+}
+
+// transparent button
+
+.button--trans {
+  color: $button-trans-color;
+  background: $button-trans-background-color;
+  border: $button-trans-border;
+
+  &:visited {
+    color: $button-trans-color;
+    background: $button-trans-background-color;
+    border: $button-trans-border;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $button-trans-color-hover;
+    background: $button-trans-background-color-hover;
+    border: $button-trans-border-hover;
+  }
+
+}

@@ -1,0 +1,30 @@
+/**
+ * Base - Images
+ */
+
+/* 
+normal image sizing 
+(only responsive when the holder gets smaller than the img)
+*/
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: $img-vertical-align; 
+  display: block; 
+}
+
+img.fit,
+.fit img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/*
+Google maps fix
+https://github.com/inuitcss/base.images/blob/master/_base.images.scss
+.gm-style img,
+img[width],
+img[height] {
+  max-width: none;
+}
+*/

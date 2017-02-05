@@ -1,0 +1,29 @@
+/**
+ * Ava theme styles
+ *
+ * 1. Sandbox to work out styles before moving them into partials.
+ * 2. Admin/Theme Customization Styles
+ *
+ */
+
+
+// ----------- pesticide debug helper
+
+$debug: false;
+
+@if $debug == true {
+
+  * {
+    outline: 1px solid orange;
+  }
+  .container {
+    border: 2px solid red;
+  }
+
+}
+
+
+// ----------- 1. Sandbox
+
+
+// ----------- 2. Admin / Theme Customization

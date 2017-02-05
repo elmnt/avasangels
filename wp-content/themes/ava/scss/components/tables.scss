@@ -1,0 +1,97 @@
+/**
+ * Components - Responsive Tables
+ */
+
+// ----------- default table styles
+
+table, 
+table * {
+  font-family: $table-global-font-family;
+  font-size: $table-global-font-size;
+  line-height: $table-global-line-height;
+}
+table * {
+  padding: $table-global-padding;
+}
+
+table {
+  border-collapse: collapse !important;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+table thead { 
+  background-color: $table-thead-background-color;
+}
+
+table th { 
+  color: $table-thead-th-color; 
+}
+
+table, 
+table td, 
+table th { 
+  border: $table-border; 
+  border-collapse: collapse !important;
+}
+
+th { 
+  vertical-align: $table-th-vertical-align; 
+  text-align: $table-th-text-align;
+}
+td { 
+  vertical-align: $table-td-vertical-align;
+  text-align: $table-td-text-align;
+}
+
+// ----------- horizontal row labels
+
+.table__row-label {
+  background-color: lighten($table-thead-background-color, 20%);
+  color: $table-thead-th-color;
+}
+
+.responsive-table { 
+  width: 100%; 
+}
+
+// ----------- responsive table breakpoints
+
+.responsive-table .mobile-thead, 
+.responsive-table .mobile-colhead { 
+  display: none; 
+}
+
+@media all and (max-width: 800px){
+
+  .responsive-table thead { 
+    display: none; 
+  }
+
+  .responsive-table .mobile-thead { 
+    display: block;
+    background-color: $table-thead-background-color;
+    color: $table-thead-th-color;
+    width: 100%;
+  }
+
+  // we need some extra border control on the responsive tables
+  .responsive-table { 
+    border: none !important; 
+  }
+
+  .responsive-table td {
+    &:not(:last-child) {
+      border-bottom: none !important; 
+    }
+  }
+  
+  .responsive-table,
+  .responsive-table td,
+  .responsive-table th {
+    width: 100%;
+    display: block;   
+  }
+
+}

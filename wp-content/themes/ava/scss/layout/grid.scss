@@ -1,0 +1,51 @@
+/**
+ * Layout - Grid
+ */
+
+.single-column {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $single-col-width;
+}
+
+/**
+ * Mobile-First 12-column Grid
+ */
+
+.grid {
+  width: 100%;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Mobile-first single column grid
+[class*='col-'] {
+  float: none;
+  width: 100%;
+  margin-right: 0;
+}
+
+// Until we're above this breakpoint
+@include breakpoint(bp-main-sidebar) {
+
+  // Generate all the column widths
+  @for $column from 1 through $grid-columns {
+    .col-#{$column} {
+      width: (($grid-col-width * $column) + (($column - 1) * $grid-gutter) * 1%)
+    }
+  }
+
+  // Add multi-column settings
+  [class*='col-'] {
+    float: left;
+    margin-right: $grid-gutter * 1%;
+    .grid &:last-of-type {
+      margin-right: 0;
+    }
+    border-collapse: collapse !important;
+  }
+
+}

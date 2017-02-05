@@ -1,0 +1,126 @@
+/*!
+Theme Name:  Ava
+Theme URI:   http://elmnt.com
+Author:      Greg Smith
+Author URI:  http://elmnt.com
+Description: Ava is a custom WordPress theme for Ava's Angels San Diego
+Version:     1.0.0
+License:     GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ava
+
+Ava is based on Underscores http://underscores.me/
+(C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+/*
+I'm using the 10UP Sass tree as a rough guide to organize styles.
+My partials will vary slightly, based on project requirements.
+
+|- assets/css/scss/
+|  |- global/ __________ # Functions, mixins, placeholders, and variables
+|  |- base/
+|    |- reset, normalize, or sanitize
+|    |- typography
+|    |- icons
+|    |- wordpress __________ # Partial for WordPress default classes
+|  |- components/
+|    |- buttons
+|    |- callouts
+|    |- toggles
+|    |- all other modular reusable UI components
+|  |- layout/
+|    |- header
+|    |- footer
+|    |- sidebar
+|  |- templates/
+|    |- home page
+|    |- single
+|    |- archives
+|    |- blog
+|    |- all page, post, and custom post type specific styles
+|  |- admin/ ____________ # Admin specific partials
+|  |- editor/ ___________ # Editor specific partials (leverage placeholders to use in front-end and admin area)
+|  |- admin.scss
+|  |- project.scss
+|  |- editor-styles.scss
+*/
+
+/**
+ * ----------- Global
+ */
+@import "global/variables";
+@import "global/mixins";
+
+/**
+ * ----------- Base
+ */
+@import "base/sanitize";
+@import "base/clearfix";
+@import "base/box-sizing";
+@import "base/page";
+@import "base/type";
+@import "base/links";
+@import "base/images";
+@import "base/figure";
+@import "base/utilities";
+@import "base/accessibility";
+//@import "base/wordpress";
+
+/**
+ * ----------- Components
+ * ----------- Reusable UI components
+ */
+@import "components/buttons";
+@import "components/tables";
+
+/**
+ * ----------- Layout
+ */
+@import "layout/wrappers";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+
+/**
+ * ----------- Templates
+ */
+@import "templates/front-page";
+@import "templates/single";
+@import "templates/archive";
+@import "templates/blog";
+@import "templates/page"; // All custom page styles
+@import "templates/parts"; // Anything in /template-parts or /templates
+@import "templates/comments"; // Custom styles for the comments template
+@import "templates/post"; // All post and custom post types
+@import "templates/widgets"; // Any custom widget styles
+
+/**
+ * ----------- Theme
+ * ----------- Any styles specific to theme customization
+ */
+@import "theme";
+
+/**
+ * ----------- Media
+ */
+@import "media/responsive";
+@media print { @import "media/print"; }
+
+/**
+ * ----------- Vendor
+ */
+@import "vendor/elmenu";
+@import "vendor/formhack";
+@import "vendor/font-awesome";
+@import "vendor/accordions";
+
+/**
+ * ----------- Pesticide debugging
+ */
+$pesticide-debug-outline: false !default;
+$pesticide-debug-depth: false !default;
+
+@import "vendor/pesticide";
