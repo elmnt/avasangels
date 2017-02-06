@@ -36,21 +36,21 @@
 		    */
 		    ?>
 			<?php if( hasChildren( $item->object_id ) ): ?>
-		   	<li class="elm__item hassub">
-		   	<?php else: ?>
-		   	<li class="elm__item">
-		   	<?php endif; ?>
-		   	<a href="<?php echo $link; ?>" class="elm__link"><?php echo $title; ?></a>
-		   	<?php endif; ?>
-		        <?php if ( $parent_id == $item->menu_item_parent ): ?>
-		        <?php if ( !$submenu ): $submenu = true; ?>
-		        <ul class="elm__list--sub">
-		        <?php endif; ?>
+			<li class="elm__item hassub">
+			<?php else: ?>
+			<li class="elm__item">
+			<?php endif; ?>
+			<a href="<?php echo $link; ?>" class="elm__link"><?php echo $title; ?></a>
+			<?php endif; ?>
+			<?php if ( $parent_id == $item->menu_item_parent ): ?>
+			<?php if ( !$submenu ): $submenu = true; ?>
+				<ul class="elm__list--sub">
+				<?php endif; ?>
 					<li class="elm__item--sub"><a href="<?php echo $link; ?>" class="elm__link--sub"><?php echo $title; ?></a></li>
-		        <?php if ( $menuitems[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ): ?>
-		        </ul>
-		        <?php $submenu = false; endif; ?>
-		        <?php endif; ?>
+				<?php if ( $menuitems[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ): ?>
+				</ul>
+			<?php $submenu = false; endif; ?>
+			<?php endif; ?>
 		    <?php if ( $menuitems[ $count + 1 ]->menu_item_parent != $parent_id ): ?>
 		    </li>
 		    <?php $submenu = false; endif; ?>
