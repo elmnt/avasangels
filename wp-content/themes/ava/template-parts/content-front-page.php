@@ -11,20 +11,24 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<!-- Don't show the standard WP 'Home' page title:
-	<header class="entry-header">
-		<?php /*the_title( '<h1 class="entry-title">', '</h1>' );*/ ?>
-	</header>
-	-->
-	<!-- .entry-header -->
+	<div class="single-column home__intro">
 
-	<?php /* Start: ACF content */
-	$hpititle = get_field('hpi_title');
-	$hpitext = get_field('hpi_text');
-	?>
-	<h2><?php echo $hpititle; ?></h2>
-	<h3><?php echo $hpitext; ?></h3>
-	<?php /* End: ACF content */ ?>
+		<!-- Don't show the standard WP 'Home' page title:
+		<header class="entry-header">
+			<?php /*the_title( '<h1 class="entry-title">', '</h1>' );*/ ?>
+		</header>
+		-->
+		<!-- .entry-header -->
+
+		<?php /* Start: ACF content */
+		$hpititle = get_field('hpi_title');
+		$hpitext = get_field('hpi_text');
+		?>
+		<h2><?php echo $hpititle; ?></h2>
+		<h4><?php echo $hpitext; ?></h4>
+		<?php /* End: ACF content */ ?>
+
+	</div>
 
 	<div class="entry-content">
 		<?php

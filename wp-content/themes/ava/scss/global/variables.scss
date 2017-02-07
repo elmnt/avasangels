@@ -8,9 +8,11 @@
 
 // ----------- Start with color settings
 
-$brand-color-1: black;
-$brand-color-2: red;
-$brand-color-3: orange;
+// darkest: #511023
+
+$ava-brand-color:       #ef899c; //rgb(239, 137, 156)
+$ava-brand-color-dark:  #e82e68; //rgb(232, 46, 104)
+$ava-brand-color-light: #fed6dd; //rgb(254, 214, 221)
 
 $base-grey-1: #eee;
 $base-grey-2: #ccc;
@@ -115,14 +117,14 @@ $h6-mobile: 1rem;
 
 $blockquote-margin:            2rem 0;
 $blockquote-padding:           0;
-$blockquote-border-left-color: $brand-color-1;
+$blockquote-border-left-color: $ava-brand-color;
 $blockquote-border-left:       4px solid $blockquote-border-left-color;
 $blockquote-bg-color:          $base-grey-1;
 
 $blockquote-p-margin:      0;
 $blockquote-p-padding:     2rem;
 $blockquote-p-font-family: $sans;
-$blockquote-p-color:       $brand-color-1;
+$blockquote-p-color:       $base-font-color;
 $blockquote-p-font-size:   1.25rem;
 $blockquote-p-line-height: 1.5em;
 $blockquote-p-font-style:  italic;
@@ -150,9 +152,9 @@ $hr-border-bottom: 1px solid $base-font-color;
 // ----------- base/links
 
 $link-text-decoration:       underline;
-$link-color:                 $brand-color-1;
+$link-color:                 $ava-brand-color-dark;
 $link-text-decoration-hover: none;
-$link-color-hover:           $brand-color-2;
+$link-color-hover:           $ava-brand-color;
 
 // ----------- base/images
 
@@ -184,60 +186,44 @@ $figcaption-text-margin:  0;
 
 // ----------- components/buttons
 
+/*
+
+$base-border-width: 2px;
+$base-border-style: solid;
+$base-border-color: $base-grey-2;
+
+*/
+
 $button-color:            white;
-$button-background-color: $brand-color-1;
+$button-background-color: $ava-brand-color-dark;
 $button-text-transform:   uppercase;
 $button-font-weight:      $fw-semibold;
-$button-font-size:        .8rem;
+$button-font-size:        1rem;
 $button-letter-spacing:   .5px;
 $button-padding:          1.45rem 3rem 1.35rem 3rem;
-$button-margin:          .5rem 0;
+$button-margin:           .5rem 0;
+$button-border:           $base-border-width $base-border-style $ava-brand-color-dark;
 
 // button states
-
 $button-color-visited:            $button-color;
 $button-background-color-visited: $button-background-color;
 $button-color-hover:              $button-color;
-$button-background-color-hover:   darken($button-background-color, 25%);
+$button-background-color-hover:   $ava-brand-color;
+$button-border-hover:             $base-border-width $base-border-style $ava-brand-color;
 
 // big buttons
-
 $button-big-padding:   1.5rem 3rem;
 $button-big-font-size: 1rem;
 
-// small buttons
+// transparent button
+$button-trans-color:            $ava-brand-color-dark;
+$button-trans-background-color: rgba(255,255,255,1);
+$button-trans-border:           $base-border-width $base-border-style $ava-brand-color-dark;
 
-$button-small-padding:   .75rem 1.5rem;
-$button-small-font-size: .65rem;
-
-// white transparent button
-$button-trans-color:            white;
-$button-trans-background-color: rgba(0,0,0,.05);
-$button-trans-border:           2px solid white;
-
-// & hover state
-$button-trans-color-hover:             $brand-color-1;
-$button-trans-background-color-hover:  white;
-$button-trans-border-hover:            2px solid white;
-
-// colored transparent button
-$button-trans-dark-color:  $brand-color-1;
-$button-trans-dark-border: 2px solid $brand-color-1;
-
-// & hover state
-$button-trans-dark-color-hover:  $brand-color-2;
-$button-trans-dark-border-hover: 2px solid $brand-color-2;
-
-// big transparent button
-$button-trans-big-border-width: 4px;
-
-// buttons with a font-awesome icon
-
-$button-hasicon-padding:        1.35rem 2rem 1.125rem 2rem;
-$button-hasicon-line-height:    1rem;
-$button-hasicon-vertical-align: top;
-$button-hasicon-font-size:      $button-hasicon-line-height;
-$button-hasicon-icon-margin:    3px;
+// transparent button states
+$button-trans-color-hover:            white;
+$button-trans-background-color-hover: $ava-brand-color;
+$button-trans-border-hover:           $base-border-width $base-border-style $ava-brand-color;
 
 // ----------- components/tables
 
@@ -354,11 +340,18 @@ $navmobile-trigger-color-hover: $base-grey-3;
  * Templates
  */
 
-// ----------- templates/home
+// ----------- templates/front-page
+
+$wrap-home-masthead-max-width: 1600px;
+
 // ----------- templates/single
-// ----------- templates/archives
+// ----------- templates/archive
 // ----------- templates/blog
-// ----------- all page, post, and custom post type specific styles
+// ----------- templates/page (All custom page styles)
+// ----------- templates/parts (Anything in /template-parts or /templates)
+// ----------- templates/comments (Custom styles for the comments template)
+// ----------- templates/post (All post and custom post types)
+// ----------- templates/widgets (Any custom widget styles)
 
 /**
  * Vendor

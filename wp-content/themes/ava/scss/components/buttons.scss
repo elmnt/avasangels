@@ -25,6 +25,7 @@ to avoid any conflict.
   padding: $button-padding;
   margin: $button-margin;
   -webkit-font-smoothing: antialiased;
+  border: $button-border;
   @include border-radius($base-border-radius);
   vertical-align: middle !important;
 
@@ -37,6 +38,7 @@ to avoid any conflict.
   &:active {
     color: $button-color-hover;
     background: $button-background-color-hover;
+    border: $button-border-hover;
   }
 
 }
@@ -62,14 +64,6 @@ to avoid any conflict.
   @extend .button;
   padding: $button-big-padding;
   font-size: $button-big-font-size;
-}
-
-// small button
-
-.button--small {
-  @extend .button;
-  padding: $button-small-padding;
-  font-size: $button-small-font-size;
 }
 
 // transparent button

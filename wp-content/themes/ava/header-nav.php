@@ -21,9 +21,10 @@
 		    <?php
 		    $count = 0;
 		    $submenu = false;
-		    foreach( $menuitems as $item ):
+		    foreach( (array) $menuitems as $item ): // ADDED (array) Tuesday, February 7, 2017
 		        $link = $item->url;
 		        $title = $item->title;
+		        // $class = $item->classes[0];
 		        // Item does not have a parent so menu_item_parent equals 0 (false)
 		        if ( !$item->menu_item_parent ):
 		        // Save this id for later comparison with sub-menu items
@@ -40,18 +41,21 @@
 			<?php else: ?>
 			<li class="elm__item">
 			<?php endif; ?>
-			<a href="<?php echo $link; ?>" class="elm__link"><?php echo $title; ?></a>
-			<?php endif; ?>
-			<?php if ( $parent_id == $item->menu_item_parent ): ?>
-			<?php if ( !$submenu ): $submenu = true; ?>
-				<ul class="elm__list--sub">
+				<a href="<?php echo $link; ?>" class="elm__link"><?php echo $title; ?></a>
 				<?php endif; ?>
-					<li class="elm__item--sub"><a href="<?php echo $link; ?>" class="elm__link--sub"><?php echo $title; ?></a></li>
-				<?php if ( $menuitems[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ): ?>
-				</ul>
-			<?php $submenu = false; endif; ?>
-			<?php endif; ?>
-		    <?php if ( $menuitems[ $count + 1 ]->menu_item_parent != $parent_id ): ?>
+				<?php if ( $parent_id == $item->menu_item_parent ): ?>
+				<?php if ( !$submenu ): $submenu = true; ?>
+					<ul class="elm__list--sub">
+					<?php endif; ?>
+						<li class="elm__item--sub"><a href="<?php echo $link; ?>" class="elm__link--sub"><?php echo $title; ?></a></li>
+					<?php if ( $menuitems[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ): ?>
+					<?php /*if ( !isset($menuitems[ $count + 1 ]) || $menuitems[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ):*/ ?>
+
+					</ul>
+				<?php $submenu = false; endif; ?>
+				<?php endif; ?>
+		    	<?php if ( $menuitems[ $count + 1 ]->menu_item_parent != $parent_id ): ?>
+		    	<?php /*if ( !isset($menu_items[ $count + 1 ]) || $menuitems[ $count + 1 ]->menu_item_parent != $parent_id ):*/ ?>
 		    </li>
 		    <?php $submenu = false; endif; ?>
 			<?php $count++; endforeach; ?>

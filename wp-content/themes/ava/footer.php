@@ -14,11 +14,22 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="container">
+    <div class="wrap">
+    <div class="grid">
+
+        <!--
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ava' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'ava' ), 'WordPress' ); ?></a>
+			<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'ava' ) );*/ ?>"><?php /*printf( esc_html__( 'Proudly powered by %s', 'ava' ), 'WordPress' );*/ ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'ava' ), 'ava', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+			<?php /*printf( esc_html__( 'Theme: %1$s by %2$s.', 'ava' ), 'ava', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' );*/ ?>
+		</div>
+        -->
+        <!-- .site-info -->
+
+    </div>
+    </div>
+    </div>
 	</footer><!-- #colophon -->
 
 <nav id="elmobile">
@@ -43,12 +54,6 @@ jQuery(document).ready(function($){
     $( '#elmain' ).elmenu( menuOrder );
 });
 </script>
-
-<style>
-#menu-menu-1 > li {
-    display: inline-block !important;
-}
-</style>
 
 </body>
 </html>

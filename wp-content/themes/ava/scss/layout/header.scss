@@ -10,14 +10,21 @@
   @extend .z7;
 }
 
+/*
 .site-title {}
 .site-title {}
 .site-description {}
 
-.container--branding {
-  @extend .container--full;
-}
-
 .site-branding {}
 .site-branding .site-title {}
 .site-branding .site-description {}
+*/
+
+.site-header {
+    border-top: 20px solid white;
+    border-bottom: 10px solid white;
+}
+
+.logo--header {
+    max-width: 400px;
+}
