@@ -32,11 +32,11 @@
     </div>
 	</footer><!-- #colophon -->
 
-<nav id="elmobile">
-    <div class="elmtoggle__holder--mobile">
-        <a href="#!" id="elmobiletoggle" class="cf"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/hamburger-close.svg" alt="Open Sub Menu" class="elmtoggle__icon"></a>
-    </div>
-</nav>
+    <nav id="elmobile">
+        <div class="elmtoggle__holder--mobile">
+            <a href="#!" id="elmobiletoggle" class="cf"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/hamburger-close.svg" alt="Open Sub Menu" class="elmtoggle__icon"></a>
+        </div>
+    </nav>
 
 </div><!-- #canvas -->
 </div><!-- #page -->

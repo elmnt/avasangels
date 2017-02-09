@@ -4,20 +4,22 @@
 
 // ----------- masthead image
 
-.wrap--home-masthead {
+.wrap--home {
     @extend .wrap;
     max-width: $wrap-home-masthead-max-width;
+    @extend .z6;
 }
 
-.wrap--home-masthead .button:first-of-type {
+.wrap--home .button:first-of-type {
     margin-right: 2rem;
 }
 
-.grid--home-masthead {
+.grid--home {
     position: relative;
+    @extend .z6;
 }
 
-.home-masthead__caption-holder {
+.home__caption-holder {
     position: absolute;
     background-color: rgba(81, 16, 51, .75);
     top: 0;
@@ -26,19 +28,22 @@
     left: 0;
     width: 100%;
     height: 100%;
+    @extend .z6;
 }
 
-.home-masthead__caption {
+.home__caption {
     position: absolute;
     right: 0;
     bottom: 100px;
     left: 0;
     width: 100%;
     text-align: center;
+    @extend .z6;
 
     h1 {
         color: white;
     }
+
 }
 
 .home__intro {

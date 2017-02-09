@@ -5,8 +5,8 @@
 // ----------- Force the z-index on the header content,
 // ----------- so the menus are always on top.
 
-.header,
-.header * {
+.site-header,
+.site-header * {
   @extend .z7;
 }
 

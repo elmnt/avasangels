@@ -129,6 +129,10 @@ function ava_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ava_scripts' );
 
+/**
+ * Custom Walker Nav
+ */
+require get_template_directory() . '/inc/ava-nav.php';
 
 /**
  * Implement the Custom Header feature.

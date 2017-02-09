@@ -13,17 +13,19 @@ get_header(); ?>
 <main id="main" class="site-main" role="main">
 
 <div class="container--full">
-<div class="wrap--home-masthead">
-<div class="grid--home-masthead">
+<div class="wrap--home">
+<div class="grid--home">
 	<?php /* Start: ACF content */
 	$hpmphoto = get_field('hpm_photo');
 	$hpmtagline = get_field('hpm_tagline');
 	?>
 	<img src="<?php echo $hpmphoto; ?>" alt="Ava's Angels" class="fit">
-	<div class="home-masthead__caption-holder">
-		<div class="home-masthead__caption">
+	<div class="home__caption-holder">
+		<div class="home__caption">
+			<!--
 			<h1><?php echo $hpmtagline; ?></h1>
 			<a href="#" class="button button--trans">Get Help</a><a href="#" class="button">Get Involved</a>
+			-->
 			<?php /* End: ACF content */ ?>
 		</div>
 	</div>

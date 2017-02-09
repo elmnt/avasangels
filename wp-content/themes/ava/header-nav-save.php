@@ -18,6 +18,7 @@
 	?>
 	<nav role="navigation">
 		<ul class="nav--main elm__list">
+
 		    <?php
 		    $count = 0;
 		    $submenu = false;
@@ -30,6 +31,7 @@
 		        // Save this id for later comparison with sub-menu items
 		        $parent_id = $item->ID;
 		    ?>
+
 		    <?php
 		    /*
 		    If the current menu item has children (check using the hasChildren function),
@@ -46,26 +48,33 @@
 				<?php if ( $parent_id == $item->menu_item_parent ): ?>
 				<?php if ( !$submenu ): $submenu = true; ?>
 					<ul class="elm__list--sub">
+
+
 					<?php endif; ?>
 						<li class="elm__item--sub"><a href="<?php echo $link; ?>" class="elm__link--sub"><?php echo $title; ?></a></li>
-					<?php if ( $menuitems[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ): ?>
-					<?php /*if ( !isset($menuitems[ $count + 1 ]) || $menuitems[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ):*/ ?>
+					<?php /*if ( $menuitems[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ):*/ ?>
+					<?php if ( !isset($menuitems[ $count + 1 ]) || $menuitems[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ): ?>
+
 
 					</ul>
 				<?php $submenu = false; endif; ?>
 				<?php endif; ?>
-		    	<?php if ( $menuitems[ $count + 1 ]->menu_item_parent != $parent_id ): ?>
-		    	<?php /*if ( !isset($menu_items[ $count + 1 ]) || $menuitems[ $count + 1 ]->menu_item_parent != $parent_id ):*/ ?>
+		    	<?php /*if ( $menuitems[ $count + 1 ]->menu_item_parent != $parent_id ):*/ ?>
+		    	<?php if ( !isset($menuitems[ $count + 1 ]) || $menuitems[ $count + 1 ]->menu_item_parent != $parent_id ): ?>
 		    </li>
 		    <?php $submenu = false; endif; ?>
 			<?php $count++; endforeach; ?>
+
 			<?php
 			/* Check if page has children */
+			/*
 			function hasChildren( $pid ) {
 			    $children = get_pages( "child_of={$pid}" );
 			    return ( $children );
 			}
+			*/
 			?>
+
 		</ul>
 	</nav>
 </div>

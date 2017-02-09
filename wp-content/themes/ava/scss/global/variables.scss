@@ -6,7 +6,7 @@
  * Global
  */
 
-// ----------- Start with color settings
+// ----------- Colors
 
 // darkest: #511023
 
@@ -177,7 +177,6 @@ $figcaption-text-padding: 0;
 $figcaption-text-margin:  0;
 
 // ----------- base/wordpress
-
 // ----------- base/utilities
 
 /**
@@ -185,14 +184,6 @@ $figcaption-text-margin:  0;
  */
 
 // ----------- components/buttons
-
-/*
-
-$base-border-width: 2px;
-$base-border-style: solid;
-$base-border-color: $base-grey-2;
-
-*/
 
 $button-color:            white;
 $button-background-color: $ava-brand-color-dark;
@@ -301,14 +292,14 @@ $frontpage-max-width: 1400px;
 // ----------- layout/footer
 // ----------- layout/sidebar
 
-// ----------- layout/nav
+// ----------- layout/nav (see elmenu variables below)
 
+/*
 $nav-font:        $sans;
 $nav-font-size:   1rem;
 $nav-line-height: 1em;
 
 $navmobile-bottom-margin:   0;
-//$navmobile-bottom-border:   1px solid lighten($base-border-color, 10%);
 $navmobile-bottom-border:   none;
 $navmain-text-transform:    none;
 $navmain-holder-background: white;
@@ -335,6 +326,7 @@ $navmobile-pad:                 0;
 $navmobile-trigger-pad:         1rem;
 $navmobile-trigger-color:       $base-font-color;
 $navmobile-trigger-color-hover: $base-grey-3;
+*/
 
 /**
  * Templates
@@ -356,6 +348,8 @@ $wrap-home-masthead-max-width: 1600px;
 /**
  * Vendor
  */
+
+// ----------- vendor/elmenu
 
 // ----------- vendor/form-hack
 
