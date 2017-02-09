@@ -7,6 +7,7 @@ Custom Walker_Nav_Menu Class to create my header nav menu
 Credit:
 http://shinraholdings.com/62/custom-nav-menu-walker-function/
 
+Luke's classes:
 .main-menu to top menu
 .sub-menu to menus inside the main-menu
 .menu-item to all <li>s
@@ -18,6 +19,17 @@ http://shinraholdings.com/62/custom-nav-menu-walker-function/
 .menu-item-even or .menu-item-odd (alternating)
 .menu-item-depth-# to tell you which level menu the <li> is in
 .menu-link to links
+
+My elmenu class structure to be injected:
+
+    Parent ul.elm__list
+           li.elm__item (optional:hassub) > a.elm__link
+
+     Child ul.elm__list--sub
+           li.elm__item--sub (optional:hassubsub) > a.elm__link--sub
+
+Grandchild ul.elm__list--subsub
+           li.elm__item--subsub > a.elm__link--subsub
 
 */
 
