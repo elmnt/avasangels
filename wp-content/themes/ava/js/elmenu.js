@@ -248,15 +248,19 @@ Quick description (see comments below for more info)
       // Open the menu
       toggleOpen.click(function(e) {
          toggleNav();
+
          // hide the hamburger icon
-         $( this ).fadeTo( 'fast', 0 );
+         // $( this ).fadeTo( 'fast', 0 );
+
       });
 
       // Close the menu
       toggleClose.click(function(e) {
          toggleNav();
+
          // show the hamburger icon
-         toggleOpen.fadeTo( 'fast', 1 );
+         // toggleOpen.fadeTo( 'fast', 1 );
+
       });
 
 

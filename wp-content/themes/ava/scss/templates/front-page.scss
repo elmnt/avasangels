@@ -21,7 +21,7 @@
 
 .home__caption-holder {
     position: absolute;
-    background-color: rgba(81, 16, 51, .75);
+    //background-color: rgba(81, 16, 51, .75);
     top: 0;
     right: 0;
     bottom: 0;
@@ -46,8 +46,29 @@
 
 }
 
+// ----------- the copy under the masthead image
+
+.container--homeintro {
+    @extend .container--full;
+    max-width: $wrap-home-masthead-max-width;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: $ava-brand-color;
+}
+
 .home__intro {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    padding: 2rem 1rem;
     text-align: center;
+
+    h4 {
+        color: $ava-brand-color-light;
+    }
+    h2 {
+        color: white;
+    }
+
+    @media only screen and (min-width: 768px){
+        padding: 4rem 2rem;
+    }
+
 }

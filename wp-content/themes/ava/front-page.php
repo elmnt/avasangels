@@ -23,7 +23,7 @@ get_header(); ?>
 	<div class="home__caption-holder">
 		<div class="home__caption">
 			<!--
-			<h1><?php echo $hpmtagline; ?></h1>
+			<h1><?php /*echo $hpmtagline;*/ ?></h1>
 			<a href="#" class="button button--trans">Get Help</a><a href="#" class="button">Get Involved</a>
 			-->
 			<?php /* End: ACF content */ ?>
@@ -32,6 +32,29 @@ get_header(); ?>
 </div>
 </div>
 </div>
+
+
+<div class="container--homeintro">
+<div class="single-column home__intro">
+
+	<!-- Don't show the standard WP 'Home' page title:
+	<header class="entry-header">
+		<?php /*the_title( '<h1 class="entry-title">', '</h1>' );*/ ?>
+	</header>
+	-->
+	<!-- .entry-header -->
+
+	<?php /* Start: ACF content */
+	$hpititle = get_field('hpi_title');
+	$hpitext = get_field('hpi_text');
+	?>
+	<h4><?php echo $hpitext; ?></h4>
+	<h2><?php echo $hpititle; ?></h2>
+	<?php /* End: ACF content */ ?>
+
+</div>
+</div>
+
 
 <div class="container">
 <div class="wrap">

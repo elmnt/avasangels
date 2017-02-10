@@ -58,6 +58,13 @@ to avoid any conflict.
   display: block;
 }
 
+// small button
+
+.button--small {
+  @extend .button;
+  padding: $button-small-padding;
+}
+
 // big button
 
 .button--big {

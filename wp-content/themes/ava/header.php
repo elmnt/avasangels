@@ -36,13 +36,13 @@ error_reporting(E_ALL);
 
 		<div class="container">
 		<div class="wrap">
-		<div class="grid">
+		<div class="grid cf">
 
-			<div class="col-6">
+			<div class="header__logo">
 				<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/avasangels-logo.svg" onerror="this.src='<?php bloginfo('stylesheet_directory'); ?>/img/avasangels-logo.png'; this.onerror=null;" class="logo--header"></a>
 			</div>
 
-			<div class="col-6">
+			<div class="header__nav">
 				<div class="navholder--main cf">
 					<nav role="navigation">
 					<?php
@@ -54,19 +54,23 @@ error_reporting(E_ALL);
 						'container_id'    => '',
 						'container_class' => '',
 						'walker'          => new Ava_Nav_Menu(),
+						//'walker'        => new SH_Last_Walker(),
 						'depth'           => 0
 					);
 					wp_nav_menu( $args );
 					?>
 					</nav>
 				</div>
-				<div class="elmtoggle__holder">
-					<a href="#!" id="elmtoggle" class="cf"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/hamburger.svg" alt="Open Sub Menu" class="elmtoggle__icon"></a>
-				</div>
 			</div>
 
 		</div>
 		</div>
+		</div>
+
+		<div class="container--full mb0">
+			<div class="elmtoggle__holder cf">
+				<a href="#!" id="elmtoggle" class="cf"><span>MENU</span> <img src="<?php bloginfo('stylesheet_directory'); ?>/img/hamburger.svg" alt="Open Sub Menu" class="elmtoggle__icon"></a>
+			</div>
 		</div>
 
 		<!--

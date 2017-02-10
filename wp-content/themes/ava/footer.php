@@ -34,7 +34,7 @@
 
     <nav id="elmobile">
         <div class="elmtoggle__holder--mobile">
-            <a href="#!" id="elmobiletoggle" class="cf"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/hamburger-close.svg" alt="Open Sub Menu" class="elmtoggle__icon"></a>
+            <a href="#!" id="elmobiletoggle" class="cf"><span>CLOSE</span> <img src="<?php bloginfo('stylesheet_directory'); ?>/img/hamburger-close.svg" alt="Open Sub Menu" class="elmtoggle__icon"></a>
         </div>
     </nav>
 
@@ -44,6 +44,7 @@
 <?php wp_footer(); ?>
 
 <script type="text/javascript">
+
 jQuery(document).ready(function($){
     /*
     elmenu init
@@ -53,7 +54,42 @@ jQuery(document).ready(function($){
     var menuOrder = ['2','0','1'];
     $( '#elmain' ).elmenu( menuOrder );
 });
+
+// Check width during development
+// Throttles the resize event
+jQuery(function($){
+
+  var resizeTimer;
+  function resizeFunction() {
+    var wdw = jQuery(window).width();
+    jQuery("#checkw").html( wdw );
+  };
+  $(window).resize(function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resizeFunction, 250);
+  });
+  resizeFunction();
+
+});
+
 </script>
+
+<style type="text/css">
+/* always show window width */
+#checkw {
+  position: absolute;
+  top: 400px;
+  right: 5px;
+  border: 1px solid red;
+  background: yellow;
+  color: red;
+  padding: 10px 15px;
+  z-index: 99999 !important;
+  font-size: 13px;
+  line-height: 1em;
+}
+</style>
+<div id="checkw"></div>
 
 </body>
 </html>

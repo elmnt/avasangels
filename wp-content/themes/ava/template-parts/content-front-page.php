@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="single-column home__intro">
+	<div class="single-column">
 
 		<!-- Don't show the standard WP 'Home' page title:
 		<header class="entry-header">
@@ -20,17 +20,9 @@
 		-->
 		<!-- .entry-header -->
 
-		<?php /* Start: ACF content */
-		$hpititle = get_field('hpi_title');
-		$hpitext = get_field('hpi_text');
-		?>
-		<h2><?php echo $hpititle; ?></h2>
-		<h4><?php echo $hpitext; ?></h4>
-		<?php /* End: ACF content */ ?>
-
 	</div>
 
-	<div class="entry-content">
+	<div class="entry-content single-column">
 		<?php
 			the_content();
 
