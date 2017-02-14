@@ -1,11 +1,6 @@
 <?php
 /**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
+ * Theme header
  * @package ava
  */
 
@@ -54,7 +49,6 @@ error_reporting(E_ALL);
 						'container_id'    => '',
 						'container_class' => '',
 						'walker'          => new Ava_Nav_Menu(),
-						//'walker'        => new SH_Last_Walker(),
 						'depth'           => 0
 					);
 					wp_nav_menu( $args );

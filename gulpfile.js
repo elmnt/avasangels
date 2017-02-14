@@ -36,7 +36,8 @@ gulp.task('browser-sync', function() {
 gulp.task('concatScripts', function() {
   return gulp.src([
     jsPath + '/elmenu.js',
-    jsPath + '/skip-link-focus-fix.js'
+    jsPath + '/skip-link-focus-fix.js',
+    jsPath + '/picturefill.js'
     //jsPath + '/customizer.js'
   ])
   .pipe(concat('ava.js'))
