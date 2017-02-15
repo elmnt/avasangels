@@ -11,26 +11,49 @@
 
 ?>
 
-	</div><!-- #content -->
+    </div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+    <footer id="colophon" class="site-footer" role="contentinfo">
+
     <div class="container">
     <div class="wrap">
     <div class="grid">
+        <div class="col-4 center">
+            <img src="#" style="width:100%;height:200px;background-color:#ccc;">
+            <a href="#" class="button button--trans">Get Help</a>
+        </div>
+        <div class="col-4 center">
+            <img src="#" style="width:100%;height:200px;background-color:#ccc;">
+            <a href="#" class="button">Get Involved</a>
+        </div>
+        <div class="col-4 center">
+            <img src="#" style="width:100%;height:200px;background-color:#ccc;">
+            <a href="#" class="button">Donate</a>
+        </div>
+    </div>
+    </div>
+    </div>
 
-        <!--
-		<div class="site-info">
-			<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'ava' ) );*/ ?>"><?php /*printf( esc_html__( 'Proudly powered by %s', 'ava' ), 'WordPress' );*/ ?></a>
-			<span class="sep"> | </span>
-			<?php /*printf( esc_html__( 'Theme: %1$s by %2$s.', 'ava' ), 'ava', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' );*/ ?>
-		</div>
-        -->
-        <!-- .site-info -->
+    <div class="container">
+    <div class="wrap">
+    <div class="single-column center">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <!--
+    <div class="site-info">
+    	<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'ava' ) );*/ ?>"><?php /*printf( esc_html__( 'Proudly powered by %s', 'ava' ), 'WordPress' );*/ ?></a>
+    	<span class="sep"> | </span>
+    	<?php /*printf( esc_html__( 'Theme: %1$s by %2$s.', 'ava' ), 'ava', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' );*/ ?>
+    </div>
+    -->
+    <!-- .site-info -->
 
     </div>
     </div>
     </div>
-	</footer><!-- #colophon -->
+
+    </footer><!-- #colophon -->
 
     <nav id="elmobile">
         <div class="elmtoggle__holder--mobile">

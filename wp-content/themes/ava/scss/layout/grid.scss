@@ -6,6 +6,11 @@
   margin: 0 auto;
   width: 100%;
   max-width: $single-col-width;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 /**

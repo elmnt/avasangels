@@ -72,25 +72,42 @@ get_header(); ?>
 <div class="container">
 <div class="wrap">
 <div class="grid">
+	<div class="col-4">
+		<h3>Our Mission</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	<div class="col-4">
+		<h3>Our Inspiration</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	<div class="col-4">
+		<h3>News &amp; Events</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+</div>
+</div>
+</div>
 
+<!--
+<div class="container">
+<div class="wrap">
+<div class="grid">
 	<?php
+	/*
 	while ( have_posts() ) : the_post();
-
 		get_template_part( 'template-parts/content', 'front-page' );
-
-		/* Never on the front-page
-		If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
-		*/
-
+		// Never comments on the front-page, even if we use the loop (post content)
+		// If comments are open or we have at least one comment, load up the comment template.
+		// if ( comments_open() || get_comments_number() ) :
+		// 	comments_template();
+		// endif;
 	endwhile; // End of the loop.
+	*/
 	?>
-
 </div>
 </div>
 </div>
+-->
 
 </main><!-- #main -->
 </div><!-- #primary -->
