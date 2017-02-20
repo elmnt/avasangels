@@ -265,11 +265,12 @@ $container-max-width:  100%;
 $container-pad:        0 2em;
 $container-pad-mobile: 0 1em;
 $wrap-max-width:       1200px;
+$wrap-wide-max-width:  1800px;
 $wrap-min-width:       100px;
 
 // center-align & middle-align box
-$cmbox-default-background: white;
-$cmbox-default-padding:    4rem;
+$cmbox-default-background: transparent;
+$cmbox-default-padding:    0;
 
 // and some increased padding options
 $cmbox-custom-padding-sm: 6rem;

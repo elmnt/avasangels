@@ -1,4 +1,69 @@
 /**
  * Parts
- * Anything in /template-parts or /templates
+ * Anything in /template-parts
  */
+
+
+/**
+ * Sub-page header (used on some pages)
+ * Color block left with title(s) and image right with CTA buttons
+ */
+
+/*
+Set a height, so we cover/center the right column background image,
+no matter the (text-driven) height in the left column
+*/
+$subhead-height: 200px;
+
+.subhead {}
+.subhead__element {}
+.subhead--modifier {}
+
+.subhead {
+    background-color: lightyellow;
+}
+
+.subhead,
+.subhead [class*='col-'] {
+    height: auto;
+    @media only screen and (min-width: 800px){
+        height: $subhead-height;
+    }
+}
+
+.subhead [class*='col-'] {
+    background-color: transparent;
+}
+
+.subhead__title {
+    margin-bottom: 0;
+}
+
+.subhead__img {
+
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .button {
+        display: block;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        @media only screen and (min-width: 800px){
+            display: inline-block;
+        }
+    }
+
+    .button:first-of-type {
+        @media only screen and (min-width: 800px){
+            margin-right: .5rem;
+        }
+    }
+    .button:last-of-type {
+        @media only screen and (min-width: 800px){
+            margin-left: .5rem;
+        }
+    }
+
+}

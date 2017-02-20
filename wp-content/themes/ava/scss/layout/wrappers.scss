@@ -3,47 +3,54 @@
  */
 
 .container {
-  margin: 0 auto;
-  padding: $container-pad-mobile;
-  width: 100%;
-  max-width: $container-max-width;
-  text-align: center;
-  @extend .cf;
+    margin: 0 auto;
+    padding: $container-pad-mobile;
+    width: 100%;
+    max-width: $container-max-width;
+    text-align: center;
+    @extend .cf;
 
-  @media only screen and (min-width: 800px) {
-    padding: $container-pad;
-  }
+    @media only screen and (min-width: 800px) {
+        padding: $container-pad;
+    }
 
 }
 
 .container--full {
-  @extend .container;
-  padding: 0;
+    @extend .container;
+    padding: 0;
 }
 
 .wrap {
-  margin: 0 auto;
-  max-width: $wrap-max-width;
-  min-width: $wrap-min-width;
-  text-align: left;
-  @extend .cf;
+    margin: 0 auto;
+    max-width: $wrap-max-width;
+    min-width: $wrap-min-width;
+    text-align: left;
+    @extend .cf;
+}
+
+// Must go inside a container--full
+.wrap--wide {
+    @extend .wrap;
+    max-width: $wrap-wide-max-width;
 }
 
 // ----------- center-align & middle-align box
 
 // the holder
 .cmbox {
-  width: 100%;
-  display: table;
-  text-align: center;
-  background-color: $cmbox-default-background;
-  padding: $cmbox-default-padding;
+    width: 100%;
+    height: 100%;
+    display: table;
+    text-align: center;
+    background-color: $cmbox-default-background;
+    padding: $cmbox-default-padding;
 }
 
 // the content
 .cmbox__content {
-  margin: 0;
-  padding: 0;
-  display: table-cell;
-  vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
 }
