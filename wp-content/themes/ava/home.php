@@ -14,9 +14,14 @@
 
 get_header(); ?>
 
+<div class="container">
+<div class="wrap">
+<div class="grid">
+
+	<div class="col-8">
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<!-- index.php -->
 
 		<?php
 		if ( have_posts() ) :
@@ -52,6 +57,15 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+	</div><!-- /.col-8 -->
+
+	<div class="col-4">
+	<?php get_sidebar(); ?>
+	</div><!-- /.col-4 -->
+
+</div>
+</div>
+</div>
+
 <?php
-get_sidebar();
 get_footer();

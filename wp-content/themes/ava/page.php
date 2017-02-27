@@ -17,11 +17,17 @@ get_header(); ?>
 			on the right, with the CTA buttons.
 			*/
 			while ( have_posts() ) : the_post();
+
+			/*
 			if ( is_page( array( 'about-us', 'our-inspiration', 'our-acts-of-kindness', 'our-directors', 'blog', 'events' ))) {
 				get_template_part( 'template-parts/content', 'sub-header' );
 			} else {
 				get_template_part( 'template-parts/content', 'page' );
 			}
+			*/
+
+			get_template_part( 'template-parts/content', 'page' );
+
 			endwhile; // End of the loop.
 			?>
 

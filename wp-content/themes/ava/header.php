@@ -27,7 +27,7 @@ error_reporting(E_ALL);
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ava' ); ?></a>
 
-	<header id="elmain" class="site-header" role="banner">
+	<header class="site-header" role="banner" id="elmain">
 
 		<div class="container">
 		<div class="wrap">
