@@ -42,7 +42,8 @@ function hasChildren( $pid ) {
 class Ava_Nav_Menu extends Walker_Nav_Menu {
 
 	// add classes to ul sub-menus
-	function start_lvl( &$output, $depth ) {
+	// function start_lvl( &$output, $depth ) {
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
 
 	    // depth dependent classes
 	    $indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
@@ -58,7 +59,8 @@ class Ava_Nav_Menu extends Walker_Nav_Menu {
 	}
 
 	// add main/sub classes to li's and links
-	function start_el( &$output, $item, $depth, $args ) {
+	// function start_el( &$output, $item, $depth, $args ) {
+	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 
 	    global $wp_query;
 	    $indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent

@@ -1,62 +1,57 @@
 <?php
 /**
  * The template for displaying the footer
- *
  * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
  * @package ava
  */
-
 ?>
 
     </div><!-- #content -->
 
     <footer id="colophon" class="site-footer" role="contentinfo">
 
-<div class="container">
-    <div class="wrap">
-        <div class="grid">
-            <div class="col-4 center">
-                <img src="#" style="width:100%;height:200px;background-color:#ccc;">
-                <a href="#" class="button button--trans">Get Help</a>
-            </div>
-            <div class="col-4 center">
-                <img src="#" style="width:100%;height:200px;background-color:#ccc;">
-                <a href="#" class="button">Get Involved</a>
-            </div>
-            <div class="col-4 center">
-                <img src="#" style="width:100%;height:200px;background-color:#ccc;">
-                <a href="#" class="button">Donate</a>
-            </div>
-        </div>
-    </div>
-</div>
+      <div class="container">
+          <div class="wrap">
+              <div class="grid">
+                  <div class="col-4 center">
+                      <img src="#" style="width:100%;height:200px;background-color:#ccc;">
+                      <a href="#" class="button button--trans">Get Help</a>
+                  </div>
+                  <div class="col-4 center">
+                      <img src="#" style="width:100%;height:200px;background-color:#ccc;">
+                      <a href="#" class="button">Get Involved</a>
+                  </div>
+                  <div class="col-4 center">
+                      <img src="#" style="width:100%;height:200px;background-color:#ccc;">
+                      <a href="#" class="button">Donate</a>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-<div class="container">
-    <div class="wrap">
-        <div class="single-column center">
-            <h4>&ldquo; No act of kindness, no matter how small, is ever wasted. &rdquo;<br>&mdash;Aesop</h4>
-        </div>
-    </div>
-</div>
+      <div class="container">
+          <div class="wrap">
+              <div class="single-column center">
+                  <h4>&ldquo; No act of kindness, no matter how small, is ever wasted. &rdquo;<br>&mdash;Aesop</h4>
+              </div>
+          </div>
+      </div>
 
-<div class="container">
-    <div class="wrap">
-        <div class="single-column center">
-            <p><a href="#">Contact Us</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#">Privacy Policy</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#">Facebook</a></p>
-            <!--
-            <div class="site-info">
-            	<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'ava' ) );*/ ?>"><?php /*printf( esc_html__( 'Proudly powered by %s', 'ava' ), 'WordPress' );*/ ?></a>
-            	<span class="sep"> | </span>
-            	<?php /*printf( esc_html__( 'Theme: %1$s by %2$s.', 'ava' ), 'ava', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' );*/ ?>
-            </div>
-            -->
-            <!-- .site-info -->
-        </div>
-    </div>
-</div>
+      <div class="container">
+          <div class="wrap">
+              <div class="single-column center">
+                  <p><a href="#">Contact Us</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#">Privacy Policy</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#">Facebook</a></p>
+                  <!--
+                  <div class="site-info">
+                  	<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'ava' ) );*/ ?>"><?php /*printf( esc_html__( 'Proudly powered by %s', 'ava' ), 'WordPress' );*/ ?></a>
+                  	<span class="sep"> | </span>
+                  	<?php /*printf( esc_html__( 'Theme: %1$s by %2$s.', 'ava' ), 'ava', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' );*/ ?>
+                  </div>
+                  -->
+                  <!-- .site-info -->
+              </div>
+          </div>
+      </div>
 
     </footer><!-- #colophon -->
 
@@ -94,7 +89,7 @@ jQuery(function($){
   };
   $(window).resize(function() {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(resizeFunction, 250);
+    resizeTimer = setTimeout(resizeFunction, 500);
   });
   resizeFunction();
 

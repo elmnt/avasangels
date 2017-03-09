@@ -14,22 +14,28 @@ get_header(); ?>
 <div class="wrap--home">
 <div class="grid--home">
 
-	<?php /* Start: ACF content */
-	$hpmphoto_xl = get_field('hpm_photoxl');
-	$hpmphoto_desktop = get_field('hpm_photodt');
-	$hpmphoto_tablet = get_field('hpm_photot');
-	$hpmphoto_mobile = get_field('hpm_photom');
-	$hpmtagline = get_field('hpm_tagline');
-	if( $hpmphoto_desktop ) {
-		echo '<picture class="fit">
-		      	<source srcset="'.$hpmphoto_xl.'" media="(min-width: 1200px)">
-		      	<source srcset="'.$hpmphoto_desktop.'" media="(min-width: 768px)">
-		      	<source srcset="'.$hpmphoto_tablet.'" media="(min-width: 420px)">
-		      	<source srcset="'.$hpmphoto_mobile.'" media="(min-width: 100px)">
-		      	<img srcset="'.$hpmphoto_mobile.'" alt="alt">
-		      </picture>';
-	} else {
-		echo '<p>Backup for ACF failure</p>';
+	<?php
+	/*
+	Start: ACF content
+	Add a safety conditional in case ACF is disabled
+	*/
+	if ( function_exists( 'get_field' ) ) {
+		$hpmphoto_xl = get_field('hpm_photoxl');
+		$hpmphoto_desktop = get_field('hpm_photodt');
+		$hpmphoto_tablet = get_field('hpm_photot');
+		$hpmphoto_mobile = get_field('hpm_photom');
+		$hpmtagline = get_field('hpm_tagline');
+		if( $hpmphoto_desktop ) {
+			echo '<picture class="fit">
+			      	<source srcset="'.$hpmphoto_xl.'" media="(min-width: 1200px)">
+			      	<source srcset="'.$hpmphoto_desktop.'" media="(min-width: 768px)">
+			      	<source srcset="'.$hpmphoto_tablet.'" media="(min-width: 420px)">
+			      	<source srcset="'.$hpmphoto_mobile.'" media="(min-width: 100px)">
+			      	<img srcset="'.$hpmphoto_mobile.'" alt="alt">
+			      </picture>';
+		} else {
+			echo '<p>Backup for ACF failure</p>';
+		}
 	}
 	?>
 	<!--
@@ -58,13 +64,18 @@ get_header(); ?>
 	-->
 	<!-- .entry-header -->
 
-	<?php /* Start: ACF content */
-	$hpititle = get_field('hpi_title');
-	$hpitext = get_field('hpi_text');
+	<?php
+	/*
+	Start: ACF content
+	Add a safety conditional in case ACF is disabled
+	*/
+	if ( function_exists( 'get_field' ) ) {
+		$hpititle = get_field('hpi_title');
+		$hpitext = get_field('hpi_text');
+		echo '<h4>'.$hpitext.'</h4>';
+		echo '<h2>'.$hpititle.'</h2>';
+	}
 	?>
-	<h4><?php echo $hpitext; ?></h4>
-	<h2><?php echo $hpititle; ?></h2>
-	<?php /* End: ACF content */ ?>
 
 </div>
 </div>

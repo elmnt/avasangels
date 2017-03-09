@@ -3,7 +3,6 @@
  * Theme header
  * @package ava
  */
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
