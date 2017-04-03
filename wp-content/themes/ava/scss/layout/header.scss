@@ -29,81 +29,75 @@
 
     // tablet + up
     @media only screen and (min-width: 768px){
-        border-bottom: 20px solid white;
+      border-bottom: 20px solid white;
     }
 
 }
 
+// A little wider than the normal wrapper
+.wrap--header {
+   @extend .wrap;
+   max-width: $wrap-wide-max-width;
+}
+
 /*
 All elmenu styles are in: /vendor/elmenu.scss
-
 */
 
 .header__logo {
 
-    // mobile first
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: center;
+   // mobile first
+   width: 100%;
+   // border: 1px solid orange;
 
-    // tablet
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {}
+   // tablet
+   @media only screen and (min-width: 768px) and (max-width: 1024px) {}
 
-    // desktop
-    @media only screen and (min-width: 1100px){
-        float: left;
-        display: inline-block;
-        width: auto;
-    }
+   // desktop
+   @media only screen and (min-width: 1025px){}
 
 }
 
 .logo--header {
 
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+   // mobile first
+   max-width: 100%;
+   height: auto;
 
-    // bigger
-    @media only screen and (min-width: 500px) {
-        max-width: 400px;
-    }
+   // bigger
+   @media only screen and (min-width: 768px) and (max-width: 1024px) {}
 
-    // desktop
-    @media only screen and (min-width: 1100px){
-        margin-left: 0;
-        margin-right: 0;
-    }
+   // desktop
+   @media only screen and (min-width: 1025px){}
 
 }
 
 .header__nav {
 
     // mobile first
-    float: none;
-    display: block;
+    // float: none;
+    // display: block;
     width: 100%;
+    // border: 1px solid orange;
 
     // tablet
     @media only screen and (min-width: 768px) and (max-width: 1100px) {
         text-align: center;
     }
+
     // desktop
     @media only screen and (min-width: 1100px){
         width: auto;
         float: right;
         display: inline-block;
         text-align: right;
-        margin-top: 1.35rem;
-        //border: 2px solid red;
+        margin-top: 1rem;
     }
 
 }
 
 // This element is not currently in use
+/*
 .navholder--utility {
    display: none;
    @media only screen and (min-width: $elmenu-mobile-breakpoint){
@@ -120,6 +114,7 @@ All elmenu styles are in: /vendor/elmenu.scss
    }
 
 }
+*/
 
 .navholder--main {
 
@@ -129,6 +124,7 @@ All elmenu styles are in: /vendor/elmenu.scss
         display: block;
         background-color: white;
     }
+
     // desktop
     @media only screen and (min-width: 1100px){
         display: inline-block;
@@ -146,7 +142,7 @@ All elmenu styles are in: /vendor/elmenu.scss
 }
 
 .elmtoggle__holder {
-   background-color: $ava-brand-color-dark;
+   background-color: $aa-color-3;
    text-align: center;
 
     span,
@@ -168,7 +164,7 @@ All elmenu styles are in: /vendor/elmenu.scss
 }
 
 .elmtoggle__holder--mobile {
-   background-color: $ava-brand-color-dark;
+   background-color: $aa-color-3;
    border-bottom: 1px solid white;
 
     span,

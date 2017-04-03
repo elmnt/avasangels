@@ -93,6 +93,8 @@ body.show-nav #elmobile {
 /**
  * Font sizes for both desktop & mobile menus
  */
+
+/*
 .nav--utility .elm__item {
    font-size: $elmenu-utility-font-size;
    line-height: $elmenu-utility-line-height;
@@ -116,6 +118,7 @@ body.show-nav #elmobile {
    line-height: $elmenu-mobile-social-line-height;
    font-weight: $elmenu-mobile-social-font-weight;
 }
+*/
 
 .nav--main .elm__item,
 .nav--main .elm__item--sub,
@@ -128,9 +131,9 @@ body.show-nav #elmobile {
 .nav--main .m-elm__item,
 .nav--main .m-elm__item--sub,
 .nav--main .m-elm__item--subsub {
-   font-size: $elmenu-mobile-main-font-size;
-   line-height: $elmenu-mobile-main-line-height;
-   font-weight: $elmenu-mobile-main-font-weight;
+   font-size: $elmenu-mobile-font-size;
+   line-height: $elmenu-mobile-line-height;
+   font-weight: $elmenu-mobile-font-weight;
 }
 
 
@@ -178,6 +181,8 @@ all the individual elmenu styles.
 Colors unique to each individual nav element (the ULs)
 Applied for both desktop and mobile
 */
+
+/*
 .nav--utility {
 
    .elm__link {
@@ -211,6 +216,7 @@ Applied for both desktop and mobile
    }
 
 }
+*/
 
 .nav--main {
 
@@ -230,16 +236,16 @@ Applied for both desktop and mobile
 
    // Level 2
    .elm__link--sub {
-      color: $elmenu-navmain-link-color;
+      color: $elmenu-navmain-sub-color;
       background-color: $elmenu-navmain-sub-background;
       &:visited {
-         color: $elmenu-navmain-link-color;
+         color: $elmenu-navmain-sub-color;
          background-color: $elmenu-navmain-sub-background;
       }
       &:hover,
       &:active,
       &:focus {
-         color: $elmenu-navmain-link-color;
+         color: $elmenu-navmain-sub-color;
          background-color: $elmenu-navmain-sub-hover-background;
       }
    }
@@ -247,16 +253,16 @@ Applied for both desktop and mobile
    // Level 3
    .elm__link--subsub {
       min-width: 200px; // To make up for really short links
-      color: $elmenu-navmain-link-color;
+      color: $elmenu-navmain-sub-color;
       background-color: $elmenu-navmain-subsub-background;
       &:visited {
-         color: $elmenu-navmain-link-color;
+         color: $elmenu-navmain-sub-color;
          background-color: $elmenu-navmain-subsub-background;
       }
       &:hover,
       &:active,
       &:focus {
-         color: $elmenu-navmain-link-color;
+         color: $elmenu-navmain-sub-color;
          background-color: $elmenu-navmain-subsub-hover-background;
       }
    }
@@ -335,14 +341,14 @@ all the individual elmenu styles.
 
    // Make the last link look like a button
    &:last-of-type .elm__link {
-      @extend .button--small;
+      @extend .button;
       margin-left: 1.5rem;
    }
 
 }
 .elm__link {
    display: block;
-   padding: $elmenu-navutility-link-padding;
+   padding: $elmenu-navmain-link-padding;
    text-decoration: none;
 }
 
@@ -386,7 +392,7 @@ all the individual elmenu styles.
 }
 .elm__link--sub {
    display: block;
-   padding: $elmenu-navutility-link-padding;
+   padding: $elmenu-navmain-link-padding;
    white-space: nowrap;
 }
 
@@ -430,7 +436,7 @@ all the individual elmenu styles.
 }
 .elm__link--subsub {
    display: block;
-   padding: $elmenu-navutility-link-padding;
+   padding: $elmenu-navmain-link-padding;
    white-space: nowrap;
 }
 
@@ -617,26 +623,26 @@ This creates the appearance of a unique BG color on the span (the sub-nav toggle
 
 // BG on the level 1 li (carries into the span)
 .m-elm__item.hassub {
-   background-color: $elmenu-highlight-color;
+   background-color: orange;
 }
 // Then 'reset' the link's BG color. The span still has the BG color of the li
 .m-elm__item.hassub a {
-   background-color: $elmenu-color-1;
+   background-color: pink;
 }
 
 // BG on the level 1 li (carries into the span)
 .m-elm__item--sub.hassubsub {
-   background-color: $elmenu-highlight-color;
+   background-color: orange;
 }
 // Then 'reset' the link's BG color. The span still has the BG color of the li
 .m-elm__item--sub.hassubsub a,
 .m-elm__link--sub {
-   background-color: lighten($elmenu-color-1, 10%);
+   background-color: lighten(pink, 10%);
 }
 
 .m-elm__item--subsub,
 .m-elm__link--subsub {
-   background-color: lighten($elmenu-color-1, 20%);
+   background-color: lighten(pink, 20%);
 }
 
 .hassub .m-elm__link,

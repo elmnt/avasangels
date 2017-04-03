@@ -78,6 +78,7 @@ jQuery(document).ready(function($){
     $( '#elmain' ).elmenu( menuOrder );
 });
 
+/*
 // Check width during development
 // Throttles the resize event
 jQuery(function($){
@@ -94,11 +95,12 @@ jQuery(function($){
   resizeFunction();
 
 });
+*/
 
 </script>
 
 <style type="text/css">
-/* always show window width */
+/* always show window width
 #checkw {
   position: absolute;
   top: 400px;
@@ -111,8 +113,9 @@ jQuery(function($){
   font-size: 13px;
   line-height: 1em;
 }
+*/
 </style>
-<div id="checkw"></div>
+<!-- <div id="checkw"></div> -->
 
 </body>
 </html>

@@ -10,49 +10,55 @@ get_header(); ?>
 <div id="primary" class="content-area">
 <main id="main" class="site-main" role="main">
 
-<div class="container--full">
-<div class="wrap--home">
-<div class="grid--home">
+<div class="container--full container--masthead">
+	<div class="masthead">
 
-	<?php
-	/*
-	Start: ACF content
-	Add a safety conditional in case ACF is disabled
-	*/
-	if ( function_exists( 'get_field' ) ) {
-		$hpmphoto_xl = get_field('hpm_photoxl');
-		$hpmphoto_desktop = get_field('hpm_photodt');
-		$hpmphoto_tablet = get_field('hpm_photot');
-		$hpmphoto_mobile = get_field('hpm_photom');
-		$hpmtagline = get_field('hpm_tagline');
-		if( $hpmphoto_desktop ) {
-			echo '<picture class="fit">
-			      	<source srcset="'.$hpmphoto_xl.'" media="(min-width: 1200px)">
-			      	<source srcset="'.$hpmphoto_desktop.'" media="(min-width: 768px)">
-			      	<source srcset="'.$hpmphoto_tablet.'" media="(min-width: 420px)">
-			      	<source srcset="'.$hpmphoto_mobile.'" media="(min-width: 100px)">
-			      	<img srcset="'.$hpmphoto_mobile.'" alt="alt">
-			      </picture>';
-		} else {
-			echo '<p>Backup for ACF failure</p>';
+		<?php // ACF content
+		if ( function_exists( 'get_field' ) ) {
+			$hpmphoto_xl = get_field('hpm_photoxl');
+			$hpmphoto_desktop = get_field('hpm_photodt');
+			$hpmphoto_tablet = get_field('hpm_photot');
+			$hpmphoto_mobile = get_field('hpm_photom');
+			$hpmtagline = get_field('hpm_tagline');
+			if( $hpmphoto_desktop ) {
+				echo '<picture class="fit">
+				      	<source srcset="'.$hpmphoto_xl.'" media="(min-width: 1200px)">
+				      	<source srcset="'.$hpmphoto_desktop.'" media="(min-width: 768px)">
+				      	<source srcset="'.$hpmphoto_tablet.'" media="(min-width: 420px)">
+				      	<source srcset="'.$hpmphoto_mobile.'" media="(min-width: 100px)">
+				      	<img srcset="'.$hpmphoto_mobile.'" alt="alt">
+				      </picture>';
+			} else {
+				echo $GLOBALS[ 'noacf' ]; // Set in header.php
+			}
 		}
-	}
-	?>
-	<!--
-	No Picturefill
-	<img src="<?php /*echo $hpmphoto_xl;*/ ?>" alt="Ava's Angels" class="fit">
-	-->
-	<div class="home__caption-holder">
-		<div class="home__caption">
-			<h1><?php echo $hpmtagline; ?></h1>
-			<a href="#" class="button button--trans">Get Help</a><a href="#" class="button">Get Involved</a>
-			<?php /* End: ACF content */ ?>
-		</div>
-	</div>
+		?>
 
-</div>
-</div>
-</div>
+		<div class="masthead__caption-holder">
+			<div class="masthead__caption">
+				<h1><?php echo $hpmtagline; ?></h1>
+				<a href="#" class="button">Get Support</a> <a href="#" class="button">Get Involved</a>
+				<?php /* End: ACF content */ ?>
+			</div>
+		</div>
+
+		<div class="masthead__flowers"></div>
+
+		<div class="masthead__tagline">
+		<?php // ACF content
+			if ( function_exists( 'get_field' ) ) {
+				$hpititle = get_field('hpi_title');
+				$hpitext = get_field('hpi_text');
+				echo '<h3>'.$hpitext.'</h3>';
+				echo '<h6><em>'.$hpititle.'</em></h6>';
+			} else {
+				echo $GLOBALS[ 'noacf' ]; // Set in header.php
+			}
+			?>
+		</div>
+
+	</div><!-- /.masthead -->
+</div><!-- /.container--masthead -->
 
 <div class="container--homeintro">
 <div class="single-column home__intro">
@@ -63,19 +69,6 @@ get_header(); ?>
 	</header>
 	-->
 	<!-- .entry-header -->
-
-	<?php
-	/*
-	Start: ACF content
-	Add a safety conditional in case ACF is disabled
-	*/
-	if ( function_exists( 'get_field' ) ) {
-		$hpititle = get_field('hpi_title');
-		$hpitext = get_field('hpi_text');
-		echo '<h4>'.$hpitext.'</h4>';
-		echo '<h2>'.$hpititle.'</h2>';
-	}
-	?>
 
 </div>
 </div>

@@ -3,6 +3,15 @@
  * Theme header
  * @package ava
  */
+
+/*
+Displays a subtle message on the front-end, anywhere there is ACF content,
+if the ACF plugin has been turned off. Normally we'd avoid showing any
+kind of error message on the front-end, but if ACF has been turned off,
+for any reason, we're loosing most of our content.
+*/
+$GLOBALS[ 'noacf' ] = '<p class="noacf">Please activate the <em>Advanced Custom Fields</em> plugin</p>';
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -29,30 +38,34 @@ error_reporting(E_ALL);
 	<header class="site-header" role="banner" id="elmain">
 
 		<div class="container">
-		<div class="wrap">
+		<div class="wrap--header">
 		<div class="grid cf">
 
-			<div class="header__logo">
-				<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/avasangels-logo.svg" onerror="this.src='<?php bloginfo('stylesheet_directory'); ?>/img/avasangels-logo.png'; this.onerror=null;" class="logo--header"></a>
+			<div class="col-4">
+				<div class="header__logo">
+					<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/avasangels-logo.svg" onerror="this.src='<?php bloginfo('stylesheet_directory'); ?>/img/avasangels-logo.png'; this.onerror=null;" class="logo--header"></a>
+				</div>
 			</div>
 
-			<div class="header__nav">
-				<div class="navholder--main cf">
-					<nav role="navigation">
-					<?php
-					$args = array(
-						'theme_location'  => 'menu-1',
-						'menu_id'         => 'primary-menu',
-						'menu_class'      => 'nav--main elm__list',
-						'container'       => '',
-						'container_id'    => '',
-						'container_class' => '',
-						'walker'          => new Ava_Nav_Menu(),
-						'depth'           => 0
-					);
-					wp_nav_menu( $args );
-					?>
-					</nav>
+			<div class="col-8">
+				<div class="header__nav">
+					<div class="navholder--main cf">
+						<nav role="navigation">
+						<?php
+						$args = array(
+							'theme_location'  => 'menu-1',
+							'menu_id'         => 'primary-menu',
+							'menu_class'      => 'nav--main elm__list',
+							'container'       => '',
+							'container_id'    => '',
+							'container_class' => '',
+							'walker'          => new Ava_Nav_Menu(),
+							'depth'           => 0
+						);
+						wp_nav_menu( $args );
+						?>
+						</nav>
+					</div>
 				</div>
 			</div>
 

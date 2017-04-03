@@ -26,7 +26,8 @@ to avoid any conflict.
   margin: $button-margin;
   -webkit-font-smoothing: antialiased;
   border: $button-border;
-  @include border-radius($base-border-radius);
+  //@include border-radius($base-border-radius);
+  @include border-radius(500px);
   vertical-align: middle !important;
 
   &:visited {

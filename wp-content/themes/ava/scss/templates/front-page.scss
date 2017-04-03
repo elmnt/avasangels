@@ -2,8 +2,143 @@
  * Front Page (front-page.php)
  */
 
+.container--masthead {
+
+   //background: #BFCF31;
+   // /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+50,BFCF31+50,BFCF31+100 */
+   // background: #ffffff; /* Old browsers */
+   // background: -moz-linear-gradient(top, #ffffff 40%, #BFCF31 40%, #BFCF31 100%); /* FF3.6-15 */
+   // background: -webkit-linear-gradient(top, #ffffff 40%,#BFCF31 40%,#BFCF31 100%); /* Chrome10-25,Safari5.1-6 */
+   // background: linear-gradient(to bottom, #ffffff 40%,#BFCF31 40%,#BFCF31 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#BFCF31',GradientType=0 ); /* IE6-9 */
+
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+22,fcd700+57,bfcf31+85 */
+   // background: rgb(255,255,255); /* Old browsers */
+   // background: -moz-linear-gradient(top, rgba(255,255,255,1) 22%, rgba(252,215,0,1) 57%, rgba(191,207,49,1) 85%); /* FF3.6-15 */
+   // background: -webkit-linear-gradient(top, rgba(255,255,255,1) 22%,rgba(252,215,0,1) 57%,rgba(191,207,49,1) 85%); /* Chrome10-25,Safari5.1-6 */
+   // background: linear-gradient(to bottom, rgba(255,255,255,1) 22%,rgba(252,215,0,1) 57%,rgba(191,207,49,1) 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bfcf31',GradientType=0 ); /* IE6-9 */
+
+   /* Rectangle 2: */
+   // background-image: linear-gradient(-180deg, #FCD700 0%, #BFCF31 100%);
+
+   /* Rectangle 2: */
+   background-image: linear-gradient(-180deg, #FFFFFF 29%, #F0D60A 64%, #BFCF31 100%);
+
+   margin-bottom: 3rem;
+
+}
+
+.masthead {
+
+    position: relative;
+    @extend .z2;
+
+    img {
+        @extend .z2;
+        //@extend .fit;
+        max-width: $wrap-wide-max-width;
+        margin-right: auto;
+        margin-left: auto;
+        border: 10px solid rgba(252, 215, 0, 0.25);
+        //border: 10px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .masthead__caption-holder {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @extend .z4;
+    }
+
+    .masthead__caption {
+        position: absolute;
+        right: 0;
+        top: 28%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        @extend .z4;
+        //outline: 1px solid red;
+
+        h1 {
+            color: white;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 800px;
+            text-shadow: -3px 3px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        a:first-of-type {
+            margin-right: 1rem;
+        }
+
+    }
+
+    .masthead__flowers {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @extend .z3;
+        background: transparent url('img/frontpage-flowers.svg') bottom center no-repeat;
+        background-size: 100%;
+        opacity: .25;
+        /*
+        The background size adjustments are to help keep the semi-transparent flowers
+        at a reasonable size, relative to the image, as the viewport changes.
+        */
+        @media only screen and (min-width: 800px) and (max-width: 999px) {
+            background-size: 95%;
+        }
+        @media only screen and (min-width: 1000px) and (max-width: 1199px) {
+            background-size: 90%;
+        }
+        @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+            background-size: 85%;
+        }
+        @media only screen and (min-width: 1400px) {
+            background-size: 80%;
+        }
+    }
+
+    .masthead__tagline {
+        text-align: center;
+        background-color: transparent;
+        position: relative;
+        @extend .z4;
+        h3,
+        h6 {
+            margin-left: auto;
+            margin-bottom: 0;
+            margin-right: auto;
+            width: 100%;
+            max-width: 1200px;
+            color: white;
+            position: relative;
+            @extend .z4;
+        }
+        h3 {
+            padding-top: 3rem;
+            padding-bottom: 1rem;
+        }
+        h6 {
+            padding-bottom: 3rem;
+            font-weight: $fw-normal;
+        }
+    }
+}
+
 // ----------- masthead image
 
+/*
 .wrap--home {
     @extend .wrap;
     max-width: $wrap-home-masthead-max-width;
@@ -21,7 +156,6 @@
 
 .home__caption-holder {
     position: absolute;
-    //background-color: rgba(81, 16, 51, .75);
     top: 0;
     right: 0;
     bottom: 0;
@@ -53,7 +187,7 @@
     max-width: $wrap-home-masthead-max-width;
     margin-top: 0;
     margin-bottom: 0;
-    background-color: $ava-brand-color;
+    background-color: pink;
 }
 
 .home__intro {
@@ -61,7 +195,7 @@
     text-align: center;
 
     h4 {
-        color: $ava-brand-color-light;
+        color: white;
     }
     h2 {
         color: white;
@@ -72,3 +206,6 @@
     }
 
 }
+*/
+
+
