@@ -29,14 +29,16 @@
 }
 
 // Mobile-first single column grid
-[class*='col-'] {
+// Added unique class for the header
+[class*='col-'],
+[class*='headercol-'] {
   float: none;
   width: 100%;
   margin-right: 0;
 }
 
 // Until we're above this breakpoint
-@include breakpoint(bp-main-sidebar) {
+@media only screen and (min-width: $bp-grid-cols) {
 
   // Generate all the column widths
   @for $column from 1 through $grid-columns {
@@ -47,6 +49,30 @@
 
   // Add multi-column settings
   [class*='col-'] {
+    float: left;
+    margin-right: $grid-gutter * 1%;
+    .grid &:last-of-type {
+      margin-right: 0;
+    }
+    border-collapse: collapse !important;
+  }
+
+}
+
+// ----------- And for the header
+
+// Until we're above this breakpoint
+@media only screen and (min-width: $bp-header) {
+
+  // Generate all the column widths
+  @for $column from 1 through $grid-columns {
+    .headercol-#{$column} {
+      width: (($grid-col-width * $column) + (($column - 1) * $grid-gutter) * 1%)
+    }
+  }
+
+  // Add multi-column settings
+  [class*='headercol-'] {
     float: left;
     margin-right: $grid-gutter * 1%;
     .grid &:last-of-type {

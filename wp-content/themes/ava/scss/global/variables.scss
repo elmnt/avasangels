@@ -41,6 +41,9 @@ $base-border-style: solid;
 
 // ----------- global/mixins
 
+// some generic breakpoints
+// use custom breaks when preferable
+
 $bp-mobile-landscape: 480px;
 $bp-tablet-portrait:  768px;
 $bp-tablet-landscape: 1024px;
@@ -49,6 +52,12 @@ $bp-desktop:          1440px;
 
 // unique break for the main/sidebar layout
 $bp-main-sidebar: 900px;
+
+// unique break for the grid modules
+$bp-grid-cols: 900px;
+
+// unique break for the header (logo/nav)
+$bp-header: 1100px;
 
 /**
  * Base
@@ -72,7 +81,6 @@ $mono:  'Consolas', Consolas, monaco, monospace;
 $fw-normal:   400;
 $fw-semibold: 600;
 
-
 /*
 
 Based on a 16px default, we set those font sizes,
@@ -87,6 +95,13 @@ without forcing pixel values on the html tag:
 $base-font-size:    100%;
 $base-font-size-md: 112.5%;
 $base-font-size-lg: 125%;
+
+// ----------- Breakpoints to change base font size
+
+// mobile first, up to the md size, will be $base-font-size
+
+$page-font-size-md: 1441px;
+$page-font-size-lg: 1800px;
 
 $page-background: white;
 
@@ -130,12 +145,24 @@ $h4: 1.75rem;
 $h5: 1.375rem;
 $h6: 1.25rem;
 
+$h1-mobile: 2.875rem;
+$h2-mobile: 2.5rem;
+$h3-mobile: 2.125rem;
+$h4-mobile: 1.75rem;
+$h5-mobile: 1.375rem;
+$h6-mobile: 1.25rem;
+
+/* Rethink these settings
 $h1-mobile: 2rem;
 $h2-mobile: 1.75rem;
 $h3-mobile: 1.5rem;
 $h4-mobile: 1.25rem;
 $h5-mobile: 1.125rem;
 $h6-mobile: 1rem;
+*/
+
+// change the header sizes at this breakpoint
+$bp-header-font-size: 900px;
 
 $blockquote-margin:            2rem 0;
 $blockquote-padding:           0;
@@ -281,11 +308,12 @@ The (optional) wrap sets a max content width
 */
 
 $container-max-width:  100%;
+$container-min-width:  300px;
 $container-pad:        0 2em;
 $container-pad-mobile: 0 1em;
 $wrap-max-width:       1200px;
 $wrap-wide-max-width:  1800px;
-$wrap-min-width:       100px;
+$wrap-min-width:       300px;
 
 // center-align & middle-align box
 $cmbox-default-background: transparent;

@@ -7,7 +7,7 @@
 @mixin bbox {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	box-sizing: border-box; 
+	box-sizing: border-box;
 }
 
 // ----------- content box
@@ -15,7 +15,7 @@
 @mixin cbox {
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
-	box-sizing: content-box; 
+	box-sizing: content-box;
 }
 
 // ----------- remove native browser styles
@@ -128,7 +128,7 @@
 }
 
 /**
- * Create a breakpoint for below a given size 
+ * Create a breakpoint for below a given size
  * Example usage:
  * @include below(200px) { // css }
  */
@@ -138,7 +138,7 @@
 }
 
 /**
- * Create a breakpoint for above a given size 
+ * Create a breakpoint for above a given size
  * Example usage:
  * @include above(200px) { // css }
  */

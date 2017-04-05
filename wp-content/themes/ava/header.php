@@ -41,13 +41,13 @@ error_reporting(E_ALL);
 		<div class="wrap--header">
 		<div class="grid cf">
 
-			<div class="col-4">
+			<div class="headercol-4">
 				<div class="header__logo">
 					<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/avasangels-logo.svg" onerror="this.src='<?php bloginfo('stylesheet_directory'); ?>/img/avasangels-logo.png'; this.onerror=null;" class="logo--header"></a>
 				</div>
 			</div>
 
-			<div class="col-8">
+			<div class="headercol-8">
 				<div class="header__nav">
 					<div class="navholder--main cf">
 						<nav role="navigation">

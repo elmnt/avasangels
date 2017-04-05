@@ -58,23 +58,75 @@
     .masthead__caption {
         position: absolute;
         right: 0;
-        top: 28%;
+        top: 5%;
         left: 0;
         width: 100%;
         text-align: center;
         @extend .z4;
-        //outline: 1px solid red;
+
+        @media only screen and (min-width: 500px) and (max-width: 600px) {
+            top: 8%;
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 870px) {
+            top: 10%;
+        }
+
+        @media only screen and (min-width: 870px) and (max-width: 1000px) {
+            top: 20%;
+        }
+
+        @media only screen and (min-width: 1001px) {
+            top: 28%;
+        }
 
         h1 {
             color: white;
             margin-right: auto;
             margin-left: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
             max-width: 800px;
             text-shadow: -3px 3px 4px rgba(0, 0, 0, 0.5);
+            font-size: $h5;
+
+            @media only screen and (min-width: 600px) and (max-width: 870px) {
+                font-size: $h2;
+            }
+
+            @media only screen and (min-width: 870px) {
+                font-size: $h1;
+            }
+
         }
 
-        a:first-of-type {
-            margin-right: 1rem;
+        a {
+            display: block;
+            max-width: 60%;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 1rem 1rem .85rem 1rem;
+            font-size: .75rem;
+
+            @media only screen and (min-width: 600px) {
+                max-width: 40%;
+                font-size: .85rem;
+                padding: 1.25rem 1rem 1rem 1rem;
+            }
+
+            @media only screen and (min-width: 768px) {
+                display: inline-block;
+                margin-right: 1rem;
+                padding: $button-padding;
+                max-width: auto;
+            }
+
+            &:last-of-type {
+                @media only screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+
         }
 
     }

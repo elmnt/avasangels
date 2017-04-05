@@ -6,11 +6,11 @@ html {
   -webkit-font-smoothing: subpixel-antialiased !important;
   font-size: $base-font-size;
 
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: $page-font-size-md) {
     font-size: $base-font-size-md;
   }
 
-  @media only screen and (min-width: 1600px) {
+  @media only screen and (min-width: $page-font-size-lg) {
     font-size: $base-font-size-lg;
   }
 
