@@ -87,6 +87,7 @@ My partials will vary slightly, based on project requirements.
 /**
  * ----------- Templates
  */
+@import "templates/global";
 @import "templates/front-page";
 @import "templates/single";
 @import "templates/archive";
@@ -113,7 +114,7 @@ My partials will vary slightly, based on project requirements.
  * ----------- Vendor
  */
 @import "vendor/elmenu";
-//@import "vendor/formhack";
+@import "vendor/formhack";
 //@import "vendor/font-awesome";
 //@import "vendor/accordions";
 

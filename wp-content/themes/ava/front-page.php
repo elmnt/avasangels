@@ -13,6 +13,8 @@ get_header(); ?>
 <div class="container--full container--masthead">
 	<div class="masthead">
 
+		<div class="masthead__top">
+
 		<?php // ACF content
 		if ( function_exists( 'get_field' ) ) {
 			$hpmphoto_xl = get_field('hpm_photoxl');
@@ -42,15 +44,17 @@ get_header(); ?>
 			</div>
 		</div>
 
+		</div>
+
 		<div class="masthead__flowers"></div>
 
 		<div class="masthead__tagline">
 		<?php // ACF content
 			if ( function_exists( 'get_field' ) ) {
-				$hpititle = get_field('hpi_title');
-				$hpitext = get_field('hpi_text');
-				echo '<h3>'.$hpitext.'</h3>';
-				echo '<h6><em>'.$hpititle.'</em></h6>';
+				$hptitle = get_field('hp_title');
+				$hpsubtitle = get_field('hp_subtitle');
+				echo '<h3>'.$hptitle.'</h3>';
+				echo '<h6><em>'.$hpsubtitle.'</em></h6>';
 			} else {
 				echo $GLOBALS[ 'noacf' ]; // Set in header.php
 			}
@@ -73,24 +77,64 @@ get_header(); ?>
 </div>
 </div>
 
-<div class="container">
-<div class="wrap">
-<div class="grid">
-	<div class="col-4">
-		<h3>Our Mission</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<div class="container--full container--home__inspiration">
+	<div class="container">
+	<div class="wrap">
+	<div class="grid">
+		<div class="col-6">
+			<h3>Our Inspiration</h3>
+			<?php // ACF content
+				if ( function_exists( 'get_field' ) ) {
+					$hpinspiration = get_field('hp_inspiration');
+					echo $hpinspiration;
+				} else {
+					echo $GLOBALS[ 'noacf' ]; // Set in header.php
+				}
+			?>
+			<p><a href="#">Read more about Ava</a></p>
+		</div>
+		<div class="col-6 home__inspiration--holder">
+			<?php // ACF content
+			if ( function_exists( 'get_field' ) ) {
+				$hpinspirationphoto = get_field('hp_inspiration_photo');
+				if( $hpinspirationphoto ) {
+					echo '<picture>
+					      	<img src="'.$hpinspirationphoto.'" alt="Ava Rose Twardowski" class="home__inspiration">
+					      </picture>';
+				} else {
+					echo $GLOBALS[ 'noacf' ]; // Set in header.php
+				}
+			}
+			?>
+		</div>
 	</div>
-	<div class="col-4">
-		<h3>Our Inspiration</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 	</div>
-	<div class="col-4">
-		<h3>News &amp; Events</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 	</div>
 </div>
+
+
+<div class="container--full container--newsletter">
+
+<div class="single-column">
+	<h4>Sign Up for Our Newsletter</h4>
+	<p>Keep up on our latest events and happenings. Stay connected.</p>
+	<form method="post" action="/signup">
+		<fieldset>
+			<ul>
+				<!-- <label for="newsletter"></label> -->
+				<input name="newsletter" id="newsletter" value="" placeholder="Enter your email address here">
+				<button>Subscribe</button>
+			</ul>
+		</fieldset>
+	</form>
 </div>
+
 </div>
+
+
+<div style="height:400px;"></div>
+
 
 <!--
 <div class="container">

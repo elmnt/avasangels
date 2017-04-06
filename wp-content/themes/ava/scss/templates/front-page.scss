@@ -3,30 +3,8 @@
  */
 
 .container--masthead {
-
-   //background: #BFCF31;
-   // /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+50,BFCF31+50,BFCF31+100 */
-   // background: #ffffff; /* Old browsers */
-   // background: -moz-linear-gradient(top, #ffffff 40%, #BFCF31 40%, #BFCF31 100%); /* FF3.6-15 */
-   // background: -webkit-linear-gradient(top, #ffffff 40%,#BFCF31 40%,#BFCF31 100%); /* Chrome10-25,Safari5.1-6 */
-   // background: linear-gradient(to bottom, #ffffff 40%,#BFCF31 40%,#BFCF31 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-   // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#BFCF31',GradientType=0 ); /* IE6-9 */
-
-   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+22,fcd700+57,bfcf31+85 */
-   // background: rgb(255,255,255); /* Old browsers */
-   // background: -moz-linear-gradient(top, rgba(255,255,255,1) 22%, rgba(252,215,0,1) 57%, rgba(191,207,49,1) 85%); /* FF3.6-15 */
-   // background: -webkit-linear-gradient(top, rgba(255,255,255,1) 22%,rgba(252,215,0,1) 57%,rgba(191,207,49,1) 85%); /* Chrome10-25,Safari5.1-6 */
-   // background: linear-gradient(to bottom, rgba(255,255,255,1) 22%,rgba(252,215,0,1) 57%,rgba(191,207,49,1) 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-   // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bfcf31',GradientType=0 ); /* IE6-9 */
-
-   /* Rectangle 2: */
-   // background-image: linear-gradient(-180deg, #FCD700 0%, #BFCF31 100%);
-
-   /* Rectangle 2: */
    background-image: linear-gradient(-180deg, #FFFFFF 29%, #F0D60A 64%, #BFCF31 100%);
-
    margin-bottom: 3rem;
-
 }
 
 .masthead {
@@ -36,12 +14,10 @@
 
     img {
         @extend .z2;
-        //@extend .fit;
         max-width: $wrap-wide-max-width;
         margin-right: auto;
         margin-left: auto;
         border: 10px solid rgba(252, 215, 0, 0.25);
-        //border: 10px solid rgba(255, 255, 255, 0.25);
     }
 
     .masthead__caption-holder {
@@ -53,31 +29,53 @@
         width: 100%;
         height: 100%;
         @extend .z4;
+
+        display: flex;
+        /*
+        This method is not appropriate, because the pattern
+        (single module with flower SVG at bottom, bleeding up over image)
+        means this div height includes everything, not just the image height.
+        Use align-self: flex-start; on the internal div (.masthead__caption),
+        and add a top setting for various sizes.
+        */
+        // align-items: center;
+        // justify-content: center;
+
     }
 
     .masthead__caption {
-        position: absolute;
-        right: 0;
-        top: 5%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        @extend .z4;
 
-        @media only screen and (min-width: 500px) and (max-width: 600px) {
-            top: 8%;
+        // Deprecate this method in favor of flexbox
+        // position: absolute;
+        // right: 0;
+        // top: 5%;
+        // left: 0;
+        // height: auto;
+        // text-align: center;
+
+        width: 100%;
+        margin-top: 2rem;
+        @extend .z4;
+        align-self: flex-start;
+
+        @media only screen and (min-width: 500px) and (max-width: 620px) {
+            margin-top: 3rem;
         }
 
-        @media only screen and (min-width: 600px) and (max-width: 870px) {
-            top: 10%;
+        @media only screen and (min-width: 620px) and (max-width: 700px) {
+            margin-top: 4rem;
+        }
+
+        @media only screen and (min-width: 700px) and (max-width: 870px) {
+            margin-top: 6rem;
         }
 
         @media only screen and (min-width: 870px) and (max-width: 1000px) {
-            top: 20%;
+            margin-top: 8rem;
         }
 
         @media only screen and (min-width: 1001px) {
-            top: 28%;
+            margin-top: 12rem;
         }
 
         h1 {
@@ -159,6 +157,13 @@
         @media only screen and (min-width: 1400px) {
             background-size: 80%;
         }
+
+        // IE10 & IE11 hack, because they can't handle their shit with simple SVG backgrounds
+        // Source: https://www.impressivewebs.com/ie10-css-hacks/
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+           background-image: none;
+        }
+
     }
 
     .masthead__tagline {
@@ -178,86 +183,86 @@
             @extend .z4;
         }
         h3 {
-            padding-top: 3rem;
+            padding-top: 2rem;
             padding-bottom: 1rem;
+            font-size: $h5;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+            @media only screen and (min-width: 768px) and (max-width: 1440px) {
+                padding-top: 3rem;
+                font-size: $h4;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                font-size: $h3;
+            }
+
         }
         h6 {
-            padding-bottom: 3rem;
+            padding-bottom: 2rem;
             font-weight: $fw-normal;
+
+            @media only screen and (min-width: 768px) and (max-width: 1440px) {
+                padding-bottom: 3rem;
+            }
+
         }
     }
 }
 
-// ----------- masthead image
 
-/*
-.wrap--home {
-    @extend .wrap;
-    max-width: $wrap-home-masthead-max-width;
-    @extend .z6;
-}
+/**
+ * Our Inspiration
+ */
+.container--home__inspiration {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: transparent url('img/frontpage-flowers-inspiration.svg') bottom right no-repeat;
+    background-size: 95%;
 
-.wrap--home .button:first-of-type {
-    margin-right: 2rem;
-}
+    @media only screen and (min-width: 100px) and (max-width: 900px) {
+        background-size: 95%;
+    }
 
-.grid--home {
-    position: relative;
-    @extend .z6;
-}
+    @media only screen and (min-width: 900px) and (max-width: 1200px) {
+        background-size: 75%;
+    }
 
-.home__caption-holder {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    @extend .z6;
-}
-
-.home__caption {
-    position: absolute;
-    right: 0;
-    bottom: 100px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    @extend .z6;
-
-    h1 {
-        color: white;
+    @media only screen and (min-width: 1200px) {
+        background-size: 55%;
     }
 
 }
 
-// ----------- the copy under the masthead image
-
-.container--homeintro {
-    @extend .container--full;
-    max-width: $wrap-home-masthead-max-width;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: pink;
-}
-
-.home__intro {
-    padding: 2rem 1rem;
+// Ava's photo
+.home__inspiration--holder {
     text-align: center;
 
-    h4 {
-        color: white;
-    }
-    h2 {
-        color: white;
-    }
-
-    @media only screen and (min-width: 768px){
-        padding: 4rem 2rem;
+    @media only screen and (min-width: $bp-grid-cols) {
+        text-align: right;
     }
 
 }
-*/
+
+.home__inspiration {
+    display: inline-block;
+    border: $base-border-width $base-border-style $aa-color-4;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 340px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 

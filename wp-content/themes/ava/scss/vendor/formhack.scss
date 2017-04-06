@@ -45,7 +45,7 @@ $fh-display: block !default;
 
 // Font
 $fh-font-family: $sans !default;
-$fh-font-size:   1rem !default;
+$fh-font-size:   .75rem !default;
 $fh-font-color:  $base-font-color !default;
 
 // Borders
@@ -67,7 +67,7 @@ $fh-focus-font-color:   red !default;
 $fh-allow-select-vendor-styling: true !default;
 
 // Fieldset & Legend Styling
-$fh-fieldset-bare: false !default;
+$fh-fieldset-bare: true !default;
 
 // Buttons & Input Submits
 $fh-button-height:           auto !default;

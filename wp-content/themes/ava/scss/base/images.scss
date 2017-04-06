@@ -2,21 +2,25 @@
  * Base - Images
  */
 
-/* 
-normal image sizing 
+/*
+normal image sizing
 (only responsive when the holder gets smaller than the img)
 */
 img {
   max-width: 100%;
   height: auto;
-  vertical-align: $img-vertical-align; 
-  display: block; 
+  vertical-align: $img-vertical-align;
+  display: block;
 }
 
 img.fit,
 .fit img {
   width: 100%;
   max-width: 100%;
+}
+
+picture {
+   display: block;
 }
 
 /*
