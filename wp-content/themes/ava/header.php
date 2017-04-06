@@ -10,7 +10,7 @@ if the ACF plugin has been turned off. Normally we'd avoid showing any
 kind of error message on the front-end, but if ACF has been turned off,
 for any reason, we're loosing most of our content.
 */
-$GLOBALS[ 'noacf' ] = '<p class="noacf">Please activate the <em>Advanced Custom Fields</em> plugin</p>';
+$GLOBALS[ 'noacf' ] = '<p class="noacf"><em>Advanced Custom Fields</em> content missing</p>';
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>

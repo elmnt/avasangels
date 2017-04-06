@@ -3,81 +3,39 @@
  */
 
 .container--masthead {
-   background-image: linear-gradient(-180deg, #FFFFFF 29%, #F0D60A 64%, #BFCF31 100%);
+   background-image: linear-gradient(-180deg, #FFFFFF 29%, #F0D60A 54%, #BFCF31 100%);
    margin-bottom: 3rem;
 }
 
 .masthead {
-
-    position: relative;
-    @extend .z2;
-
-    img {
-        @extend .z2;
-        max-width: $wrap-wide-max-width;
-        margin-right: auto;
-        margin-left: auto;
-        border: 10px solid rgba(252, 215, 0, 0.25);
+    background: transparent url('img/frontpage-flowers.svg') bottom center no-repeat;
+    background-size: 90%;
+    .masthead__top {
+        position: relative;
+        img {
+            @extend .z1;
+            max-width: $wrap-wide-max-width;
+            margin-right: auto;
+            margin-left: auto;
+            border: 10px solid rgba(252, 215, 0, 0.25);
+        }
+        .masthead__caption-holder {
+            @extend .z2;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
-
-    .masthead__caption-holder {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        @extend .z4;
-
-        display: flex;
-        /*
-        This method is not appropriate, because the pattern
-        (single module with flower SVG at bottom, bleeding up over image)
-        means this div height includes everything, not just the image height.
-        Use align-self: flex-start; on the internal div (.masthead__caption),
-        and add a top setting for various sizes.
-        */
-        // align-items: center;
-        // justify-content: center;
-
-    }
-
     .masthead__caption {
-
-        // Deprecate this method in favor of flexbox
-        // position: absolute;
-        // right: 0;
-        // top: 5%;
-        // left: 0;
-        // height: auto;
-        // text-align: center;
-
+        @extend .z2;
         width: 100%;
-        margin-top: 2rem;
-        @extend .z4;
-        align-self: flex-start;
-
-        @media only screen and (min-width: 500px) and (max-width: 620px) {
-            margin-top: 3rem;
-        }
-
-        @media only screen and (min-width: 620px) and (max-width: 700px) {
-            margin-top: 4rem;
-        }
-
-        @media only screen and (min-width: 700px) and (max-width: 870px) {
-            margin-top: 6rem;
-        }
-
-        @media only screen and (min-width: 870px) and (max-width: 1000px) {
-            margin-top: 8rem;
-        }
-
-        @media only screen and (min-width: 1001px) {
-            margin-top: 12rem;
-        }
-
         h1 {
             color: white;
             margin-right: auto;
@@ -87,17 +45,13 @@
             max-width: 800px;
             text-shadow: -3px 3px 4px rgba(0, 0, 0, 0.5);
             font-size: $h5;
-
             @media only screen and (min-width: 600px) and (max-width: 870px) {
                 font-size: $h2;
             }
-
             @media only screen and (min-width: 870px) {
                 font-size: $h1;
             }
-
         }
-
         a {
             display: block;
             max-width: 60%;
@@ -105,70 +59,26 @@
             margin-left: auto;
             padding: 1rem 1rem .85rem 1rem;
             font-size: .75rem;
-
             @media only screen and (min-width: 600px) {
                 max-width: 40%;
                 font-size: .85rem;
                 padding: 1.25rem 1rem 1rem 1rem;
             }
-
             @media only screen and (min-width: 768px) {
                 display: inline-block;
                 margin-right: 1rem;
                 padding: $button-padding;
                 max-width: auto;
             }
-
             &:last-of-type {
                 @media only screen and (min-width: 768px) {
                     display: none;
                 }
             }
-
         }
-
     }
-
-    .masthead__flowers {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        @extend .z3;
-        background: transparent url('img/frontpage-flowers.svg') bottom center no-repeat;
-        background-size: 100%;
-        opacity: .25;
-        /*
-        The background size adjustments are to help keep the semi-transparent flowers
-        at a reasonable size, relative to the image, as the viewport changes.
-        */
-        @media only screen and (min-width: 800px) and (max-width: 999px) {
-            background-size: 95%;
-        }
-        @media only screen and (min-width: 1000px) and (max-width: 1199px) {
-            background-size: 90%;
-        }
-        @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-            background-size: 85%;
-        }
-        @media only screen and (min-width: 1400px) {
-            background-size: 80%;
-        }
-
-        // IE10 & IE11 hack, because they can't handle their shit with simple SVG backgrounds
-        // Source: https://www.impressivewebs.com/ie10-css-hacks/
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-           background-image: none;
-        }
-
-    }
-
     .masthead__tagline {
         text-align: center;
-        background-color: transparent;
         position: relative;
         @extend .z4;
         h3,
@@ -188,16 +98,13 @@
             font-size: $h5;
             padding-left: 2rem;
             padding-right: 2rem;
-
             @media only screen and (min-width: 768px) and (max-width: 1440px) {
                 padding-top: 3rem;
                 font-size: $h4;
             }
-
             @media only screen and (min-width: 1440px) {
                 font-size: $h3;
             }
-
         }
         h6 {
             padding-bottom: 2rem;
@@ -206,11 +113,9 @@
             @media only screen and (min-width: 768px) and (max-width: 1440px) {
                 padding-bottom: 3rem;
             }
-
         }
     }
 }
-
 
 /**
  * Our Inspiration
@@ -233,16 +138,21 @@
         background-size: 55%;
     }
 
-}
-
-// Ava's photo
-.home__inspiration--holder {
-    text-align: center;
-
-    @media only screen and (min-width: $bp-grid-cols) {
-        text-align: right;
+    .home__inspiration--title {
+        background: transparent url('img/aa-icon-flower.svg') top left no-repeat;
+        padding-left: 80px;
+        @media only screen and (min-width: 1440px) {
+            padding-left: 100px;
+        }
     }
 
+}
+
+/**
+ * Ava's photo
+ */
+.home__inspiration--holder {
+    text-align: center;
 }
 
 .home__inspiration {
@@ -252,17 +162,3 @@
     width: 100%;
     max-width: 340px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

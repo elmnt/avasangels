@@ -44,9 +44,9 @@ get_header(); ?>
 			</div>
 		</div>
 
-		</div>
+		</div><!-- /.masthead__top -->
 
-		<div class="masthead__flowers"></div>
+		<!-- <div class="masthead__flowers"></div> -->
 
 		<div class="masthead__tagline">
 		<?php // ACF content
@@ -64,26 +64,12 @@ get_header(); ?>
 	</div><!-- /.masthead -->
 </div><!-- /.container--masthead -->
 
-<div class="container--homeintro">
-<div class="single-column home__intro">
-
-	<!-- Don't show the standard WP 'Home' page title:
-	<header class="entry-header">
-		<?php /*the_title( '<h1 class="entry-title">', '</h1>' );*/ ?>
-	</header>
-	-->
-	<!-- .entry-header -->
-
-</div>
-</div>
-
-
 <div class="container--full container--home__inspiration">
 	<div class="container">
 	<div class="wrap">
 	<div class="grid">
 		<div class="col-6">
-			<h3>Our Inspiration</h3>
+			<h3 class="home__inspiration--title">Our Inspiration</h3>
 			<?php // ACF content
 				if ( function_exists( 'get_field' ) ) {
 					$hpinspiration = get_field('hp_inspiration');
@@ -114,24 +100,23 @@ get_header(); ?>
 </div>
 
 
-<div class="container--full container--newsletter">
-
-<div class="single-column">
-	<h4>Sign Up for Our Newsletter</h4>
-	<p>Keep up on our latest events and happenings. Stay connected.</p>
-	<form method="post" action="/signup">
-		<fieldset>
-			<ul>
-				<!-- <label for="newsletter"></label> -->
-				<input name="newsletter" id="newsletter" value="" placeholder="Enter your email address here">
-				<button>Subscribe</button>
-			</ul>
-		</fieldset>
-	</form>
+<div class="container container--newsletter">
+<div class="wrap">
+	<div class="single-column">
+		<h4>Sign Up for Our Newsletter</h4>
+		<p>Keep up on our latest events and happenings. Stay connected.</p>
+		<form method="post" action="/signup">
+			<fieldset>
+				<div class="newsletter__form">
+					<label for="newsletter">Newsletter Signup</label>
+					<input name="newsletter" id="newsletter" value="" placeholder="Enter your email address here">
+					<button>Subscribe</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
 </div>
-
 </div>
-
 
 <div style="height:400px;"></div>
 

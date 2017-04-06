@@ -3,6 +3,9 @@
  * Styled modules that might appear on any page/post
  */
 
+/**
+ * Newsletter Sign-Up
+ */
 .container--newsletter {
     background-color: $aa-color-6;
     padding-top: 3rem;
@@ -12,36 +15,40 @@
 
 .container--newsletter,
 .single-column {
+    h4 {
+        color: $aa-color-5;
+    }
+    p {
+        color: white;
+        font-style: italic;
+    }
     text-align: center;
-
     fieldset {
         width: 100%;
         background-color: white;
-        padding: 1rem;
+        padding: .5rem;
         @include border-radius(500px);
         border: none;
-
-        ul {
+        .newsletter__form {
             display: flex;
-            margin: 0;
-            padding: 0;
+            flex-direction: row;
+            label {
+                display: none;
+            }
+            input,
+            button {
+                margin: 0;
+            }
+            input {
+                flex-basis: 90%;
+                margin-left: 3rem;
+                //border: 1px solid red;
+            }
+            button {
+                margin-left: 1rem;
+                border: none;
+                width: auto;
+            }
         }
-
     }
-
-    input,
-    button {
-        margin: 0;
-    }
-
-    input {
-        margin-left: 1rem;
-        //border: 1px solid red;
-    }
-
-    button {
-        margin-left: 1rem;
-        border: none;
-    }
-
 }
