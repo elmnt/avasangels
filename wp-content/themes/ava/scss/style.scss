@@ -64,7 +64,7 @@ My partials will vary slightly, based on project requirements.
 @import "base/links";
 @import "base/images";
 @import "base/figure";
-@import "base/utilities";
+//@import "base/utilities"; - Added last to force precedence
 @import "base/accessibility";
 //@import "base/wordpress";
 
@@ -117,6 +117,11 @@ My partials will vary slightly, based on project requirements.
 @import "vendor/formhack";
 //@import "vendor/font-awesome";
 //@import "vendor/accordions";
+
+/**
+ * ----------- Base: Utilities - Added last to force precedence
+ */
+@import "base/utilities";
 
 /**
  * ----------- Pesticide debugging

@@ -10,6 +10,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
 <main id="main" class="site-main" role="main">
 
+
 <div class="container--full container--masthead">
 	<div class="masthead">
 
@@ -46,8 +47,6 @@ get_header(); ?>
 
 		</div><!-- /.masthead__top -->
 
-		<!-- <div class="masthead__flowers"></div> -->
-
 		<div class="masthead__tagline">
 		<?php // ACF content
 			if ( function_exists( 'get_field' ) ) {
@@ -63,6 +62,7 @@ get_header(); ?>
 
 	</div><!-- /.masthead -->
 </div><!-- /.container--masthead -->
+
 
 <div class="container--full container--home__inspiration">
 	<div class="container">
@@ -99,26 +99,52 @@ get_header(); ?>
 	</div>
 </div>
 
+<?php // Get the newsletter signup form ?>
+<?php require get_template_directory() . '/inc/newsletter-signup.php'; ?>
 
-<div class="container container--newsletter">
+<?php // Get Support, Get Involved, Donate Buttons ?>
+<?php require get_template_directory() . '/inc/three-ctas.php'; ?>
+
+<div class="container">
 <div class="wrap">
-	<div class="single-column">
-		<h4>Sign Up for Our Newsletter</h4>
-		<p>Keep up on our latest events and happenings. Stay connected.</p>
-		<form method="post" action="/signup">
-			<fieldset>
-				<div class="newsletter__form">
-					<label for="newsletter">Newsletter Signup</label>
-					<input name="newsletter" id="newsletter" value="" placeholder="Enter your email address here">
-					<button>Subscribe</button>
-				</div>
-			</fieldset>
-		</form>
-	</div>
-</div>
-</div>
+<div class="grid">
 
-<div style="height:400px;"></div>
+	<div class="col-5">
+		<h3 class="home__mission--title">Our Mission</h3>
+		<?php // ACF content
+			if ( function_exists( 'get_field' ) ) {
+				$hpourmission = get_field('hp_our_mission');
+				echo $hpourmission;
+			} else {
+				echo $GLOBALS[ 'noacf' ]; // Set in header.php
+			}
+		?>
+	</div>
+
+	<div class="col-2"><p>&nbsp;</p></div>
+
+	<div class="col-5">
+		<h3 class="home__newsevents--title">News &amp; Events</h3>
+		<?php // Show the most recent blog post
+		global $post;
+		$args = array( 'posts_per_page' => 1 );
+		$lastposts = get_posts( $args );
+		foreach ( $lastposts as $post ) :
+		  setup_postdata( $post ); ?>
+			<h4 class="home__newsevents--post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+			<p class="home__newsevents--date"><?php the_date(); ?></p>
+			<?php the_post_thumbnail( $size = 'home-featured-post' ); ?>
+			<div class="home__newsevents--excerpt">
+				<?php the_excerpt(); ?>
+				<p><a href="#">Continue Reading &rarr;</a></p>
+			</div>
+		<?php endforeach; ?>
+		<?php wp_reset_postdata(); ?>
+	</div>
+
+</div>
+</div>
+</div>
 
 
 <!--
@@ -142,8 +168,10 @@ get_header(); ?>
 </div>
 -->
 
+
 </main><!-- #main -->
 </div><!-- #primary -->
+
 
 <?php /*get_sidebar();*/ ?>
 <?php

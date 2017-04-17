@@ -4,62 +4,36 @@
  * Contains the closing of the #content div and all content after.
  * @package ava
  */
-?>
+?></div><!-- #content -->
 
-    </div><!-- #content -->
-
-    <footer id="colophon" class="site-footer" role="contentinfo">
-
-      <div class="container">
-          <div class="wrap">
-              <div class="grid">
-                  <div class="col-4 center">
-                      <img src="#" style="width:100%;height:200px;background-color:#ccc;">
-                      <a href="#" class="button button--trans">Get Help</a>
-                  </div>
-                  <div class="col-4 center">
-                      <img src="#" style="width:100%;height:200px;background-color:#ccc;">
-                      <a href="#" class="button">Get Involved</a>
-                  </div>
-                  <div class="col-4 center">
-                      <img src="#" style="width:100%;height:200px;background-color:#ccc;">
-                      <a href="#" class="button">Donate</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="container">
-          <div class="wrap">
-              <div class="single-column center">
-                  <h4>&ldquo; No act of kindness, no matter how small, is ever wasted. &rdquo;<br>&mdash;Aesop</h4>
-              </div>
-          </div>
-      </div>
-
-      <div class="container">
-          <div class="wrap">
-              <div class="single-column center">
-                  <p><a href="#">Contact Us</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#">Privacy Policy</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#">Facebook</a></p>
-                  <!--
-                  <div class="site-info">
-                  	<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'ava' ) );*/ ?>"><?php /*printf( esc_html__( 'Proudly powered by %s', 'ava' ), 'WordPress' );*/ ?></a>
-                  	<span class="sep"> | </span>
-                  	<?php /*printf( esc_html__( 'Theme: %1$s by %2$s.', 'ava' ), 'ava', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' );*/ ?>
-                  </div>
-                  -->
-                  <!-- .site-info -->
-              </div>
-          </div>
-      </div>
-
-    </footer><!-- #colophon -->
-
-    <nav id="elmobile">
-        <div class="elmtoggle__holder--mobile">
-            <a href="#!" id="elmobiletoggle" class="cf"><span>CLOSE</span> <img src="<?php bloginfo('stylesheet_directory'); ?>/img/hamburger-close.svg" alt="Open Sub Menu" class="elmtoggle__icon"></a>
+    <div class="container--full container--footer-quote">
+        <div class="wrap">
+            <div class="single-column center">
+            <h5>&ldquo;No act of kindness, no matter how small, is ever wasted.&rdquo;<br><br>&mdash;Aesop</h5>
+            </div>
         </div>
-    </nav>
+    </div>
+
+   <footer id="colophon" class="site-footer" role="contentinfo">
+
+    <div class="container--full container--footer">
+        <div class="wrap">
+            <div class="single-column center">
+                <p><a href="#">Contact Us</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#">Privacy Policy</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#">Facebook</a></p>
+                <p class="copyright">Copyright 2013. Ava's Angels. All Rights Reserved.</p>
+                <!--<div class="site-info"></div>-->
+                <!-- .site-info -->
+            </div>
+        </div>
+    </div>
+
+   </footer><!-- #colophon -->
+
+   <nav id="elmobile">
+      <div class="elmtoggle__holder--mobile">
+          <a href="#!" id="elmobiletoggle" class="cf"><span>CLOSE</span> <img src="<?php bloginfo('stylesheet_directory'); ?>/img/hamburger-close.svg" alt="Open Sub Menu" class="elmtoggle__icon"></a>
+      </div>
+   </nav>
 
 </div><!-- #canvas -->
 </div><!-- #page -->

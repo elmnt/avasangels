@@ -39,6 +39,11 @@ function ava_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	/**
+	 * Add a custom image size for the home page featured post image
+	 */
+	add_image_size( 'home-featured-post', 600, 300, array( 'center', 'center' ) );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'ava' ),
@@ -88,6 +93,7 @@ add_action( 'after_setup_theme', 'ava_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function ava_widgets_init() {
+
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'ava' ),
 		'id'            => 'sidebar-1',
@@ -96,7 +102,8 @@ function ava_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	));
+
 }
 add_action( 'widgets_init', 'ava_widgets_init' );
 

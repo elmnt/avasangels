@@ -162,3 +162,51 @@
     width: 100%;
     max-width: 340px;
 }
+
+/**
+ * Our Mission
+ */
+.home__mission--title {
+    background: transparent url('img/aa-icon-mission.svg') top left no-repeat;
+    padding-left: 50px;
+    @media only screen and (min-width: 1440px) {
+        padding-left: 60px;
+    }
+}
+
+/**
+ * News & Events
+ */
+.home__newsevents--title {
+    background: transparent url('img/aa-icon-newsevents.svg') top left no-repeat;
+    padding-left: 60px;
+    @media only screen and (min-width: 1440px) {
+        padding-left: 60px;
+    }
+}
+
+.home__newsevents--post-title {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.home__newsevents--date {
+    color: black;
+}
+
+// the thumbnail
+.attachment-home-featured-post {
+    margin-bottom: 2rem;
+}
+
+.home__newsevents--excerpt p {}
+.home__newsevents--excerpt p:first-child {
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+

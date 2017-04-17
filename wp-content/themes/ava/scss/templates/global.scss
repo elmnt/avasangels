@@ -10,11 +10,11 @@
     background-color: $aa-color-6;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
-.container--newsletter,
-.single-column {
+.container--newsletter {
     h4 {
         color: $aa-color-5;
     }
@@ -51,4 +51,35 @@
             }
         }
     }
+}
+
+/**
+ * Three CTAs above the footer
+ */
+.container--footer-cta {
+  margin-top: 8rem;
+  //padding-bottom: 4rem;
+  //border-bottom: 1px solid $aa-grey-2;
+  margin-bottom: 8rem;
+}
+
+.footer__cta-holder {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  // Use the global grid breakpoint
+  @media only screen and (min-width: $bp-grid-cols) {
+    margin-bottom: 0;
+  }
+
+}
+
+.footer__cta-img {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+}
+
+.footer__cta-button {
+  margin-top: -2.5rem;
 }
