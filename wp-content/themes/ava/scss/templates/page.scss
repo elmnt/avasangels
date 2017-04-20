@@ -1,3 +1,86 @@
 /**
  * Page
  */
+
+.page__header {
+
+   padding-top: 4rem;
+   padding-bottom: 4rem;
+   margin-bottom: 4rem;
+
+   // Multiple BGs (image on top of gradient)
+   background-image: url('img/page-header-flowers.svg'), linear-gradient(-225deg, #BFCF31 40%, #FCD700 80%);
+   background-position: bottom right;
+   background-repeat: no-repeat;
+
+   // Set up flexbox for vertical center alignment
+   .grid {
+      display: flex;
+      flex-direction: column; //default
+      align-items: center;
+
+      @media only screen and (min-width: $bp-grid-cols) {
+         flex-direction: row; //default
+      }
+
+   }
+
+   .page__header-title {
+      color: white;
+   }
+
+   .page__header-tagline {
+      font-size: $base-font-size-md;
+      color: $aa-color-5;
+      //font-style: italic;
+      max-width: 700px;
+   }
+
+   p {
+      color: white;
+      font-style: italic;
+      margin-bottom: 0;
+   }
+
+   .page__header-buttons {
+
+      // Continue flexbox vertical alignment
+      // Now, buttons are centered, vert and horiz, mobile-first
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      // Change buttons to inline display above 600px
+      @media only screen and (min-width: 600px) {
+         flex-direction: row;
+      }
+
+      // Mobile-first, no R/L margins on buttons
+      a:last-of-type {
+         margin-left: 0;
+
+         // Now add a left margin on the right button, above 600px
+         // ( Same time it switches to flex-direction: row; )
+         @media only screen and (min-width: 600px) {
+            margin-left: 1rem;
+         }
+
+      }
+
+      // Lastly, when it's above the column breakpoint,
+      // do these two things
+      @media only screen and (min-width: $bp-grid-cols) {
+
+         // Remove the top margin
+         margin-top: 0;
+
+         // Adjust alignment when we hit the breakpoint
+         justify-content: flex-end;
+
+      }
+
+   }
+
+}

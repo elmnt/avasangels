@@ -37,8 +37,8 @@ gulp.task('concatScripts', function() {
   return gulp.src([
     jsPath + '/elmenu.js',
     jsPath + '/skip-link-focus-fix.js',
-    jsPath + '/picturefill.js'
-    //jsPath + '/customizer.js'
+    jsPath + '/picturefill.js',
+    jsPath + '/main.js'
   ])
   .pipe(concat('ava.js'))
   .pipe(gulp.dest(jsPath));

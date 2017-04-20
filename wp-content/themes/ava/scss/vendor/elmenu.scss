@@ -623,26 +623,26 @@ This creates the appearance of a unique BG color on the span (the sub-nav toggle
 
 // BG on the level 1 li (carries into the span)
 .m-elm__item.hassub {
-   background-color: orange;
+   background-color: $elmenu-mobile-subnav-toggle-background-color;
 }
 // Then 'reset' the link's BG color. The span still has the BG color of the li
 .m-elm__item.hassub a {
-   background-color: pink;
+   background-color: $aa-color-2;
 }
 
 // BG on the level 1 li (carries into the span)
 .m-elm__item--sub.hassubsub {
-   background-color: orange;
+   background-color: $elmenu-mobile-subnav-toggle-background-color;
 }
 // Then 'reset' the link's BG color. The span still has the BG color of the li
 .m-elm__item--sub.hassubsub a,
 .m-elm__link--sub {
-   background-color: lighten(pink, 10%);
+   background-color: $aa-color-2;
 }
 
 .m-elm__item--subsub,
 .m-elm__link--subsub {
-   background-color: lighten(pink, 20%);
+   background-color: $aa-color-3;
 }
 
 .hassub .m-elm__link,

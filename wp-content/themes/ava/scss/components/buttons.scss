@@ -96,3 +96,21 @@ button {
   }
 
 }
+
+// white button
+
+.button--white {
+  color: $button-background-color;
+  background: white;
+  border: $button-trans-border;
+
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: $button-background-color;
+    background: white;
+    border: $button-trans-border;
+  }
+
+}

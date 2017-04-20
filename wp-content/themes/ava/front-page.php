@@ -4,12 +4,10 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  * @package ava
  */
-
 get_header(); ?>
 
 <div id="primary" class="content-area">
 <main id="main" class="site-main" role="main">
-
 
 <div class="container--full container--masthead">
 	<div class="masthead">
@@ -146,7 +144,6 @@ get_header(); ?>
 </div>
 </div>
 
-
 <!--
 <div class="container">
 <div class="wrap">
@@ -168,10 +165,8 @@ get_header(); ?>
 </div>
 -->
 
-
 </main><!-- #main -->
 </div><!-- #primary -->
-
 
 <?php /*get_sidebar();*/ ?>
 <?php

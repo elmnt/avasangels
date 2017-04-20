@@ -82,19 +82,20 @@ $fw-normal:   400;
 $fw-semibold: 600;
 
 /*
-
 Based on a 16px default, we set those font sizes,
 without forcing pixel values on the html tag:
-
 16px - 100%
 18px - 112.5%
 20px - 125%
-
 */
 
+//$base-font-size:    100%;
+//$base-font-size-md: 112.5%;
+//$base-font-size-lg: 125%;
+
 $base-font-size:    100%;
-$base-font-size-md: 112.5%;
-$base-font-size-lg: 125%;
+$base-font-size-md: 100%;
+$base-font-size-lg: 112.5%;
 
 // ----------- Breakpoints to change base font size
 
@@ -240,7 +241,7 @@ $button-text-transform:   uppercase;
 $button-font-weight:      $fw-semibold;
 $button-font-size:        1rem;
 $button-letter-spacing:   .5px;
-$button-padding:          1.45rem 4rem 1.35rem 4rem;
+$button-padding:          1.25rem 3rem 1.15rem 3rem;
 $button-margin:           .5rem 0;
 $button-border:           $base-border-width $base-border-style $button-background-color;
 
@@ -312,7 +313,7 @@ $container-min-width:  300px;
 $container-pad:        0 2em;
 $container-pad-mobile: 0 1em;
 $wrap-max-width:       1200px;
-$wrap-wide-max-width:  1800px;
+$wrap-wide-max-width:  1400px;
 $wrap-min-width:       300px;
 
 // center-align & middle-align box
@@ -449,7 +450,7 @@ $elmenu-elmobile-width:   400px;
 $elmenu-links-padding:    1.25rem 1rem;
 $elmenu-sublinks-padding: 1.25rem 1rem 1.25rem 2rem;
 
-$elmenu-mobile-subnav-toggle-background-color: orange;
+$elmenu-mobile-subnav-toggle-background-color: $aa-color-4;
 
 // ----------- vendor/form-hack
 
