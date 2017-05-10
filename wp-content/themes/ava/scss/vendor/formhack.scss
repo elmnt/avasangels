@@ -150,9 +150,8 @@ select,
 textarea {
 	width: $fh-input-width;
 	max-width: $fh-input-max-width;
-	padding: $fh-input-height / 5;
+	padding: $fh-input-padding;
 	background-color: $fh-input-bg-color;
-
 	border-radius: $fh-border-radius;
 	border: $fh-border-width $fh-border-style $fh-border-color;
 }
@@ -237,7 +236,7 @@ select[multiple] {
 
 	option {
 		margin: 0;
-		padding: $fh-input-height / 5;
+		padding: $fh-input-padding;
 	}
 }
 
@@ -249,9 +248,13 @@ fieldset {
 		border: 0;
 	}
 	@else {
+		padding: 0;
+		border: 0;
+		/* remove these styles
 		padding: 10px 25px;
 		border-radius: $fh-border-radius;
 		border: $fh-border-width $fh-border-style $fh-border-color;
+		*/
 	}
 }
 
@@ -277,7 +280,7 @@ input[type="image"] {
 	width: $fh-button-width;
 	max-width: $fh-button-max-width;
 	background-color: $fh-button-bg-color;
-	padding: $fh-input-height / 5;
+	padding: $fh-button-padding;
 	cursor: pointer;
 
 	color: $fh-button-font-color;
@@ -286,13 +289,16 @@ input[type="image"] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 
-	border-radius: $fh-border-radius;
-	border: $fh-border-width $fh-border-style $fh-border-color;
+	border: $fh-button-border;
+	@include border-radius(500px);
+
+	//border-radius: $fh-border-radius;
+	//border: $fh-border-width $fh-border-style $fh-border-color;
 }
 
 input[type="image"] {
 	text-align: center;
-	padding: $fh-input-height / 5;
+	padding: $fh-input-padding;
 }
 
 /* States ------------------ */

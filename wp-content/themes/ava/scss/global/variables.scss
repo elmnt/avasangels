@@ -471,8 +471,8 @@ $fh-input-width:            100% !default;
 $fh-input-max-width:        100% !default;
 $fh-input-search-max-width: 100% !default;
 $fh-input-bg-color:         white !default;
-$fh-input-padding:          1rem 1rem 1rem 1rem !default;
-$fh-input-hover-padding:    1rem 1rem 1rem 1.5rem !default;
+$fh-input-padding:          1rem !default;
+$fh-input-hover-padding:    1rem !default;
 $fh-textarea-padding:       1rem !default;
 $fh-focus-bg-color:         white !default;
 $fh-focus-border-color:     $aa-color-1 !default;
@@ -494,6 +494,8 @@ $fh-button-bg-color:         $button-background-color !default;
 $fh-button-hover-bg-color:   $button-background-color-hover;
 $fh-button-hover-font-color: $fh-button-font-color !default;
 $fh-button-text-transform:   uppercase !default;
+$fh-button-border:           $button-border;
+//$fh-button-border-radius:    $button-border;
 
 // Layout
 $fh-centered: false !default;

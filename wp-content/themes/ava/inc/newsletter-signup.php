@@ -7,8 +7,8 @@
 			<fieldset>
 				<div class="newsletter__form">
 					<label for="newsletter">Newsletter Signup</label>
-					<input name="newsletter" id="newsletter" value="" placeholder="Enter your email address here">
-					<button>Subscribe</button>
+					<input type="text" name="newsletter" id="newsletter" value="" placeholder="Enter your email address here">
+					<button class="button">Subscribe</button>
 				</div>
 			</fieldset>
 		</form>

@@ -19,7 +19,7 @@
     <div class="container--full container--footer">
         <div class="wrap">
             <div class="single-column center">
-                <p><a href="#">Contact Us</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#">Privacy Policy</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="#">Facebook</a></p>
+                <p><a href="#">Contact Us</a>/<a href="#">Privacy Policy</a><!-- <a href="#">Facebook</a> --></p>
                 <p class="copyright">Copyright 2013. Ava's Angels. All Rights Reserved.</p>
                 <!--<div class="site-info"></div>-->
                 <!-- .site-info -->

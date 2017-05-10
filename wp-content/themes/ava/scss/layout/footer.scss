@@ -23,16 +23,16 @@
   padding-bottom: 4rem;
 
   p {
-    color: white;
-    &.copyright {
-      color: $aa-color-1;
-    }
+    color: $aa-color-1;
+    font-family: $sans;
   }
 
   a {
     color: white;
     font-style: normal;
     text-decoration: none;
+    padding-right: .75rem;
+    padding-left: .75rem;
   }
 
 }

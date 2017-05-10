@@ -69,6 +69,12 @@ My partials will vary slightly, based on project requirements.
 //@import "base/wordpress";
 
 /**
+ * ----------- Vendor - formhack
+ * ----------- Placed here so we can override form settings
+ */
+@import "vendor/formhack";
+
+/**
  * ----------- Components
  * ----------- Reusable UI components
  */
@@ -114,7 +120,7 @@ My partials will vary slightly, based on project requirements.
  * ----------- Vendor
  */
 @import "vendor/elmenu";
-@import "vendor/formhack";
+//@import "vendor/formhack";
 //@import "vendor/font-awesome";
 //@import "vendor/accordions";
 
