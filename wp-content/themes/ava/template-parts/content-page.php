@@ -47,43 +47,70 @@
 		<div class="container">
 		<div class="wrap">
 
-		<!-- put this in the partials -->
-		<!-- <div class="grid"> -->
-
-
-			<!--
-			Set up some conditionals here with ACF content.
-			Getting a temporary include to show dummy content.
-			-->
-
 			<?php
+
+			/*
+			Setting up some conditionals here with ACF content for all the Pages:
+
+			I chose this method as opposed to page-name.php in the root directory,
+			just because I like the tidiness of keeping them in a unique directory.
+
+			When the client adds pages, in the future, via the Admin, they'll be limited
+			to a basic template, and they can control visibility via the Menu settings. Basic.
+
+			/inc/dummy.php = temporary include to show dummy content.
+
+			about-us
+				our-directors
+				our-inspiration
+			programs-events
+				blog
+				our-acts-of-kindness
+				helping-hands-of-little-angels
+				gathering-in-the-garden
+			contact-us
+			give
+			get-support
+			get-involved
+				fundraisers (Should this content be ON the get-involved page?)
+
+			*/
 
 			// First, is it a page?
 			if ( is_page()) {
 
 				// Yes, get the specific page content
+
+				// About Us (and sub-pages)
 				if ( is_page('about-us')) {
-					require get_template_directory() . '/inc/dummy.php';
-				} elseif ( is_page('our-acts-of-kindness')) {
-					require get_template_directory() . '/inc/dummy.php';
-				} elseif ( is_page('our-directors')) {
-					require get_template_directory() . '/inc/dummy.php';
+					require get_template_directory() . '/template-parts/pages/about-us.php';
 				} elseif ( is_page('our-inspiration')) {
-					require get_template_directory() . '/inc/dummy.php';
-				} elseif ( is_page('contact-us')) {
-					require get_template_directory() . '/inc/dummy.php';
-				} elseif ( is_page('donate')) {
-					require get_template_directory() . '/inc/dummy.php';
-				} elseif ( is_page('get-support')) {
-					require get_template_directory() . '/inc/dummy.php';
-				} elseif ( is_page('get-involved')) {
-					require get_template_directory() . '/inc/dummy.php';
-				} elseif ( is_page('the-gathering-in-the-garden')) {
-					require get_template_directory() . '/inc/dummy.php';
+					require get_template_directory() . '/template-parts/pages/our-inspiration.php';
+				} elseif ( is_page('our-directors')) {
+					require get_template_directory() . '/template-parts/pages/our-directors.php';
+
+				// Programs & Events (and sub-pages)
+				} elseif ( is_page('programs-events')) {
+					require get_template_directory() . '/template-parts/pages/programs-events.php';
 				} elseif ( is_page('fundraisers')) {
-					require get_template_directory() . '/inc/dummy.php';
-				} elseif ( is_page('helping-hands-of-little-angels')) {}
-				else { // With a fall-back, just in case
+					require get_template_directory() . '/template-parts/pages/fundraisers.php';
+				} elseif ( is_page('our-acts-of-kindness')) {
+					require get_template_directory() . '/template-parts/pages/our-acts-of-kindness.php';
+				} elseif ( is_page('helping-hands-of-little-angels')) {
+					require get_template_directory() . '/template-parts/pages/helping-hands-of-little-angels.php';
+				} elseif ( is_page('the-gathering-in-the-garden')) {
+					require get_template_directory() . '/template-parts/pages/the-gathering-in-the-garden.php';
+
+				// Remaining sub-pages
+				}  elseif ( is_page('contact-us')) {
+					require get_template_directory() . '/template-parts/pages/contact-us.php';
+				} elseif ( is_page('give')) {
+					require get_template_directory() . '/template-parts/pages/give.php';
+				} elseif ( is_page('get-support')) {
+					require get_template_directory() . '/template-parts/pages/get-support.php';
+				} elseif ( is_page('get-involved')) {
+					require get_template_directory() . '/template-parts/pages/get-involved.php';
+				} else { // With a fall-back, just in case
 					the_content();
 				}
 
@@ -91,20 +118,6 @@
 			} else {
 				the_content();
 			}
-
-			/* All possible pages:
-			about-us
-				our-acts-of-kindness
-				our-directors
-				our-inspiration
-			contact-us
-			donate
-			get-support
-			get-involved
-				the-gathering-in-the-garden
-				fundraisers
-				helping-hands-of-little-angels
-			*/
 
 			?>
 
@@ -130,8 +143,6 @@
 				));
 				*/
 			?>
-
-		<!-- </div> -->
 
 		</div>
 		</div>

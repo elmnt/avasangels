@@ -9854,7 +9854,11 @@ var acf;
 			
 			// vars
 			var $input = $select.siblings('input');
-				
+			
+			
+			// bail early if no select2
+			if( !$input.data('select2') ) return;
+			
 			
 			// destroy
 			$input.select2('destroy');
@@ -10244,6 +10248,10 @@ var acf;
 		},
 		
 		destroy: function( $select ){
+			
+			// bail early if no select2
+			if( !$select.data('select2') ) return;
+			
 			
 			// destroy
 			$select.select2('destroy');
