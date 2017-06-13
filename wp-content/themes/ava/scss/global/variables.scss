@@ -218,17 +218,17 @@ $img-vertical-align: middle;
 
 // ----------- base/figure
 
-$figure-margin:               0 0 2rem 0;
+$figure-margin:               0;
 $figure-padding:              0;
-$figcaption-margin:           1px 0 0 0;
+$figcaption-margin:           1px 0 2rem 0;
 $figcaption-padding:          1rem;
-$figcaption-background-color: $base-font-color;
+$figcaption-background-color: $aa-color-7;
 $figcaption-text-align:       left;
 
 $figcaption-font-family:  $sans;
 $figcaption-font-size:    1rem;
 $figcaption-line-height:  1em;
-$figcaption-color:        $aa-grey-1;
+$figcaption-color:        white;
 $figcaption-text-padding: 0;
 $figcaption-text-margin:  0;
 

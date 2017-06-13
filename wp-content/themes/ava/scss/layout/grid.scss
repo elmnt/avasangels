@@ -82,3 +82,43 @@
   }
 
 }
+
+/**
+ * Optional Portfolio Display
+ */
+
+.grid--portfolio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  // mobile first
+  .gpitem {
+
+    flex-basis: 100%;
+
+    @media only screen and (min-width: 600px) and (max-width: 799px) {
+      flex-basis: 50%;
+    }
+    @media only screen and (min-width: 800px) {
+      flex-basis: 33.333333%;
+    }
+
+  }
+
+  p {
+    border: 1px solid pink;
+    padding: 20px;
+    margin-bottom: 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
