@@ -114,10 +114,50 @@
 
 }
 
+/**
+ * Split content inside a single column
+ */
+.grid--flex {
 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 
+  .gfitem-1,
+  .gfitem-2 {
+    flex-basis: 100%;
+  }
 
+  .gfitem-1 {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
 
+  // And some image settings
+  // to force display and alignment in single column
+  .gfitem-img {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media only screen and (min-width: $bp-grid-cols) {
+
+    flex-direction: row;
+
+    .gfitem-1 {
+      flex-basis: 30%;
+      padding-bottom: 0;
+    }
+
+    .gfitem-2 {
+      flex-basis: 70%;
+      padding-left: 2rem;
+    }
+
+  }
+
+}
 
 
 

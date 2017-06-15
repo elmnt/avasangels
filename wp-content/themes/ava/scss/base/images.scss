@@ -33,3 +33,16 @@ img[height] {
   max-width: none;
 }
 */
+
+.img--round {
+    display: inline-block;
+    border: $base-border-width $base-border-style $aa-color-4;
+    border-radius: 50%;
+    width: 75%;
+
+    // Use the same breakpoint as the grid
+    @media only screen and (min-width: $bp-grid-cols) {
+      width: 100%;
+    }
+
+}

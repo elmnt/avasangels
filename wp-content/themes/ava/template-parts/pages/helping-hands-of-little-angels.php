@@ -1,33 +1,47 @@
 <div class="grid">
 
 	<div class="col-6">
-		<h4>Helping Hands of Little Angels</h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <?php // ACF content
+      if ( function_exists( 'get_field' ) ) {
+         $hhquote = get_field('hh_quote');
+         $hhquoteatt = get_field('hh_quote_attribute');
+         if( $hhquote ) {
+            echo '<h5>'.$hhquote.'</h5>';
+            echo '<h6>'.$hhquoteatt.'</h6>';
+         } else {
+            echo $GLOBALS[ 'noacf' ]; // Set in header.php
+         }
+      }
+      //hh_quote
+      //hh_quote_attribute
+      ?>
+
 	</div>
 
 	<div class="col-6">
 
-      <?php // ACF content - The "Easy ways" title
+      <?php // ACF content
       if ( function_exists( 'get_field' ) ) {
-         $oaoksbtitle = get_field('oaok_sidebar_title');
-         if( $oaoksbtitle ) {
-            echo '<h4>'.$oaoksbtitle.'</h4>';
+         $hhopptitle = get_field('hh_opportunites_title');
+         if( $hhopptitle ) {
+            echo '<h4>'.$hhopptitle.'</h4>';
          } else {
             echo $GLOBALS[ 'noacf' ]; // Set in header.php
          }
       }
       ?>
 
-      <?php // ACF content - The "Easy ways" list
+      <?php // ACF content - The "Opportunities" list
       if ( function_exists( 'get_field' ) ) {
          // Check if the repeater field has rows of data
-         if( have_rows( 'oaok_sidebar_list' ) ) {
+         if( have_rows( 'hh_opportunites_list' ) ) {
             echo '<ol>';
             // loop through the rows of data
-            while ( have_rows( 'oaok_sidebar_list' ) ) : the_row();
+            while ( have_rows( 'hh_opportunites_list' ) ) : the_row();
                // set variables
-               $sidebaritem = get_sub_field( 'oaok_sidebar_list_item' );
-               echo '<li class="mb1">'.$sidebaritem.'</li>';
+               $hhoppitem = get_sub_field( 'hh_opportunity_item' );
+               echo '<li class="mb1">'.$hhoppitem.'</li>';
             endwhile;
             echo '</ol>';
          } else {

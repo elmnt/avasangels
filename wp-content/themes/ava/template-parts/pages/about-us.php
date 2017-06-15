@@ -13,10 +13,77 @@
 	<div class="col-6">
 
 		<h2>Our Inspiration</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <?php // Get the image & copy from the Our Inspiration page ?>
+
+      <div class="grid--flex">
+
+         <div class="col-6 gfitem-1">
+            <?php // ACF content
+            if ( function_exists( 'get_field' ) ) {
+               // Add the page ID to get the field from the Our Inspiration page
+               $oiavaphoto = get_field('oi_ava_photo', 49);
+               if( $oiavaphoto ) {
+                  echo '<img src="'.$oiavaphoto.'" alt="Ava Rose Twardowski" class="img--round gfitem-img">';
+               } else {
+                  echo $GLOBALS[ 'noacf' ]; // Set in header.php
+               }
+            }
+            ?>
+         </div>
+
+   		<p class="gfitem-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
 
       <h2>Our Directors</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <?php // Get the image & copy from the FIRST entry on the Our Directors page ?>
+
+      <div class="grid--flex">
+
+         <div class="col-6 gfitem-1">
+
+            <?php // ACF content
+            if ( function_exists( 'get_field' ) ) {
+               // Add the page ID to get the field from the Our Directors page
+               $odonephoto = get_field('od_one_photo', 102);
+               $odonename = get_field('od_one_name', 102);
+               if( $odonephoto ) {
+                  echo '<picture>
+                           <img src="'.$odonephoto.'" alt="'.$odonename.'" class="home__inspiration">
+                        </picture>';
+               } else {
+                  echo $GLOBALS[ 'noacf' ]; // Set in header.php
+               }
+            }
+            ?>
+
+         </div>
+
+         <div class="gfitem-2">
+
+            <?php // ACF content
+            if ( function_exists( 'get_field' ) ) {
+               // Add the page ID to get the field from the Our Directors page
+               $odonename = get_field('od_one_name', 102);
+               $odonebio = get_field('od_one_bio', 102);
+               if( $odonename ) {
+                  echo '<h5>'.$odonename.'</h5>';
+               } else {
+                  echo $GLOBALS[ 'noacf' ]; // Set in header.php
+               }
+               if( $odonebio ) {
+                  echo $odonebio;
+               } else {
+                  echo $GLOBALS[ 'noacf' ]; // Set in header.php
+               }
+            }
+            ?>
+
+         </div>
+
+      </div>
 
    </div>
 

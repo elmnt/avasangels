@@ -38,5 +38,18 @@ footer {
     //font-family: $elmenu-font-family;
 }
 
+// Remove this from the meta display in posts
+.entry-meta {
+
+   time.updated,
+   .byline {
+      display: none;
+   }
+
+}
+
+// Set up a side-by-side display posts in the blog feed
+// with a featured image
+.entry-content {}
 
 // ----------- 2. Admin / Theme Customization
