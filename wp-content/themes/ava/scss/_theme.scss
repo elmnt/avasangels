@@ -6,7 +6,6 @@
  *
  */
 
-
 // ----------- pesticide debug helper
 
 $debug: false;
@@ -32,7 +31,6 @@ $debug: false;
 
 // ----------- 1. Sandbox
 
-
 header,
 footer {
     //font-family: $elmenu-font-family;
@@ -53,3 +51,22 @@ footer {
 .entry-content {}
 
 // ----------- 2. Admin / Theme Customization
+
+/**
+ * Center all Meta-Sliders
+ */
+.metaslider {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+ * Styles per specific page
+ */
+
+// Helping Hands of Little Angels
+
+.hh__topquote {
+  border: 2px solid $aa-color-7;
+  padding: 3rem;
+}

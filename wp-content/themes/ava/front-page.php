@@ -66,8 +66,10 @@ get_header(); ?>
 	<div class="container">
 	<div class="wrap">
 	<div class="grid">
+
+
 		<div class="col-6">
-			<h3 class="home__inspiration--title">Our Inspiration</h3>
+			<h2 class="home__inspiration--title">Our Inspiration</h2>
 			<?php // ACF content
 				if ( function_exists( 'get_field' ) ) {
 					$hpinspiration = get_field('hp_inspiration');
@@ -76,8 +78,10 @@ get_header(); ?>
 					echo $GLOBALS[ 'noacf' ]; // Set in header.php
 				}
 			?>
-			<p><a href="#">Read more about Ava</a></p>
+			<p><a href="/our-inspiration/">Read more about Ava &rarr;</a></p>
 		</div>
+
+
 		<div class="col-6 home__inspiration--holder">
 			<?php // ACF content
 			if ( function_exists( 'get_field' ) ) {
@@ -108,7 +112,7 @@ get_header(); ?>
 <div class="grid">
 
 	<div class="col-5">
-		<h3 class="home__mission--title">Our Mission</h3>
+		<h2 class="home__mission--title">Our Mission</h2>
 		<?php // ACF content
 			if ( function_exists( 'get_field' ) ) {
 				$hpourmission = get_field('hp_our_mission');
@@ -117,12 +121,13 @@ get_header(); ?>
 				echo $GLOBALS[ 'noacf' ]; // Set in header.php
 			}
 		?>
+		<p><a href="/about-us/">Read More &rarr;</a></p>
 	</div>
 
 	<div class="col-2"><p>&nbsp;</p></div>
 
 	<div class="col-5">
-		<h3 class="home__newsevents--title">News &amp; Events</h3>
+		<h2 class="home__newsevents--title">News &amp; Events</h2>
 		<?php // Show the most recent blog post
 		global $post;
 		$args = array( 'posts_per_page' => 1 );
@@ -134,7 +139,7 @@ get_header(); ?>
 			<?php the_post_thumbnail( $size = 'home-featured-post' ); ?>
 			<div class="home__newsevents--excerpt">
 				<?php the_excerpt(); ?>
-				<p><a href="#">Continue Reading &rarr;</a></p>
+				<p><a href="#">Read More &rarr;</a></p>
 			</div>
 		<?php endforeach; ?>
 		<?php wp_reset_postdata(); ?>

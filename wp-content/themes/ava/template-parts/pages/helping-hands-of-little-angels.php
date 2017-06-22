@@ -2,20 +2,20 @@
 
 	<div class="col-6">
 
+      <div class="hh__topquote">
       <?php // ACF content
       if ( function_exists( 'get_field' ) ) {
          $hhquote = get_field('hh_quote');
          $hhquoteatt = get_field('hh_quote_attribute');
          if( $hhquote ) {
             echo '<h5>'.$hhquote.'</h5>';
-            echo '<h6>'.$hhquoteatt.'</h6>';
+            echo '<h6 class="mb0">&mdash; '.$hhquoteatt.'</h6>';
          } else {
             echo $GLOBALS[ 'noacf' ]; // Set in header.php
          }
       }
-      //hh_quote
-      //hh_quote_attribute
       ?>
+      </div>
 
 	</div>
 
@@ -54,8 +54,30 @@
 
 </div>
 
-<div class="grid--portfolio">
+<div class="grid">
 
-<!-- class="gpitem" -->
+   <?php // ACF content - Acts of Kindness images/captions
+   if ( function_exists( 'get_field' ) ) {
+      // Check if the repeater field has rows of data
+      if( have_rows( 'hh_events' ) ) {
+         echo '<div class="grid--portfolio">';
+         // loop through the rows of data
+         while ( have_rows( 'hh_events' ) ) : the_row();
+            // set variables
+            $image = get_sub_field( 'hh_event_image' );
+            $caption = get_sub_field( 'hh_event_caption' );
+            echo '<div class="gpitem">';
+            echo '<figure>';
+            echo '<img src="'.$image.'">';
+            echo '<figcaption><p>'.$caption.'</p></figcaption>';
+            echo '</figure>';
+            echo '</div>';
+         endwhile;
+         echo '</div>';
+      } else {
+         echo $GLOBALS[ 'noacf' ]; // Set in header.php
+      }
+   }
+   ?>
 
 </div>

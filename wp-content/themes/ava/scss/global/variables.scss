@@ -319,7 +319,7 @@ $container-min-width:  300px;
 $container-pad:        0 2em;
 $container-pad-mobile: 0 1em;
 $wrap-max-width:       1200px;
-$wrap-wide-max-width:  1400px;
+$wrap-wide-max-width:  1600px;
 $wrap-min-width:       300px;
 
 // center-align & middle-align box
@@ -345,7 +345,8 @@ $single-col-width-margin: ($single-col-width - $readable-col-width)/2;
 
 // the frontpage full-screen image
 // (in header.scss because it's part of header-frontpage.php)
-$frontpage-max-width: 1400px;
+// Not in use
+// $frontpage-max-width: 1400px;
 
 // ----------- layout/footer
 // ----------- layout/sidebar
@@ -357,7 +358,8 @@ $frontpage-max-width: 1400px;
 
 // ----------- templates/front-page
 
-$wrap-home-masthead-max-width: 1600px;
+// Not in use:
+// $wrap-home-masthead-max-width: 1600px;
 
 // ----------- templates/single
 // ----------- templates/archive
