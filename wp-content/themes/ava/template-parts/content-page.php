@@ -31,6 +31,13 @@
 		</div>
 		</div>
 		</div>
+		<?php
+		/*
+		Place the Our Mission anchor here, so the text isn't
+		up against the top of the browser window when we access the link.
+		*/
+		?>
+		<div id="our-mission-anchor"></div>
 	</header><!-- .entry-header -->
 
 	<?php // Or, just render the title ?>
@@ -38,6 +45,13 @@
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php
+		/*
+		Place the Our Mission anchor here, so the text isn't
+		up against the top of the browser window when we access the link.
+		*/
+		?>
+		<div id="our-mission-anchor"></div>
 	</header><!-- .entry-header -->
 
 	<?php endif; ?>

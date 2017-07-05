@@ -22,6 +22,14 @@
 
 .hide { display: none !important; }
 
+// Add this class to hide anything in mobile mode,
+// according to the main column breakpoint
+.hide-mobile {
+   @media only screen and (max-width: $bp-grid-cols) {
+      display: none !important;
+   }
+}
+
 .inline       { display: inline; }
 .block        { display: block; }
 .inline-block { display: inline-block; }

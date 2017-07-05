@@ -118,9 +118,9 @@
 }
 
 /**
- * Our Inspiration
+ * Our Mission
  */
-.container--home__inspiration {
+.container--home__mission {
     padding-top: 2rem;
     padding-bottom: 2rem;
     background: transparent url('img/frontpage-flowers-inspiration.svg') bottom right no-repeat;
@@ -138,12 +138,11 @@
         background-size: 55%;
     }
 
-    .home__inspiration--title {
-        background: transparent url('img/aa-icon-flower.svg') top left no-repeat;
-        padding-left: 80px;
-        line-height: 1em;
+    .home__mission--title {
+        background: transparent url('img/aa-icon-mission.svg') top left no-repeat;
+        padding-left: 60px;
         @media only screen and (min-width: 1440px) {
-            padding-left: 90px;
+            padding-left: 70px;
         }
     }
 
@@ -165,15 +164,17 @@
 }
 
 /**
- * Our Mission
+ * Our Inspiration
  */
-.home__mission--title {
-    background: transparent url('img/aa-icon-mission.svg') top left no-repeat;
-    padding-left: 60px;
+.home__inspiration--title {
+    background: transparent url('img/aa-icon-flower.svg') top left no-repeat;
+    padding-left: 80px;
+    line-height: 1em;
     @media only screen and (min-width: 1440px) {
-        padding-left: 70px;
+        padding-left: 90px;
     }
 }
+
 
 /**
  * News & Events

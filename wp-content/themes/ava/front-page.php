@@ -62,40 +62,41 @@ get_header(); ?>
 </div><!-- /.container--masthead -->
 
 
-<div class="container--full container--home__inspiration">
+<div class="container--full container--home__mission">
 	<div class="container">
 	<div class="wrap">
 	<div class="grid">
 
-
 		<div class="col-6">
-			<h2 class="home__inspiration--title">Our Inspiration</h2>
-			<?php // ACF content
-				if ( function_exists( 'get_field' ) ) {
-					$hpinspiration = get_field('hp_inspiration');
-					echo $hpinspiration;
-				} else {
-					echo $GLOBALS[ 'noacf' ]; // Set in header.php
-				}
-			?>
-			<p><a href="/our-inspiration/">Read more about Ava &rarr;</a></p>
-		</div>
-
-
-		<div class="col-6 home__inspiration--holder">
+			<h2 class="home__mission--title">Our Mission</h2>
 			<?php // ACF content
 			if ( function_exists( 'get_field' ) ) {
-				$hpinspirationphoto = get_field('hp_inspiration_photo');
-				if( $hpinspirationphoto ) {
-					echo '<picture>
-					      	<img src="'.$hpinspirationphoto.'" alt="Ava Rose Twardowski" class="home__inspiration">
-					      </picture>';
+			   // Add the page ID to get the Our Mission excerpt field from the Front Page
+			   $omexcerpt = get_field('au_our_mission_excerpt', 41);
+			   if( $omexcerpt ) {
+			      echo $omexcerpt;
+			   } else {
+			      echo $GLOBALS[ 'noacf' ]; // Set in header.php
+			   }
+			}
+			?>
+			<p><a href="/about-us/#our-mission-anchor">Read More &rarr;</a></p>
+		</div>
+
+		<div class="col-6 hide-mobile">
+			<?php // ACF content
+			if ( function_exists( 'get_field' ) ) {
+				$hpomphoto = get_field('hp_our_mission_photo');
+				$hpomphotomw = get_field('hp_our_mission_photo_width');
+				if( $hpomphoto ) {
+					echo '<img src="'.$hpomphoto.'" alt="Our Mission" style="max-width:'.$hpomphotomw.'px">';
 				} else {
 					echo $GLOBALS[ 'noacf' ]; // Set in header.php
 				}
 			}
 			?>
 		</div>
+
 	</div>
 	</div>
 	</div>
@@ -112,14 +113,17 @@ get_header(); ?>
 <div class="grid">
 
 	<div class="col-5">
-		<h2 class="home__mission--title">Our Mission</h2>
+		<h2 class="home__inspiration--title">Our Inspiration</h2>
 		<?php // ACF content
-			if ( function_exists( 'get_field' ) ) {
-				$hpourmission = get_field('hp_our_mission');
-				echo $hpourmission;
-			} else {
-				echo $GLOBALS[ 'noacf' ]; // Set in header.php
-			}
+		if ( function_exists( 'get_field' ) ) {
+		   // Add the page ID to get the Our Inspiration excerpt field from the Front Page
+		   $oiexcerpt = get_field('oi_ava_excerpt', 49);
+		   if( $oiexcerpt ) {
+		      echo $oiexcerpt;
+		   } else {
+		      echo $GLOBALS[ 'noacf' ]; // Set in header.php
+		   }
+		}
 		?>
 		<p><a href="/about-us/">Read More &rarr;</a></p>
 	</div>

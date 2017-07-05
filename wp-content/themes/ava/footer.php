@@ -6,28 +6,51 @@
  */
 ?></div><!-- #content -->
 
-    <div class="container--full container--footer-quote">
-        <div class="wrap">
-            <div class="single-column center">
-            <h5>&ldquo;No act of kindness, no matter how small, is ever wasted.&rdquo;<br><br>&mdash;Aesop</h5>
-            </div>
-        </div>
-    </div>
+  <div class="container--full container--footer-quote">
+      <div class="wrap">
+          <div class="single-column center">
+          <?php
+          // Get the slug, so we can assign the ACF
+          // based on the page name
+          // global $post;
+          // $post_slug = $post->post_name;
+          // echo $post_slug;
+          // ACF Content
+          // If a quote is entered for this page, it will show.
+          if ( function_exists( 'get_field' ) ) {
+             $iq = get_field('iquote');
+             $iqatt = get_field('iquoteatt');
+             if( $iq ) {
+                echo '<h5>&ldquo;';
+                echo $iq;
+                echo '&rdquo;<br><br>&mdash;';
+                echo $iqatt;
+                echo '</h5>';
+             } else {
+                // If not, just show nothing
+                // echo $GLOBALS[ 'noacf' ]; // Set in header.php
+             }
+          }
+          ?>
+          </div>
 
-   <footer id="colophon" class="site-footer" role="contentinfo">
+      </div>
+  </div>
 
-    <div class="container--full container--footer">
-        <div class="wrap">
-            <div class="single-column center">
-                <p><a href="#">Contact Us</a>/<a href="#">Privacy Policy</a><!-- <a href="#">Facebook</a> --></p>
-                <p class="copyright">Copyright 2013. Ava's Angels. All Rights Reserved.</p>
-                <!--<div class="site-info"></div>-->
-                <!-- .site-info -->
-            </div>
-        </div>
-    </div>
+  <footer id="colophon" class="site-footer" role="contentinfo">
 
-   </footer><!-- #colophon -->
+  <div class="container--full container--footer">
+      <div class="wrap">
+          <div class="single-column center">
+              <p><a href="#">Contact Us</a>/<a href="#">Privacy Policy</a><!-- <a href="#">Facebook</a> --></p>
+              <p class="copyright">Copyright 2013. Ava's Angels. All Rights Reserved.</p>
+              <!--<div class="site-info"></div>-->
+              <!-- .site-info -->
+          </div>
+      </div>
+  </div>
+
+  </footer><!-- #colophon -->
 
    <nav id="elmobile">
       <div class="elmtoggle__holder--mobile">
