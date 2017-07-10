@@ -1,82 +1,53 @@
-<div class="grid">
+<?php // ACF content - Our Directors excerpt
+if ( function_exists( 'get_field' ) ) {
+   $odexcerpt = get_field('od_directors_excerpt');
+   if( $odexcerpt ) {
+      echo '<div class="grid mt2 mb4">';
+      echo '<div class="single-column">';
+      echo '<h6>';
+      echo $odexcerpt;
+      echo '</h6>';
+      echo '</div>';
+      echo '</div>';
+   } else {
+      echo $GLOBALS[ 'noacf' ]; // Set in header.php
+   }
+}
+?>
 
-   <div class="col-6 home__inspiration--holder">
-      <?php // ACF content
-      if ( function_exists( 'get_field' ) ) {
-         $odonephoto = get_field('od_one_photo');
-         $odonename = get_field('od_one_name');
-         if( $odonephoto ) {
-            echo '<picture>
-                     <img src="'.$odonephoto.'" alt="'.$odonename.'" class="home__inspiration">
-                  </picture>';
-         } else {
-            echo $GLOBALS[ 'noacf' ]; // Set in header.php
-         }
-      }
-      ?>
-   </div>
+<?php // ACF content - Our Directors Repeater ?>
+<?php if ( function_exists( 'get_field' ) ) : ?>
 
-	<div class="col-6">
+<?php if( have_rows('director_repeater') ): ?>
 
-      <?php // ACF content
-      if ( function_exists( 'get_field' ) ) {
-         $odonename = get_field('od_one_name');
-         $odonebio = get_field('od_one_bio');
-         if( $odonename ) {
-            echo '<h2>'.$odonename.'</h2>';
-         } else {
-            echo $GLOBALS[ 'noacf' ]; // Set in header.php
-         }
-         if( $odonebio ) {
-            echo $odonebio;
-         } else {
-            echo $GLOBALS[ 'noacf' ]; // Set in header.php
-         }
-      }
-      ?>
+   <?php while( have_rows('director_repeater') ): the_row(); ?>
 
-   </div>
+      <div class="grid mb4">
 
-</div>
+         <div class="col-6 home__inspiration--holder">
+            <?php
+               $dirphoto = get_sub_field('director_photo');
+               $dirname = get_sub_field('director_name');
+               echo '<img src="'.$dirphoto.'" alt="'.$dirname.'" class="home__inspiration">';
+            ?>
+         </div>
 
+         <div class="col-6">
+            <?php
+               $dirname = get_sub_field('director_name');
+               $dirbio = get_sub_field('director_bio');
+               echo '<h3>'.$dirname.'</h3>';
+               echo '<p>'.$dirbio.'</p>';
+            ?>
+         </div>
 
-<div class="grid mt4">
+      </div>
 
-   <div class="col-6 home__inspiration--holder">
-      <?php // ACF content
-      if ( function_exists( 'get_field' ) ) {
-         $odonephoto = get_field('od_one_photo');
-         $odonename = get_field('od_one_name');
-         if( $odonephoto ) {
-            echo '<picture>
-                     <img src="'.$odonephoto.'" alt="'.$odonename.'" class="home__inspiration">
-                  </picture>';
-         } else {
-            echo $GLOBALS[ 'noacf' ]; // Set in header.php
-         }
-      }
-      ?>
-   </div>
+   <?php endwhile; ?>
 
-   <div class="col-6">
+<?php endif; ?>
 
-      <?php // ACF content
-      if ( function_exists( 'get_field' ) ) {
-         $odonename = get_field('od_one_name');
-         $odonebio = get_field('od_one_bio');
-         if( $odonename ) {
-            echo '<h2>'.$odonename.'</h2>';
-         } else {
-            echo $GLOBALS[ 'noacf' ]; // Set in header.php
-         }
-         if( $odonename ) {
-            echo $odonebio;
-         } else {
-            echo $GLOBALS[ 'noacf' ]; // Set in header.php
-         }
-      }
-      ?>
-
-   </div>
-
-</div>
+<?php // end ACF content check with fallback ?>
+<?php else: ?>
+<?php echo $GLOBALS[ 'noacf' ]; // Set in header.php ?>
+<?php endif; ?>

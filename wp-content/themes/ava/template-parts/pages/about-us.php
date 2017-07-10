@@ -8,9 +8,11 @@
          $aumissiontitle = get_field('au_our_mission_title');
          $aumissionsubtitle = get_field('au_our_mission_subtitle');
          $aumissiontext = get_field('au_our_missoin_text');
-         if( $aumissiontitle ) {
+         if( $aumissiontitle && $aumissiontext ) {
             echo '<h2>'.$aumissiontitle.'</h2>';
-            echo '<h6>'.$aumissionsubtitle.'</h6>';
+            if ( $aumissionsubtitle ) {
+               echo '<h6>'.$aumissionsubtitle.'</h6>';
+            }
             echo $aumissiontext;
          } else {
             echo $GLOBALS[ 'noacf' ]; // Set in header.php
@@ -23,7 +25,7 @@
 
 		<h2>Our Inspiration</h2>
       <?php // Get the image & copy from the Our Inspiration page ?>
-      <div class="grid--flex">
+      <div class="grid--flex mb2">
          <div class="col-6 gfitem-1">
             <?php // ACF content
             if ( function_exists( 'get_field' ) ) {
@@ -40,15 +42,16 @@
    		<div class="gfitem-2">
             <?php // ACF content - Our Inspiration excerpt
             if ( function_exists( 'get_field' ) ) {
-               $auoitext = get_field('au_our_inspiration_text');
-               if( $auoitext ) {
-                  echo $auoitext;
+               $oiavaexcerpt = get_field('oi_ava_excerpt', 49);
+               if( $oiavaexcerpt ) {
+                  echo $oiavaexcerpt;
                } else {
                   echo $GLOBALS[ 'noacf' ]; // Set in header.php
                }
             }
+            //oi_ava_excerpt
             ?>
-            <p><a href="#">Read More &rarr;</a></p>
+            <p><a href="/about-us/our-inspiration/">Read More &rarr;</a></p>
          </div>
       </div>
 
@@ -74,15 +77,15 @@
          <div class="gfitem-2">
             <?php // ACF content - Our Directors excerpt
             if ( function_exists( 'get_field' ) ) {
-               $auodtext = get_field('au_our_directors_text');
-               if( $auodtext ) {
-                  echo $auodtext;
+               $odexcerpt = get_field('od_directors_excerpt', 102);
+               if( $odexcerpt ) {
+                  echo $odexcerpt;
                } else {
                   echo $GLOBALS[ 'noacf' ]; // Set in header.php
                }
             }
             ?>
-            <p><a href="#">Read More &rarr;</a></p>
+            <p><a href="/about-us/our-directors/">Read More &rarr;</a></p>
          </div>
       </div>
 

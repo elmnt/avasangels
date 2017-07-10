@@ -114,3 +114,11 @@ button {
   }
 
 }
+
+// Override submit buttons for a default input type=submit
+// to give it a more reasonable width on desktop
+.button--submit {
+  margin-top: 2rem;
+  width: 100% !important;
+  max-width: 300px !important;
+}

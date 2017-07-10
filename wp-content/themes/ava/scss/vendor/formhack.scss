@@ -150,6 +150,7 @@ select,
 textarea {
 	width: $fh-input-width;
 	max-width: $fh-input-max-width;
+	margin-bottom: $fh-input-margin-bottom;
 	padding: $fh-input-padding;
 	background-color: $fh-input-bg-color;
 	border-radius: $fh-border-radius;
@@ -171,7 +172,7 @@ input[type="time"],
 input[type="url"],
 input[type="week"],
 input[list] {
-	height: $fh-input-height;
+	//height: $fh-input-height;
 	-webkit-appearance: none;
 }
 
@@ -193,7 +194,7 @@ input[type="file"] {
 }
 
 input[type="search"] {
-	height: $fh-input-height;
+	//height: $fh-input-height;
 	-webkit-appearance: none;
 }
 input[type="search"]::-webkit-search-cancel-button,
