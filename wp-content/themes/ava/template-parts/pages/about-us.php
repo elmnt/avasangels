@@ -56,17 +56,15 @@
       </div>
 
       <h2>Our Directors</h2>
-      <?php // Get the image & copy from the FIRST entry on the Our Directors page ?>
       <div class="grid--flex">
          <div class="col-6 gfitem-1">
-            <?php // ACF content
+            <?php // ACF content od_aboutus
             if ( function_exists( 'get_field' ) ) {
                // Add the page ID to get the field from the Our Directors page
-               $odonephoto = get_field('od_one_photo', 102);
-               $odonename = get_field('od_one_name', 102);
-               if( $odonephoto ) {
+               $odaboutus = get_field('od_aboutus', 102);
+               if( $odaboutus ) {
                   echo '<picture>
-                           <img src="'.$odonephoto.'" alt="'.$odonename.'" class="home__inspiration">
+                           <img src="'.$odaboutus.'" alt="Ava\'s Angels San Diego" class="home__inspiration">
                         </picture>';
                } else {
                   echo $GLOBALS[ 'noacf' ]; // Set in header.php

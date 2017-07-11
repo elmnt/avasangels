@@ -36,13 +36,31 @@ footer {
     //font-family: $elmenu-font-family;
 }
 
-// Remove this from the meta display in posts
+// Control the meta display in posts
+
 .entry-meta {
 
-   time.updated,
-   .byline {
-      display: none;
-   }
+  // hide the byline
+  .byline {
+     display: none;
+  }
+
+  // hide the double time tag
+  .posted-on {
+    a {
+      time:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+}
+
+body.blog footer.entry-footer {
+
+  .comments-link {
+    display: none;
+  }
 
 }
 

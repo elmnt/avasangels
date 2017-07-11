@@ -1,9 +1,7 @@
 <?php
 /**
- * Template part for displaying posts
- *
+ * Template part for displaying main blog feed (via home.php) and posts
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
  * @package ava
  */
 ?>
@@ -30,24 +28,79 @@
 
 	</header><!-- .entry-header -->
 
+	<!--
+	<div class="grid--flex">
+		<div class="gfitem-1">
+			<?php /*the_post_thumbnail( 'thumbnail' );*/ ?>
+		</div>
+		<div class="gfitem-2">
+			<?php /*the_excerpt();*/ ?>
+		</div>
+	</div>
+	-->
+
 	<div class="entry-content">
 
+		<?php if ( has_excerpt() && has_post_thumbnail() ): ?>
+
+		<div class="grid--flex">
+			<div class="gfitem-1">
+				<?php the_post_thumbnail( 'thumbnail' ); ?>
+			</div>
+			<div class="gfitem-2">
+				<?php the_excerpt(); ?>
+			</div>
+		</div>
+
+		<?php elseif ( has_excerpt() && !has_post_thumbnail() ): ?>
+
+		<div class="grid">
+			<?php the_excerpt(); ?>
+		</div>
+
+		<?php elseif ( !has_excerpt() && has_post_thumbnail() ): ?>
+
+		<div class="grid--flex">
+			<div class="gfitem-1">
+				<?php the_post_thumbnail( 'thumbnail' ); ?>
+			</div>
+			<div class="gfitem-2">
+				<?php the_excerpt(); ?>
+			</div>
+		</div>
+
+		<?php elseif ( !has_excerpt() && !has_post_thumbnail() ): ?>
+
+		<div class="grid">
+			<?php the_excerpt(); ?>
+		</div>
+
+		<?php else: ?>
+		<?php the_content(); // safe fallback ?>
+		<?php endif; ?>
+
 		<?php
+		/* alternate style
 		if ( has_excerpt() && has_post_thumbnail() ) {
-			echo 'BOTH';
+			echo '<p style="color:red;">Show excerpt and thumbnail</p>';
 		} elseif ( has_excerpt() && !has_post_thumbnail() ) {
-			echo 'EXCERPT / NO THUMB';
+			echo '<p style="color:red;">Show excerpt only</p>';
 		} elseif ( !has_excerpt() && has_post_thumbnail() ) {
-			echo 'NO EXCERPT / THUMB';
+			echo '<p style="color:red;">Show generated content excerpt and thumbnail</p>';
 		} elseif ( !has_excerpt() && !has_post_thumbnail() ) {
-			echo 'NEITHER';
+			echo '<p style="color:red;">Show generated content excerpt only</p>';
+			the_excerpt();
 		} else {
+			// safe fallback
 			the_content();
 		}
+		*/
 		?>
 
-		<?php the_post_thumbnail( 'thumbnail' ); ?>
-		<?php the_excerpt(); ?>
+		<p class="mt2"><a href="#">Continue Reading</a></p>
+
+		<?php /*the_post_thumbnail( 'thumbnail' );*/ ?>
+		<?php /*the_excerpt();*/ ?>
 
 		<?php
 			/*
