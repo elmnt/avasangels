@@ -16,6 +16,26 @@ p.lead {
   font-style: $p-lead-font-style;
 }
 
+ul,
+ol {
+  margin: $p-margin;
+}
+
+li {
+  font-size: 112.5%;
+}
+
+/*
+WP wraps all Wysiwyg Editor content in p tags.
+If that content is in a repeater, and in a list item,
+we need to make sure the text stays the proper size.
+( And remove the native p bottom margin )
+*/
+li > p {
+  font-size:100% !important;
+  margin-bottom: 0;
+}
+
 /*
 ul,
 ol {

@@ -28,20 +28,18 @@
 
 	</header><!-- .entry-header -->
 
-	<!--
-	<div class="grid--flex">
-		<div class="gfitem-1">
-			<?php /*the_post_thumbnail( 'thumbnail' );*/ ?>
-		</div>
-		<div class="gfitem-2">
-			<?php /*the_excerpt();*/ ?>
-		</div>
-	</div>
-	-->
-
 	<div class="entry-content">
 
-		<?php if ( has_excerpt() && has_post_thumbnail() ): ?>
+		<?php if ( is_single() ) : ?>
+			<div class="grid">
+				<p>single</p>
+			</div>
+		<?php else: ?>
+			<p>all posts</p>
+		<?php endif; ?>
+
+		<?php // if excerpt and thumbnail OR no excerpt and thumbnail
+		if ( ( has_excerpt() && has_post_thumbnail() ) || ( !has_excerpt() && has_post_thumbnail() )  ): ?>
 
 		<div class="grid--flex">
 			<div class="gfitem-1">
@@ -52,24 +50,8 @@
 			</div>
 		</div>
 
-		<?php elseif ( has_excerpt() && !has_post_thumbnail() ): ?>
-
-		<div class="grid">
-			<?php the_excerpt(); ?>
-		</div>
-
-		<?php elseif ( !has_excerpt() && has_post_thumbnail() ): ?>
-
-		<div class="grid--flex">
-			<div class="gfitem-1">
-				<?php the_post_thumbnail( 'thumbnail' ); ?>
-			</div>
-			<div class="gfitem-2">
-				<?php the_excerpt(); ?>
-			</div>
-		</div>
-
-		<?php elseif ( !has_excerpt() && !has_post_thumbnail() ): ?>
+		<?php // if excerpt and no thumbnail OR no excerpt and no thumbnail
+		elseif ( ( has_excerpt() && !has_post_thumbnail() ) || ( !has_excerpt() && !has_post_thumbnail() ) ): ?>
 
 		<div class="grid">
 			<?php the_excerpt(); ?>
@@ -79,28 +61,7 @@
 		<?php the_content(); // safe fallback ?>
 		<?php endif; ?>
 
-		<?php
-		/* alternate style
-		if ( has_excerpt() && has_post_thumbnail() ) {
-			echo '<p style="color:red;">Show excerpt and thumbnail</p>';
-		} elseif ( has_excerpt() && !has_post_thumbnail() ) {
-			echo '<p style="color:red;">Show excerpt only</p>';
-		} elseif ( !has_excerpt() && has_post_thumbnail() ) {
-			echo '<p style="color:red;">Show generated content excerpt and thumbnail</p>';
-		} elseif ( !has_excerpt() && !has_post_thumbnail() ) {
-			echo '<p style="color:red;">Show generated content excerpt only</p>';
-			the_excerpt();
-		} else {
-			// safe fallback
-			the_content();
-		}
-		*/
-		?>
-
 		<p class="mt2"><a href="#">Continue Reading</a></p>
-
-		<?php /*the_post_thumbnail( 'thumbnail' );*/ ?>
-		<?php /*the_excerpt();*/ ?>
 
 		<?php
 			/*

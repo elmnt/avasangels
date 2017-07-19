@@ -1,15 +1,32 @@
 <div class="grid">
+<div class="single-column">
+
+   <?php // ACF content
+   if ( function_exists( 'get_field' ) ) {
+      $liintro = get_field('li_intro');
+      if( $liintro ) {
+         echo '<h6 class="mb3">'.$liintro.'</h6>';
+      } else {
+         echo $GLOBALS[ 'noacf' ]; // Set in header.php
+      }
+   }
+   ?>
+
+</div>
+</div>
+
+<div class="grid">
 
 	<div class="col-6">
 
       <div class="hh__topquote">
       <?php // ACF content
       if ( function_exists( 'get_field' ) ) {
-         $hhquote = get_field('hh_quote');
-         $hhquoteatt = get_field('hh_quote_attribute');
-         if( $hhquote ) {
-            echo '<h5>'.$hhquote.'</h5>';
-            echo '<h6 class="mb0">&mdash; '.$hhquoteatt.'</h6>';
+         $liquote = get_field('li_quote');
+         $liquoteatt = get_field('li_quote_attribute');
+         if( $liquote ) {
+            echo '<h5>'.$liquote.'</h5>';
+            echo '<h6 class="mb0">&mdash; '.$liquoteatt.'</h6>';
          } else {
             echo $GLOBALS[ 'noacf' ]; // Set in header.php
          }
@@ -23,25 +40,25 @@
 
       <?php // ACF content
       if ( function_exists( 'get_field' ) ) {
-         $hhopptitle = get_field('hh_opportunites_title');
-         if( $hhopptitle ) {
-            echo '<h4>'.$hhopptitle.'</h4>';
+         $liopptitle = get_field('li_opportunites_title');
+         if( $liopptitle ) {
+            echo '<h4>'.$liopptitle.'</h4>';
          } else {
             echo $GLOBALS[ 'noacf' ]; // Set in header.php
          }
       }
       ?>
 
-      <?php // ACF content - The "Opportunities" list
+      <?php // ACF content
       if ( function_exists( 'get_field' ) ) {
          // Check if the repeater field has rows of data
-         if( have_rows( 'hh_opportunites_list' ) ) {
+         if( have_rows( 'li_opportunites_list' ) ) {
             echo '<ol>';
             // loop through the rows of data
-            while ( have_rows( 'hh_opportunites_list' ) ) : the_row();
+            while ( have_rows( 'li_opportunites_list' ) ) : the_row();
                // set variables
-               $hhoppitem = get_sub_field( 'hh_opportunity_item' );
-               echo '<li class="mb1">'.$hhoppitem.'</li>';
+               $lioppitem = get_sub_field( 'li_opportunity_item' );
+               echo '<li class="mb1">'.$lioppitem.'</li>';
             endwhile;
             echo '</ol>';
          } else {
@@ -59,13 +76,13 @@
    <?php // ACF content - Acts of Kindness images/captions
    if ( function_exists( 'get_field' ) ) {
       // Check if the repeater field has rows of data
-      if( have_rows( 'hh_events' ) ) {
+      if( have_rows( 'li_events' ) ) {
          echo '<div class="grid--portfolio">';
          // loop through the rows of data
-         while ( have_rows( 'hh_events' ) ) : the_row();
+         while ( have_rows( 'li_events' ) ) : the_row();
             // set variables
-            $image = get_sub_field( 'hh_event_image' );
-            $caption = get_sub_field( 'hh_event_caption' );
+            $image = get_sub_field( 'li_event_image' );
+            $caption = get_sub_field( 'li_event_caption' );
             echo '<div class="gpitem">';
             echo '<figure>';
             echo '<img src="'.$image.'">';

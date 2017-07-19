@@ -6,7 +6,9 @@
 #secondary {}
 
 // Sidebar widget titles
-#secondary h2.widget-title {}
+#secondary .widget-title {
+  margin-top: 2rem !important;
+}
 
 /*
 Using menus in the sidebar widgets, so we can easily

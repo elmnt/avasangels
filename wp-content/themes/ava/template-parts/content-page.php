@@ -77,10 +77,10 @@
 			about-us
 				our-directors
 				our-inspiration
-			programs-events
+			programs
 				blog
 				our-acts-of-kindness
-				helping-hands-of-little-angels
+				little-angels
 				gathering-in-the-garden
 			contact-us
 			give
@@ -104,16 +104,16 @@
 					require get_template_directory() . '/template-parts/pages/our-directors.php';
 
 				// Programs & Events (and sub-pages)
-				} elseif ( is_page('programs-events')) {
-					require get_template_directory() . '/template-parts/pages/programs-events.php';
+				} elseif ( is_page('programs')) {
+					require get_template_directory() . '/template-parts/pages/programs.php';
 				} elseif ( is_page('fundraisers')) {
 					require get_template_directory() . '/template-parts/pages/fundraisers.php';
-				} elseif ( is_page('our-acts-of-kindness')) {
-					require get_template_directory() . '/template-parts/pages/our-acts-of-kindness.php';
-				} elseif ( is_page('helping-hands-of-little-angels')) {
-					require get_template_directory() . '/template-parts/pages/helping-hands-of-little-angels.php';
-				} elseif ( is_page('the-gathering-in-the-garden')) {
-					require get_template_directory() . '/template-parts/pages/the-gathering-in-the-garden.php';
+				} elseif ( is_page('acts-of-kindness')) {
+					require get_template_directory() . '/template-parts/pages/acts-of-kindness.php';
+				} elseif ( is_page('little-angels')) {
+					require get_template_directory() . '/template-parts/pages/little-angels.php';
+				} elseif ( is_page('gathering-in-the-garden')) {
+					require get_template_directory() . '/template-parts/pages/gathering-in-the-garden.php';
 
 				// Remaining sub-pages
 				}  elseif ( is_page('contact-us')) {

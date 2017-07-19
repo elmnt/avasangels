@@ -10,7 +10,8 @@ It will use most of these styles, but will stay there
 to avoid any conflict.
 */
 .button,
-button {
+button,
+input[type="submit"] {
   display: inline-block;
   color: $button-color;
   background: $button-background-color;

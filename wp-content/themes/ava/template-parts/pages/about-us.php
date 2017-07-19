@@ -49,7 +49,6 @@
                   echo $GLOBALS[ 'noacf' ]; // Set in header.php
                }
             }
-            //oi_ava_excerpt
             ?>
             <p><a href="/about-us/our-inspiration/">Read More &rarr;</a></p>
          </div>
@@ -77,7 +76,9 @@
             if ( function_exists( 'get_field' ) ) {
                $odexcerpt = get_field('od_directors_excerpt', 102);
                if( $odexcerpt ) {
+                  echo '<p>';
                   echo $odexcerpt;
+                  echo '</p>';
                } else {
                   echo $GLOBALS[ 'noacf' ]; // Set in header.php
                }
