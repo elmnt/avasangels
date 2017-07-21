@@ -41,7 +41,9 @@ I built upon it to add:
  * elmenu global font setting
  */
 #elmenu,
-#elmobile, {}
+#elmobile {
+   font-family: $elmenu-font-family;
+}
 
 /**
  * Page structure

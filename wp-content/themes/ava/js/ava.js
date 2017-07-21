@@ -1937,7 +1937,7 @@ setTimeout( function() {
 	// create the buttons
 	const mobileCTAs = document.createElement('div');
 	mobileCTAs.classList.add('elmobile__cta-holder');
-	mobileCTAs.innerHTML = '<a href="#" class="button button--white">Get Support</a><a href="#" class="button button--white">Get Involved</a>';
+	mobileCTAs.innerHTML = '<a href="/get-support/" class="button button--white">Get Support</a><a href="/get-involved/" class="button button--white">Get Involved</a>';
 	const mobileMenu = document.querySelector( '#elmobile' );
 	mobileMenu.appendChild( mobileCTAs );
 

@@ -7,7 +7,7 @@
       Suite D467<br>
       Encinitas, Ca 92024<br>
       </p>
-      <p><a href="http://www.facebook.com/AvasAngelsSanDeigo">Connect with us on Facebook</a></p>
+      <p><a href="http://www.facebook.com/AvasAngelsSanDiego" target="_blank">Connect with us on Facebook</a></p>
 	</div>
 
 	<div class="col-8">

@@ -140,6 +140,7 @@
 
     .home__mission--title {
         background: transparent url('img/aa-icon-mission.svg') top left no-repeat;
+        background-size: 50px;
         padding-left: 60px;
         @media only screen and (min-width: 1440px) {
             padding-left: 70px;
@@ -168,9 +169,11 @@
  */
 .home__inspiration--title {
     background: transparent url('img/aa-icon-flower.svg') top left no-repeat;
+    background-size: 60px;
     padding-left: 80px;
     line-height: 1em;
     @media only screen and (min-width: 1440px) {
+        //background-size: auto;
         padding-left: 90px;
     }
 }
@@ -181,8 +184,10 @@
  */
 .home__newsevents--title {
     background: transparent url('img/aa-icon-newsevents.svg') top left no-repeat;
+    background-size: 50px;
     padding-left: 60px;
     @media only screen and (min-width: 1440px) {
+        //background-size: auto;
         padding-left: 75px;
     }
 }

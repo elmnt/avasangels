@@ -38,7 +38,7 @@ get_header(); ?>
 		<div class="masthead__caption-holder">
 			<div class="masthead__caption">
 				<h1><?php echo $hpmtagline; ?></h1>
-				<a href="#" class="button">Get Support</a><a href="#" class="button">Get Involved</a><a href="#" class="button">Donate</a>
+				<a href="/get-support/" class="button">Get Support</a><a href="/get-involved/" class="button">Get Involved</a><a href="/give/" class="button">Give</a>
 				<?php /* End: ACF content */ ?>
 			</div>
 		</div>

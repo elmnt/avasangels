@@ -4,17 +4,17 @@
 
 <div class="col-4 footer__cta-holder">
 	<img src="<?php bloginfo('stylesheet_directory'); ?>/img/cta-get-support.jpg" class="footer__cta-img">
-	<a href="#" class="button footer__cta-button">Get Help</a>
+	<a href="/get-support/" class="button footer__cta-button">Get Support</a>
 </div>
 
 <div class="col-4 footer__cta-holder">
 	<img src="<?php bloginfo('stylesheet_directory'); ?>/img/cta-get-involved.jpg" class="footer__cta-img">
-	<a href="#" class="button footer__cta-button">Get Involved</a>
+	<a href="/get-involved/" class="button footer__cta-button">Get Involved</a>
 </div>
 
 <div class="col-4 footer__cta-holder">
 	<img src="<?php bloginfo('stylesheet_directory'); ?>/img/cta-donate.jpg" class="footer__cta-img">
-	<a href="#" class="button footer__cta-button">Donate</a>
+	<a href="/give/" class="button footer__cta-button">Give</a>
 </div>
 
 </div>

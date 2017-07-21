@@ -82,10 +82,12 @@
  * Three CTAs above the footer
  */
 .container--footer-cta {
-  margin-top: 8rem;
-  //padding-bottom: 4rem;
-  //border-bottom: 1px solid $aa-grey-2;
-  margin-bottom: 8rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  @media only screen and (min-width: $bp-grid-cols) {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
 }
 
 .footer__cta-holder {

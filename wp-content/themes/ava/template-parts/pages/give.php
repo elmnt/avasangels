@@ -1,4 +1,11 @@
 <div class="grid">
+<div class="single-column">
+   <?php /*the_content();*/ ?>
+   <iframe src="https://ots.sumacpages.com/sumac/sumac_start_new_session.php?package=donation2&userfolder=../ORG/avasangelsofsandiego" width="100%" height="1700" frameborder="0"></iframe>
+</div>
+</div>
+
+<div class="grid">
 
 	<div class="col-6">
 		<h4>Give</h4>
