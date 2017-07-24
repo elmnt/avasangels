@@ -1,0 +1,346 @@
+/* FormHack v1.2.0 (formhack.io) */
+/* formhack defaults, kept for reference
+
+// Font
+$fh-font-family: 'Raleway', sans-serif !default;
+$fh-font-size: 16px !default;
+$fh-font-color: rgb(40, 40, 40) !default;
+
+// Borders
+$fh-border-radius: 5px !default;
+$fh-border-width: 1px !default;
+$fh-border-style: solid !default;
+$fh-border-color: rgb(200, 200, 200) !default;
+
+// Inputs, Textareas, Select, Option
+$fh-input-height: 40px !default;
+$fh-input-width: 100% !default;
+$fh-input-max-width: 400px !default;
+$fh-input-bg-color: #fff !default;
+$fh-focus-bg-color: rgb(220, 220, 220) !default;
+$fh-focus-border-color: $fh-border-color !default;
+$fh-focus-font-color: $fh-font-color !default;
+
+// Select Vendor Styling
+$fh-allow-select-vendor-styling: true !default;
+
+// Fieldset & Legend Styling
+$fh-fieldset-bare: false !default;
+
+// Buttons & Input Submits
+$fh-button-height: 40px !default;
+$fh-button-width: 100% !default;
+$fh-button-max-width: 200px !default;
+$fh-button-font-color: $fh-font-color !default;
+$fh-button-bg-color: $fh-focus-bg-color !default;
+$fh-button-hover-bg-color: $fh-border-color !default;
+$fh-button-hover-font-color: $fh-font-color !default;
+
+// Layout
+$fh-centered: false !default;
+$fh-display: block !default;
+
+*/
+/**
+ * Mixins
+ */
+/*
+@mixin transY($tY) {
+  -webkit-transform: translateY($tY);
+      -ms-transform: translateY($tY);
+          transform: translateY($tY);
+}
+*/
+/*
+@mixin forcesmooth {
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+*/
+/**
+ * Create a breakpoint for below a given size
+ * Example usage:
+ * @include below(200px) { // css }
+ */
+/**
+ * Create a breakpoint for above a given size
+ * Example usage:
+ * @include above(200px) { // css }
+ */
+/**
+ * Variables
+ */
+/**
+ * Global
+ */
+/*
+Sub-page masthead gradient:
+background-image: linear-gradient(-205deg, #FCD700 0%, #BFCF31 94%);
+*/
+/**
+ * Base
+ */
+/*
+Using Google font Poppins for headers
+400: regular
+600: semi-bold
+*/
+/*
+Based on a 16px default, we set those font sizes,
+without forcing pixel values on the html tag:
+16px - 100%
+18px - 112.5%
+20px - 125%
+*/
+/*
+Alternate heading styles
+$heading-weight-normal: $fw-normal;
+$heading-style-italic: italic;
+*/
+/* Rethink these settings
+$h1-mobile: 2rem;
+$h2-mobile: 1.75rem;
+$h3-mobile: 1.5rem;
+$h4-mobile: 1.25rem;
+$h5-mobile: 1.125rem;
+$h6-mobile: 1rem;
+*/
+/**
+ * Components - Reusable UI components
+ */
+/**
+ * Layout
+ */
+/*
+
+Setting container-max-width at 100% allows for edge-to-edge layout
+(and edge-to-edge background color even when a wrap is used)
+The (optional) wrap sets a max content width
+
+|-------------------- screen --------------------|
+|--p--|------------ container -------------|--p--|
+|----------|---------- wrap ----------|----------|
+
+*/
+/**
+ * Templates
+ */
+/**
+ * Vendor
+ */
+/* not in use
+$elmenu-utility-font-size:   $elmenu-global-font-size;
+$elmenu-utility-line-height: $elmenu-global-line-height;
+$elmenu-utility-font-weight: $elmenu-global-font-weight;
+
+$elmenu-mobile-utility-font-size:   $elmenu-global-font-size;
+$elmenu-mobile-utility-line-height: $elmenu-global-line-height;
+$elmenu-mobile-utility-font-weight: $elmenu-global-font-weight;
+
+$elmenu-social-font-size:   $elmenu-global-font-size;
+$elmenu-social-line-height: $elmenu-global-line-height;
+$elmenu-social-font-weight: $elmenu-global-font-weight;
+
+$elmenu-mobile-social-font-size:   $elmenu-global-font-size;
+$elmenu-mobile-social-line-height: $elmenu-global-line-height;
+$elmenu-mobile-social-font-weight: $elmenu-global-font-weight;
+*/
+/* navutility
+$elmenu-navutility-background:                  $elmenu-color-1;
+$elmenu-navutility-link-padding:                1.25rem 1rem;
+$elmenu-navutility-link-color:                  $elmenu-color-3;
+$elmenu-navutility-link-hover-color:            white;
+$elmenu-navutility-link-background-color:       $elmenu-color-1;
+$elmenu-navutility-link-hover-background-color: $elmenu-color-1;
+$elmenu-navutility-link-text-transform:         none;
+*/
+/**
+ * Our Theme
+ */
+/**
+ * Media
+ */
+/* Global Reset Styles ------------------ */
+input,
+textarea,
+select,
+option,
+optgroup,
+button,
+legend,
+fieldset {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins", helvetica, "helvetica neue", arial, sans-serif;
+  font-size: 1rem;
+  color: #888;
+  vertical-align: top;
+  display: block;
+  margin: 10px 0; }
+
+datalist {
+  font-family: "Poppins", helvetica, "helvetica neue", arial, sans-serif;
+  font-size: 1rem; }
+
+label {
+  display: block;
+  margin: 10px 0; }
+
+/* Input & Textarea ------------------ */
+/* Fields with standard width */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: none;
+  border: 4px solid #eee; }
+
+/* Fields with standard height */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list] {
+  -webkit-appearance: none; }
+
+/* Other */
+textarea {
+  -webkit-appearance: none;
+  overflow: auto; }
+
+input[type="range"] {
+  height: auto;
+  width: 100%;
+  max-width: 100%; }
+
+input[type="file"] {
+  min-height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: none; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle; }
+
+/* Select ------------------ */
+select {
+  height: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none; }
+
+select::-ms-expand {
+  display: none; }
+
+select[multiple] {
+  height: auto;
+  min-height: auto;
+  padding: 0; }
+
+select[multiple] option {
+  margin: 0;
+  padding: 1rem; }
+
+/* Fieldset ------------------ */
+fieldset {
+  padding: 0;
+  border: 0;
+  /* remove these styles
+		padding: 10px 25px;
+		border-radius: $fh-border-radius;
+		border: $fh-border-width $fh-border-style $fh-border-color;
+		*/ }
+
+legend {
+  padding: 0 5px;
+  font-weight: 700; }
+
+/* Buttons, Input Type Submit/Reset ------------------ */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"] {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  background-color: #E23D69;
+  padding: 1.25rem 3rem 1.15rem 3rem;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 4px solid #E23D69;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  -ms-border-radius: 500px;
+  border-radius: 500px; }
+
+input[type="image"] {
+  text-align: center;
+  padding: 1rem; }
+
+/* States ------------------ */
+input[disabled],
+textarea[disabled],
+select[disabled],
+option[disabled],
+button[disabled] {
+  cursor: not-allowed; }
+
+input:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus {
+  background-color: white;
+  border-color: #EF899C; }
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: #EF899C solid 2px; }
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+  background-color: #EF899C;
+  color: white; }
