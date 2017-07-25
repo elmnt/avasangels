@@ -88,3 +88,19 @@ body.blog footer.entry-footer {
   border: 2px solid $aa-color-7;
   padding: 3rem;
 }
+
+/**
+ * Contact Form 7 output
+ */
+
+// change color of the success div
+div.wpcf7-mail-sent-ok {
+  border-color: $aa-color-7 !important;
+}
+
+// increase the padding on the output div
+div.wpcf7-response-output {
+  padding: 2em !important;
+  font-size: 1.5rem !important;
+  line-height: 1.5em !important;
+}
