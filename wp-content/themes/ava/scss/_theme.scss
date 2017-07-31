@@ -31,31 +31,6 @@ $debug: false;
 
 // ----------- 1. Sandbox
 
-header,
-footer {
-    //font-family: $elmenu-font-family;
-}
-
-// Control the meta display in posts
-
-.entry-meta {
-
-  // hide the byline
-  .byline {
-     display: none;
-  }
-
-  // hide the double time tag
-  .posted-on {
-    a {
-      time:nth-child(2) {
-        display: none;
-      }
-    }
-  }
-
-}
-
 body.blog footer.entry-footer {
 
   .comments-link {
@@ -64,26 +39,13 @@ body.blog footer.entry-footer {
 
 }
 
-// Set up a side-by-side display posts in the blog feed
-// with a featured image
-.entry-content {}
-
-// ----------- 2. Admin / Theme Customization
-
-/**
- * Center all Meta-Sliders
- */
+// Center all Meta-Sliders
 .metaslider {
   margin-left: auto;
   margin-right: auto;
 }
 
-/**
- * Styles per specific page
- */
-
 // Helping Hands of Little Angels
-
 .hh__topquote {
   border: 2px solid $aa-color-7;
   padding: 3rem;

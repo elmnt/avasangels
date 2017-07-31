@@ -7,7 +7,23 @@
    .entry-header {
 
       .entry-meta {
+
          margin-bottom: 1rem;
+
+         // hide the byline
+         .byline {
+            display: none;
+         }
+
+         // hide the double time tag
+         .posted-on {
+            a {
+               time:nth-child(2) {
+                  display: none;
+               }
+            }
+         }
+
       }
 
    }

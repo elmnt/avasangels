@@ -14,39 +14,6 @@ Ava is based on Underscores http://underscores.me/
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
-/*
-I'm using the 10UP Sass tree as a rough guide to organize styles.
-My partials will vary slightly, based on my project requirements.
-
-|- assets/scss/
-|  |- global/ __________ # Functions, mixins, placeholders, and variables
-|  |- base/
-|    |- reset, normalize, or sanitize
-|    |- typography
-|    |- icons
-|    |- wordpress __________ # Partial for WordPress default classes
-|  |- components/
-|    |- buttons
-|    |- callouts
-|    |- toggles
-|    |- all other modular reusable UI components
-|  |- layout/
-|    |- header
-|    |- footer
-|    |- sidebar
-|  |- templates/
-|    |- home page
-|    |- single
-|    |- archives
-|    |- blog
-|    |- all page, post, and custom post type specific styles
-|  |- admin/ ____________ # Admin specific partials
-|  |- editor/ ___________ # Editor specific partials (leverage placeholders to use in front-end and admin area)
-|  |- admin.scss
-|  |- project.scss
-|  |- editor-styles.scss
-*/
-
 /**
  * ----------- Global
  */
@@ -64,7 +31,7 @@ My partials will vary slightly, based on my project requirements.
 @import "base/links";
 @import "base/images";
 @import "base/figure";
-// @import "base/utilities"; - Added last to force precedence
+// @import "base/utilities"; - Moved down to force precedence
 @import "base/accessibility";
 // @import "base/wordpress"; - Only enable as needed
 

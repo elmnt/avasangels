@@ -87,11 +87,11 @@ without forcing pixel values on the html tag:
 16px - 100%
 18px - 112.5%
 20px - 125%
-*/
 
-//$base-font-size:    100%;
-//$base-font-size-md: 112.5%;
-//$base-font-size-lg: 125%;
+$base-font-size:    100%;
+$base-font-size-md: 112.5%;
+$base-font-size-lg: 125%;
+*/
 
 $base-font-size:    100%;
 $base-font-size-md: 100%;
@@ -159,7 +159,7 @@ $h4-mobile: 1.75rem;
 $h5-mobile: 1.375rem;
 $h6-mobile: 1.25rem;
 
-/* Rethink these settings
+/* Option for smaller mobile screen settings
 $h1-mobile: 2rem;
 $h2-mobile: 1.75rem;
 $h3-mobile: 1.5rem;
@@ -308,9 +308,9 @@ Setting container-max-width at 100% allows for edge-to-edge layout
 (and edge-to-edge background color even when a wrap is used)
 The (optional) wrap sets a max content width
 
-|-------------------- screen --------------------|
-|--p--|------------ container -------------|--p--|
-|----------|---------- wrap ----------|----------|
+|---------------------- screen ----------------------|
+|--pad--|------------ container -------------|--pad--|
+|----------|------------ wrap ------------|----------|
 
 */
 
