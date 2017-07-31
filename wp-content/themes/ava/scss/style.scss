@@ -16,9 +16,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 /*
 I'm using the 10UP Sass tree as a rough guide to organize styles.
-My partials will vary slightly, based on project requirements.
+My partials will vary slightly, based on my project requirements.
 
-|- assets/css/scss/
+|- assets/scss/
 |  |- global/ __________ # Functions, mixins, placeholders, and variables
 |  |- base/
 |    |- reset, normalize, or sanitize
@@ -64,9 +64,9 @@ My partials will vary slightly, based on project requirements.
 @import "base/links";
 @import "base/images";
 @import "base/figure";
-//@import "base/utilities"; - Added last to force precedence
+// @import "base/utilities"; - Added last to force precedence
 @import "base/accessibility";
-//@import "base/wordpress";
+// @import "base/wordpress"; - Only enable as needed
 
 /**
  * ----------- Vendor - formhack
