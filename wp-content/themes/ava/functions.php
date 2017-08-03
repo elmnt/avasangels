@@ -104,6 +104,16 @@ function ava_widgets_init() {
 		'after_title'   => '</h5>',
 	));
 
+	register_sidebar( array(
+		'name'          => esc_html__( 'Contact Info', 'ava' ),
+		'id'            => 'sidebar-contact-info',
+		'description'   => esc_html__( 'Drag the "Contact Info" widget here, from "Available Widgets" on the left.', 'ava' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	));
+
 }
 add_action( 'widgets_init', 'ava_widgets_init' );
 
@@ -148,6 +158,11 @@ require get_template_directory() . '/inc/ava-nav.php';
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * Contact Info Widget
+ */
+require get_template_directory() . '/inc/contact-info.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -165,4 +180,4 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+//require get_template_directory() . '/inc/jetpack.php';
