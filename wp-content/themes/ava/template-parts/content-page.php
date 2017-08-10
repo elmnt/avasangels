@@ -25,7 +25,7 @@
 			</div>
 
 			<div class="col-6 page__header-buttons">
-				<a href="/get-support" class="button">Get Support</a><a href="/get-involved" class="button">Get Involved</a>
+				<a href="/get-support/" class="button">Get Support</a><a href="/get-involved/" class="button">Get Involved</a><a href="/give/" class="button show-mobile-small">Give</a>
 			</div>
 
 		</div>

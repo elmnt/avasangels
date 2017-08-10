@@ -53,7 +53,6 @@ All elmenu styles are in: /vendor/elmenu.scss
 
    // mobile first
    width: 100%;
-   //border: 1px solid orange;
 
    // tablet
    @media only screen and (min-width: 768px) and (max-width: 1100px) {}
@@ -85,10 +84,7 @@ All elmenu styles are in: /vendor/elmenu.scss
 .header__nav {
 
     // mobile first
-    // float: none;
-    // display: block;
     width: 100%;
-    //border: 1px solid orange;
 
     // tablet
     @media only screen and (min-width: 768px) and (max-width: 1100px) {

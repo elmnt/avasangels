@@ -58,13 +58,19 @@
       }
 
       // Mobile-first, no R/L margins on buttons
-      a:last-of-type {
+      // a:last-of-type {
+      a {
          margin-left: 0;
 
-         // Now add a left margin on the right button, above 600px
+         // Now add a left margin, above 600px
          // ( Same time it switches to flex-direction: row; )
          @media only screen and (min-width: 600px) {
             margin-left: 1rem;
+         }
+
+         // Make the buttons uniform width in mobile display
+         @media only screen and (max-width: 600px) {
+            width: 80%;
          }
 
       }

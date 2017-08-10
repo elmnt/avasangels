@@ -30,6 +30,22 @@
    }
 }
 
+// Add this class to show anything in mobile mode ONLY,
+// according to the main column breakpoint
+.show-mobile {
+   @media only screen and (min-width: $bp-grid-cols) {
+      display: none !important;
+   }
+}
+
+// Add this class to show anything in mobile mode ONLY,
+// according to the main nav breakpoint
+.show-mobile-small {
+   @media only screen and (min-width: $elmenu-mobile-breakpoint) {
+      display: none !important;
+   }
+}
+
 .inline       { display: inline; }
 .block        { display: block; }
 .inline-block { display: inline-block; }
