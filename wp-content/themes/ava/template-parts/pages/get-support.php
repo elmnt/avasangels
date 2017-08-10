@@ -19,7 +19,12 @@
       <p><a href="mailto:info@avasangelssandiego.com?subject=Get%20Support">info@avasangelssandiego.com</a></p>
       <p>&nbsp;</p>
 
-      <?php the_content(); ?>
+      <?php
+      /*the_content();*/
+      /* Adding the iframe directly for testing */
+      ?>
+
+      <iframe src="https://ots.sumacpages.com/sumac/sumac_start_new_session.php?package=singleform2&formname=SUPPORT&userfolder=../ORG/avasangelsofsandiego" width="100%" height="1000" scrolling="auto" style="border:none;"></iframe>
 
 	</div>
 
