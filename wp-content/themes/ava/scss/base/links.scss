@@ -27,19 +27,3 @@ a:active,
 a:visited {
   outline: 0px;
 }
-
-// Credit for this idea: Paul Jarvis https://pjrvs.com
-/*
-p a, li a {
-   padding: 2px 0 4px 0;
-   transition: ease box-shadow .25s;
-   box-shadow: inset 0 -4px 0 rgba(226, 61, 105, .5);
-}
-
-p a:hover,
-li a:hover,
-p a:active,
-li a:active {
-    box-shadow: inset 0 -2px 0 rgba(226, 61, 105, .5);
-}
-*/

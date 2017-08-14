@@ -1,6 +1,6 @@
 <div class="grid">
 
-   <?php // ACF content - Our Directors excerpt
+   <?php // ACF content - Intro text
    if ( function_exists( 'get_field' ) ) {
       $oaokintro = get_field('oaok_intro');
       if( $oaokintro ) {
@@ -39,9 +39,9 @@
             }
          }
          ?>
-      </div>
+      </div><!-- /.grid -->
 
-	</div>
+	</div><!-- /.col-6 -->
 
 	<div class="col-6">
 
@@ -74,6 +74,6 @@
       }
       ?>
 
-   </div>
+   </div><!-- /.col-6 -->
 
-</div>
+</div><!-- /.grid -->

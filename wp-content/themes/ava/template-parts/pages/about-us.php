@@ -1,10 +1,9 @@
 <div class="grid">
-<!-- <div id="our-mission-anchor"></div> -->
 
 	<div class="col-6">
+
       <?php // ACF content - Our Mission
       if ( function_exists( 'get_field' ) ) {
-         // Add the page ID to get the field from the Our Inspiration page
          $aumissiontitle = get_field('au_our_mission_title');
          $aumissionsubtitle = get_field('au_our_mission_subtitle');
          $aumissiontext = get_field('au_our_missoin_text');
@@ -19,15 +18,16 @@
          }
       }
       ?>
-	</div>
+
+	</div><!-- /.col-6 -->
 
 	<div class="col-6">
 
 		<h2>Our Inspiration</h2>
-      <?php // Get the image & copy from the Our Inspiration page ?>
       <div class="grid--flex mb2">
+
          <div class="col-6 gfitem-1">
-            <?php // ACF content
+            <?php // ACF content - Our Inspiration image
             if ( function_exists( 'get_field' ) ) {
                // Add the page ID to get the field from the Our Inspiration page
                $oiavaphoto = get_field('oi_ava_photo', 49);
@@ -38,10 +38,12 @@
                }
             }
             ?>
-         </div>
+         </div><!-- /.gfitem-1 -->
+
    		<div class="gfitem-2">
             <?php // ACF content - Our Inspiration excerpt
             if ( function_exists( 'get_field' ) ) {
+               // Add the page ID to get the field from the Our Inspiration page
                $oiavaexcerpt = get_field('oi_ava_excerpt', 49);
                if( $oiavaexcerpt ) {
                   echo $oiavaexcerpt;
@@ -51,13 +53,15 @@
             }
             ?>
             <p><a href="/about-us/our-inspiration/">Read More &rarr;</a></p>
-         </div>
-      </div>
+         </div><!-- /.gfitem-2 -->
+
+      </div><!-- /.grid--flex -->
 
       <h2>Our Directors</h2>
       <div class="grid--flex">
+
          <div class="col-6 gfitem-1">
-            <?php // ACF content od_aboutus
+            <?php // ACF content - Our Directors image
             if ( function_exists( 'get_field' ) ) {
                // Add the page ID to get the field from the Our Directors page
                $odaboutus = get_field('od_aboutus', 102);
@@ -70,10 +74,12 @@
                }
             }
             ?>
-         </div>
+         </div><!-- /.gfitem-1 -->
+
          <div class="gfitem-2">
             <?php // ACF content - Our Directors excerpt
             if ( function_exists( 'get_field' ) ) {
+               // Add the page ID to get the field from the Our Directors page
                $odexcerpt = get_field('od_directors_excerpt', 102);
                if( $odexcerpt ) {
                   echo '<p>';
@@ -85,8 +91,9 @@
             }
             ?>
             <p><a href="/about-us/our-directors/">Read More &rarr;</a></p>
-         </div>
-      </div>
+         </div><!-- /.gfitem-2 -->
+
+      </div><!-- /.grid--flex -->
 
    </div><!-- /col-6 -->
 

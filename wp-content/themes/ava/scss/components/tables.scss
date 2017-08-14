@@ -4,7 +4,7 @@
 
 // ----------- default table styles
 
-table, 
+table,
 table * {
   font-family: $table-global-font-family;
   font-size: $table-global-font-size;
@@ -21,26 +21,26 @@ table {
   max-width: 100%;
 }
 
-table thead { 
+table thead {
   background-color: $table-thead-background-color;
 }
 
-table th { 
-  color: $table-thead-th-color; 
+table th {
+  color: $table-thead-th-color;
 }
 
-table, 
-table td, 
-table th { 
-  border: $table-border; 
+table,
+table td,
+table th {
+  border: $table-border;
   border-collapse: collapse !important;
 }
 
-th { 
-  vertical-align: $table-th-vertical-align; 
+th {
+  vertical-align: $table-th-vertical-align;
   text-align: $table-th-text-align;
 }
-td { 
+td {
   vertical-align: $table-td-vertical-align;
   text-align: $table-td-text-align;
 }
@@ -52,24 +52,24 @@ td {
   color: $table-thead-th-color;
 }
 
-.responsive-table { 
-  width: 100%; 
+.responsive-table {
+  width: 100%;
 }
 
 // ----------- responsive table breakpoints
 
-.responsive-table .mobile-thead, 
-.responsive-table .mobile-colhead { 
-  display: none; 
+.responsive-table .mobile-thead,
+.responsive-table .mobile-colhead {
+  display: none;
 }
 
 @media all and (max-width: 800px){
 
-  .responsive-table thead { 
-    display: none; 
+  .responsive-table thead {
+    display: none;
   }
 
-  .responsive-table .mobile-thead { 
+  .responsive-table .mobile-thead {
     display: block;
     background-color: $table-thead-background-color;
     color: $table-thead-th-color;
@@ -77,21 +77,21 @@ td {
   }
 
   // we need some extra border control on the responsive tables
-  .responsive-table { 
-    border: none !important; 
+  .responsive-table {
+    border: none !important;
   }
 
   .responsive-table td {
     &:not(:last-child) {
-      border-bottom: none !important; 
+      border-bottom: none !important;
     }
   }
-  
+
   .responsive-table,
   .responsive-table td,
   .responsive-table th {
     width: 100%;
-    display: block;   
+    display: block;
   }
 
 }

@@ -2,68 +2,8 @@
  * Layout - Sidebar
  */
 
-// Sidebar
 #secondary {}
 
-// Sidebar widget titles
 #secondary .widget-title {
   margin-top: 2rem !important;
 }
-
-/*
-Using menus in the sidebar widgets, so we can easily
-accomplish some "most recent" content groupings
-*/
-
-/*
-#secondary .widget ul.menu {
-  @extend .list-reset;
-}
-
-#secondary .widget ul.menu li {
-  font-size: 1rem;
-  //margin-left: 20px;
-  //list-style-type: circle;
-
-  &:not(:first-of-type) {
-    padding-top: .5rem;
-  }
-
-  &:not(:last-of-type) {
-    padding-bottom: .5rem;
-  }
-
-  // separate multiple items with a bottom border,
-  // but leave it off the last item
-  &:not(:last-of-type) {
-    border-bottom: 1px solid $base-border-color;
-  }
-
-}
-
-#secondary .widget ul.menu li a {
-  text-decoration: none;
-}
-
-// ----------- Styles for the 'Hadley Sidebar Bio' sidebar widget
-
-#secondary .widget .widget__hsb figure {
-  margin-bottom: 1rem;
-}
-
-#secondary .widget .widget__hsb figcaption {
-  background-color: transparent;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid $base-border-color;
-}
-
-#secondary .widget .widget__hsb figcaption p {
-  color: $base-text-color;
-  font-size: 1rem;
-  font-family: $serif;
-  font-weight: $fw-normal;
-  font-style: italic;
-}
-*/

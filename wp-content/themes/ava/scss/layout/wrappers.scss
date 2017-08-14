@@ -25,7 +25,6 @@
 .wrap {
     margin: 0 auto;
     max-width: $wrap-max-width;
-    //min-width: $wrap-min-width;
     text-align: left;
     @extend .cf;
 }
@@ -39,6 +38,7 @@
 // ----------- center-align & middle-align box
 // ----------- ( this is a pre-flexbox technique )
 
+/*
 // the holder
 .cmbox {
     width: 100%;
@@ -56,3 +56,4 @@
     display: table-cell;
     vertical-align: middle;
 }
+*/

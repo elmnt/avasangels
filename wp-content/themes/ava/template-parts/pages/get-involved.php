@@ -1,6 +1,7 @@
 <div class="grid">
 
    <div class="col-4">
+
       <h5>Ava's Angels San Diego</h5>
       <p>
       2240 Encinitas Blvd<br>
@@ -8,9 +9,11 @@
       Encinitas, Ca 92024<br>
       </p>
       <p><a href="http://www.facebook.com/AvasAngelsSanDiego" target="_blank">Connect with us on Facebook</a></p>
+
    </div>
 
 	<div class="col-8">
+
       <h2>There are so many ways to help and get involved!</h2>
       <ul>
          <li>Receive periodic emails when we are looking for items or extra hands to help a family. (E.g. we need a twin bed, or help planting a garden.)</li>
