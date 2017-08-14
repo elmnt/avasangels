@@ -21,6 +21,22 @@ $debug: false;
 
 }
 
+// ----------- Color classes
+
+.aa-color-1 { color: $aa-color-1; } // #EF899C
+.aa-color-2 { color: $aa-color-2; } // #E8707D
+.aa-color-3 { color: $aa-color-3; } // #E23D69
+
+.aa-color-4 { color: $aa-color-4; } // #FCD700
+.aa-color-5 { color: $aa-color-5; } // #D4FCC3
+.aa-color-6 { color: $aa-color-6; } // #BFCF31
+.aa-color-7 { color: $aa-color-7; } // #72BF44
+
+.aa-grey-1 { color: $aa-grey-1; } // #eee
+.aa-grey-2 { color: $aa-grey-2; } // #ccc
+.aa-grey-3 { color: $aa-grey-3; } // #888
+.aa-grey-4 { color: $aa-grey-4; } // #444
+
 // ----------- ACF Failure
 
 .noacf {

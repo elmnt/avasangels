@@ -1,3 +1,4 @@
+<?php /* This method is not compatible with Sumac
 <div class="container container--newsletter">
 <div class="wrap">
 	<div class="single-column center">
@@ -12,6 +13,17 @@
 				</div>
 			</fieldset>
 		</form>
+	</div>
+</div>
+</div>
+*/
+?>
+<div class="container container--newsletter">
+<div class="wrap">
+	<div class="single-column center">
+		<h3 class="aa-color-5">Sign Up for Our Newsletter</h3>
+		<h6 style="color:white;">Stay connected, and keep up on our latest events and happenings!</h6>
+		<a href="/contact-us/" class="button button--white">Sign Me Up</a>
 	</div>
 </div>
 </div>
