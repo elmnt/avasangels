@@ -44,7 +44,7 @@
             padding-right: 1.5rem;
             max-width: 800px;
             text-shadow: -3px 3px 4px rgba(0, 0, 0, 0.5);
-            font-size: $h5;
+            font-size: $h3;
             @media only screen and (min-width: 600px) and (max-width: 870px) {
                 font-size: $h2;
             }
@@ -77,6 +77,52 @@
             }
         }
     }
+
+    .masthead__desktop-buttons {
+        // mobile first
+        display: none;
+        @media only screen and (min-width: $elmenu-mobile-breakpoint) {
+            display: block;
+        }
+    }
+
+    .masthead__mobile-buttons {
+
+        // mobile first
+        display: block;
+        @media only screen and (min-width: $elmenu-mobile-breakpoint) {
+            display: none;
+        }
+        margin-top: 2rem;
+
+        // same as buttons above
+        a {
+            display: block;
+            max-width: 60%;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 1rem 1rem .85rem 1rem;
+            font-size: .75rem;
+            @media only screen and (min-width: 600px) {
+                max-width: 40%;
+                font-size: .85rem;
+                padding: 1.25rem 1rem 1rem 1rem;
+            }
+            @media only screen and (min-width: 768px) {
+                display: inline-block;
+                margin-right: 1rem;
+                padding: $button-padding;
+                max-width: auto;
+            }
+            &:last-of-type {
+                @media only screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+
+    }//.masthead__mobile-buttons
+
     .masthead__tagline {
         text-align: center;
         position: relative;

@@ -38,12 +38,18 @@ get_header(); ?>
 		<div class="masthead__caption-holder">
 			<div class="masthead__caption">
 				<h1><?php echo $hpmtagline; ?></h1>
-				<a href="/get-support/" class="button">Get Support</a><a href="/get-involved/" class="button">Get Involved</a><a href="/give/" class="button">Give</a>
+				<div class="masthead__desktop-buttons">
+					<a href="/get-support/" class="button">Get Support</a><a href="/get-involved/" class="button">Get Involved</a><a href="/give/" class="button">Give</a>
+				</div>
 				<?php /* End: ACF content */ ?>
 			</div>
 		</div>
 
 		</div><!-- /.masthead__top -->
+
+		<div class="masthead__mobile-buttons">
+			<a href="/get-support/" class="button">Get Support</a><a href="/get-involved/" class="button">Get Involved</a><a href="/give/" class="button">Give</a>
+		</div>
 
 		<div class="masthead__tagline">
 		<?php // ACF content
