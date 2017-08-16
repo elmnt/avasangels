@@ -2,10 +2,14 @@
  * Base - Type
  */
 
+body {
+  font-size: 112.5%;
+}
+
 p {
   padding: $p-padding;
   margin: $p-margin;
-  font-size: 112.5%;
+  font-size: 100%;
 }
 
 p.lead {
@@ -22,7 +26,7 @@ ol {
 }
 
 li {
-  font-size: 112.5%;
+  font-size: 100%;
 }
 
 /*
@@ -32,7 +36,7 @@ we need to make sure the text stays the proper size.
 ( And remove the native p bottom margin )
 */
 li > p {
-  font-size:100% !important;
+  font-size: 100% !important;
   margin-bottom: 0;
 }
 

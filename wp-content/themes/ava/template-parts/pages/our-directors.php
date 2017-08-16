@@ -30,7 +30,7 @@ if ( function_exists( 'get_field' ) ) {
                $dirname = get_sub_field('director_name');
                echo '<img src="'.$dirphoto.'" alt="'.$dirname.'" class="home__inspiration">';
             ?>
-         </div>
+         </div><!-- /.col-6 -->
 
          <div class="col-6">
             <?php
@@ -39,9 +39,9 @@ if ( function_exists( 'get_field' ) ) {
                echo '<h3>'.$dirname.'</h3>';
                echo '<p>'.$dirbio.'</p>';
             ?>
-         </div>
+         </div><!-- /.col-6 -->
 
-      </div>
+      </div><!-- /.grid -->
 
    <?php endwhile; ?>
 

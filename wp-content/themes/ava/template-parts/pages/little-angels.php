@@ -12,29 +12,29 @@
    }
    ?>
 
-</div>
-</div>
+</div><!-- /.single-column -->
+</div><!-- /.grid -->
 
 <div class="grid">
 
 	<div class="col-6">
 
       <div class="hh__topquote">
-      <?php // ACF content
-      if ( function_exists( 'get_field' ) ) {
-         $liquote = get_field('li_quote');
-         $liquoteatt = get_field('li_quote_attribute');
-         if( $liquote ) {
-            echo '<h5>'.$liquote.'</h5>';
-            echo '<h6 class="mb0">&mdash; '.$liquoteatt.'</h6>';
-         } else {
-            echo $GLOBALS[ 'noacf' ]; // Set in header.php
+         <?php // ACF content
+         if ( function_exists( 'get_field' ) ) {
+            $liquote = get_field('li_quote');
+            $liquoteatt = get_field('li_quote_attribute');
+            if( $liquote ) {
+               echo '<h5>'.$liquote.'</h5>';
+               echo '<h6 class="mb0">&mdash; '.$liquoteatt.'</h6>';
+            } else {
+               echo $GLOBALS[ 'noacf' ]; // Set in header.php
+            }
          }
-      }
-      ?>
-      </div>
+         ?>
+      </div><!-- /.hh__topquote -->
 
-	</div>
+	</div><!-- /.col-6 -->
 
 	<div class="col-6">
 
@@ -67,9 +67,9 @@
       }
       ?>
 
-	</div>
+	</div><!-- /.col-6 -->
 
-</div>
+</div><!-- /.grid -->
 
 <div class="grid">
 
@@ -97,4 +97,4 @@
    }
    ?>
 
-</div>
+</div><!-- /.grid -->

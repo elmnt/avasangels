@@ -13,7 +13,7 @@
          }
       }
       ?>
-   </div>
+   </div><!-- /.col-6 -->
 
 	<div class="col-6">
       <?php // ACF content
@@ -31,6 +31,6 @@
          }
       }
       ?>
-   </div>
+   </div><!-- /.col-6 -->
 
-</div>
+</div><!-- /.grid -->

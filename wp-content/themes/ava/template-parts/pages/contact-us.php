@@ -1,4 +1,11 @@
-<div class="grid flexheight">
+<?php
+/*
+if(isset($_POST[ 'nlcheck' ])) {
+  echo '<p>'.$_POST[ 'nlcheck' ].'</p>';
+  echo '<p>'.$_POST[ 'message' ].'</p>';
+}
+*/
+?><div class="grid flexheight">
 
 	<div class="col-4">
 

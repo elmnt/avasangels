@@ -31,6 +31,7 @@ input[type="submit"] {
   //@include border-radius($base-border-radius);
   @include border-radius(500px);
   vertical-align: middle !important;
+  width: auto;
 
   &:visited {
     color: $button-color-visited;
@@ -99,19 +100,22 @@ input[type="submit"] {
 }
 
 // white button
+// adding the !important,
+// so it over-rides the default input[type="submit"] settings
+// pertinent on front-page.php template
 
 .button--white {
-  color: $button-background-color;
-  background: white;
-  border: $button-trans-border;
+  color: $button-background-color !important;
+  background: white !important;
+  border: $button-trans-border !important;
 
   &:visited,
   &:hover,
   &:focus,
   &:active {
-    color: $button-background-color;
-    background: white;
-    border: $button-trans-border;
+    color: $button-background-color !important;
+    background: white !important;
+    border: $button-trans-border !important;
   }
 
 }

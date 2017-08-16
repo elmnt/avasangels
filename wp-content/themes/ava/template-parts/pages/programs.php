@@ -12,15 +12,17 @@
    }
    ?>
 
-</div>
-</div>
+</div><!-- /.single-column -->
+</div><!-- /.grid -->
 
 <?php // ACF content - Programs Repeater ?>
 <?php if ( function_exists( 'get_field' ) ) : ?>
 
 <?php if( have_rows('programs_repeater') ): ?>
    <?php while( have_rows('programs_repeater') ): the_row(); ?>
+
       <div class="grid mb4">
+
          <div class="col-6 home__inspiration--holder">
             <?php
                $progimg = get_sub_field('programs_image');
@@ -28,7 +30,8 @@
                $proglink = get_sub_field('programs_link');
                echo '<a href="'.$proglink.'"><img src="'.$progimg.'" alt="'.$progname.'" class="home__inspiration"></a>';
             ?>
-         </div>
+         </div><!-- /.col-6 -->
+
          <div class="col-6">
             <?php
                $progname = get_sub_field('programs_title');
@@ -38,8 +41,10 @@
                echo '<p>'.$progbio.'</p>';
                echo '<p><a href="'.$proglink.'">Read More &rarr;</a></p>';
             ?>
-         </div>
-      </div>
+         </div><!-- /.col-6 -->
+
+      </div><!-- /.grid -->
+
    <?php endwhile; ?>
 <?php endif; ?>
 

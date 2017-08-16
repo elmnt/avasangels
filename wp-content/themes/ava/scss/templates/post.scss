@@ -4,6 +4,15 @@
 
 .post {
 
+   padding-bottom: 2rem;
+   border-bottom: $base-border;
+   margin-bottom: 3rem;
+
+   &:last-of-type {
+      padding-bottom: none;
+      border-bottom: none;
+   }
+
    .entry-header {
 
       .entry-meta {
@@ -34,8 +43,33 @@
 
    .entry-content {}
 
-   .entry-footer {
-      margin-bottom: 3rem;
-   }
+   .entry-footer {}
 
+}
+
+// except for single posts
+
+.single .post {
+   padding-bottom: 0;
+   border-bottom: none;
+   //margin-bottom: 3rem;
+}
+
+// previous / next nav on a single post
+
+.post-navigation {
+   margin-bottom: 3rem;
+   .nav-links {
+      .nav-previous {
+         margin-bottom: .5rem;
+         &::before {
+            content: "Previous Post: ";
+         }
+      }
+      .nav-next {
+         &::before {
+            content: "Next Post: ";
+         }
+      }
+   }
 }

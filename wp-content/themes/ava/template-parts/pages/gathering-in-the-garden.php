@@ -1,13 +1,15 @@
 <div class="grid mb3">
+
    <?php the_content(); ?>
-</div>
+
+</div><!-- /.grid -->
 
 <div class="grid">
 <div class="single-column">
 
    <?php // ACF content
    if ( function_exists( 'get_field' ) ) {
-      // Check if the repeater field has rows of data
+      // check if the repeater field has rows of data
       if( have_rows( 'gathering_content' ) ) {
          // loop through the rows of data
          while ( have_rows( 'gathering_content' ) ) : the_row();
@@ -23,5 +25,5 @@
    }
    ?>
 
-</div>
-</div>
+</div><!-- /.single-column -->
+</div><!-- /.grid -->

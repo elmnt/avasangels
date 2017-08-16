@@ -22,7 +22,7 @@
       <div class="grid">
          <?php // ACF content - Acts of Kindness images/captions
          if ( function_exists( 'get_field' ) ) {
-            // Check if the repeater field has rows of data
+            // check if the repeater field has rows of data
             if( have_rows( 'oaok_acts' ) ) {
                echo '<figure>';
                // loop through the rows of data
@@ -58,7 +58,7 @@
 
       <?php // ACF content - The "Easy ways" list
       if ( function_exists( 'get_field' ) ) {
-         // Check if the repeater field has rows of data
+         // check if the repeater field has rows of data
          if( have_rows( 'oaok_sidebar_list' ) ) {
             echo '<ol>';
             // loop through the rows of data
