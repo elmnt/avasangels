@@ -17,12 +17,12 @@
 				$hpmtagline = get_field('hpm_tagline');
 				if( $hpmphoto_desktop ) {
 					echo '<picture class="fit">
-					      	<source srcset="'.$hpmphoto_xl.'" media="(min-width: 1200px)">
-					      	<source srcset="'.$hpmphoto_desktop.'" media="(min-width: 768px)">
-					      	<source srcset="'.$hpmphoto_tablet.'" media="(min-width: 420px)">
-					      	<source srcset="'.$hpmphoto_mobile.'" media="(min-width: 100px)">
-					      	<img srcset="'.$hpmphoto_mobile.'" alt="alt">
-					      </picture>';
+						  	<source srcset="'.$hpmphoto_xl.'" media="(min-width: 1200px)">
+						  	<source srcset="'.$hpmphoto_desktop.'" media="(min-width: 768px)">
+						  	<source srcset="'.$hpmphoto_tablet.'" media="(min-width: 420px)">
+						  	<source srcset="'.$hpmphoto_mobile.'" media="(min-width: 100px)">
+						  	<img srcset="'.$hpmphoto_mobile.'" alt="alt">
+						  </picture>';
 				} else {
 					echo $GLOBALS[ 'noacf' ]; // Set in header.php
 				}
