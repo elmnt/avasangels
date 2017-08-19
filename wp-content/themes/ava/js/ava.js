@@ -1925,6 +1925,7 @@ Quick description (see comments below for more info)
  * so the elmenu script is at the top of the synchronous list.
  */
 
+
 /**
  * Add our two main CTAs to the mobile nav, AFTER the links.
  * Use a timeout to allow the mobile menu to render.
@@ -1942,3 +1943,25 @@ setTimeout( function() {
 	mobileMenu.appendChild( mobileCTAs );
 
 }, 2000 );
+
+
+/**
+ * Add a force reload on the About Us link, and the Our Mission link, to avoid a problem where,
+ * if the mobile menu is showing, and either of those links are clicked, 
+ * we get pushed down the page (because of the in-page anchor link), 
+ * WITH the mobile menu open, showing only the solid background color of the mobile menu.
+ * NOTE: This will break down if the client changes the link structure in the Admin.
+ */
+// Target the About Us link
+const primaryMenu = document.querySelector("#primary-menu");
+const aboutUsItem = primaryMenu.firstChild;
+const aboutUsLink = aboutUsItem.firstChild;
+
+// Target the Our Mission link
+const subList = aboutUsItem.childNodes[2]; // the sub ul
+const subListItem = subList.childNodes[1]; // the Our Mission li
+const subListLink = subListItem.firstChild // the Our Mission link (a)
+
+// Add the JS to refresh when hitting either of these links
+aboutUsLink.setAttribute("onclick", "window.location.reload(true);");
+subListLink.setAttribute("onclick", "window.location.reload(true);");
