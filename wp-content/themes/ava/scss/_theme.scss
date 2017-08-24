@@ -82,3 +82,12 @@ div.wpcf7-response-output {
   font-size: 1.5rem !important;
   line-height: 1.5em !important;
 }
+
+// checkbox styles
+span.wpcf7-checkbox span.wpcf7-list-item {
+  margin-left: 0;
+}
+
+span.wpcf7-checkbox span.wpcf7-list-item input[type="checkbox"] {
+  margin-right: .5em;
+}

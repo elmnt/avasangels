@@ -123,7 +123,7 @@ function ava_scripts() {
 
 	// Loads Google Fonts
 	$query_args = array(
-		'family' => 'Poppins:400,600'
+		'family' => 'Quicksand:400,500'
 	);
 	wp_register_style('ava-fonts', add_query_arg($query_args, 'https://fonts.googleapis.com/css'), array(), null);
 	wp_enqueue_style('ava-fonts');

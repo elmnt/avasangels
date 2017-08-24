@@ -71,7 +71,8 @@ Using Google font Poppins for headers
 400: regular
 600: semi-bold
 */
-$sans:  'Poppins', helvetica, 'helvetica neue', arial, sans-serif;
+// $sans:  'Poppins', helvetica, 'helvetica neue', arial, sans-serif;
+$sans:  'Quicksand', helvetica, 'helvetica neue', arial, sans-serif;
 $serif: georgia, athelas, calisto, baskerville, serif;
 $mono:  'Consolas', Consolas, monaco, monospace;
 
@@ -122,12 +123,21 @@ $heading-text-decoration: none;
 
 $h1-margin: $heading-margin;
 
+/*
 $h1: 2.875rem;
 $h2: 2.5rem;
 $h3: 2.125rem;
 $h4: 1.75rem;
 $h5: 1.375rem;
 $h6: 1.25rem;
+*/
+
+$h1: 3rem;
+$h2: 2.875rem;
+$h3: 2.5rem;
+$h4: 2.125rem;
+$h5: 2rem;
+$h6: 1.5rem;
 
 $h1-mobile: 2.875rem;
 $h2-mobile: 2.5rem;

@@ -29,8 +29,8 @@
     <div class="container--full container--footer">
       <div class="wrap">
         <div class="single-column center">
-          <p><a href="/contact-us/">Contact Us</a>/<a href="/privacy-policy/">Privacy Policy</a>/<a href="http://www.facebook.com/AvasAngelsSanDiego" target="_blank">Facebook</a></p>
-          <p class="copyright">Copyright 2013. Ava's Angels. All Rights Reserved.</p>
+          <p><a href="/contact-us/">Contact Us</a>/<a href="http://www.facebook.com/AvasAngelsSanDiego" target="_blank">Facebook</a></p>
+          <p class="copyright">Copyright 2013 - <?php echo date("Y"); ?> Ava's Angels. All Rights Reserved.</p>
           <!--<div class="site-info"></div>-->
           <!-- /.site-info -->
         </div>
