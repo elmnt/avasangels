@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<p>&nbsp;</p>
+
 <div class="container">
 	<div class="wrap">
 		<div class="grid">

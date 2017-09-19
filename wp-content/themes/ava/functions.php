@@ -40,6 +40,15 @@ function ava_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	/**
+	 * Reset thumbnail size
+	 */
+	function wpdocs_setup_theme() {
+		add_theme_support( 'post-thumbnails' );
+		set_post_thumbnail_size( 300, 300 );
+	}
+	add_action( 'after_setup_theme', 'wpdocs_setup_theme' );
+
+	/**
 	 * Add a custom image size for the home page featured post image
 	 */
 	add_image_size( 'home-featured-post', 600, 300, array( 'center', 'center' ) );
