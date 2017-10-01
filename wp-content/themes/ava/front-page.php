@@ -141,7 +141,7 @@
 					<?php the_post_thumbnail( $size = 'home-featured-post' ); ?>
 					<div class="home__newsevents--excerpt">
 						<?php the_excerpt(); ?>
-						<p><a href="#">Read More &rarr;</a></p>
+						<p><a href="<?php the_permalink(); ?>">Read More &rarr;</a></p>
 					</div>
 				<?php endforeach; ?>
 				<?php wp_reset_postdata(); ?>
