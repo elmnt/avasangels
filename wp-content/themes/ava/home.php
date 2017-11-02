@@ -6,7 +6,7 @@
 		<div class="wrap">
 			<div class="grid">
 				<div class="col-6">
-					<h1 class="entry-title page__header-title">News &amp; Events</h1>
+					<h1 class="entry-title page__header-title">News &amp; Updates</h1>
 					<h6 class="page__header-tagline">Fostering Human Connection and Compassion While Helping Families with Sick or Disabled Children.</h6>
 					<p>Ava's Angels San Diego</p>
 				</div><!-- /.col-6 -->

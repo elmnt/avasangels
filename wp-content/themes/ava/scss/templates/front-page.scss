@@ -185,12 +185,14 @@
     }
 
     .home__mission--title {
+        /* remove icon
         background: transparent url('img/aa-icon-mission.svg') top left no-repeat;
         background-size: 50px;
         padding-left: 60px;
         @media only screen and (min-width: 1440px) {
             padding-left: 70px;
         }
+        */
     }
 
 }
@@ -250,6 +252,7 @@
 // the thumbnail
 .attachment-home-featured-post {
     margin-bottom: 2rem;
+    max-width: 300px;
 }
 
 .home__newsevents--excerpt p {}
